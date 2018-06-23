@@ -466,6 +466,241 @@ df_res_filteredM3Drop10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
+## ----------------------- filteredExpr10_Trapnell -------------------------- ##
+df_sce_filteredExpr10_Trapnell <- data.frame(
+  Title = "sce_filteredExpr10_Trapnell",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_Trapnell <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Trapnell",
+  Description = "Clustering results for sce_filteredExpr10_Trapnell",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+## ----------------------- filteredHVG10_Trapnell --------------------------- ##
+df_sce_filteredHVG10_Trapnell <- data.frame(
+  Title = "sce_filteredHVG10_Trapnell",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_Trapnell <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Trapnell",
+  Description = "Clustering results for sce_filteredHVG10_Trapnell",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+## ---------------------- filteredM3Drop10_Trapnell ------------------------- ##
+df_sce_filteredM3Drop10_Trapnell <- data.frame(
+  Title = "sce_filteredM3Drop10_Trapnell",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_Trapnell <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Trapnell",
+  Description = "Clustering results for sce_filteredM3Drop10_Trapnell",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Trapnell.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredExpr10_TrapnellTCC ------------------------- ##
+df_sce_filteredExpr10_TrapnellTCC <- data.frame(
+  Title = "sce_filteredExpr10_TrapnellTCC",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_TrapnellTCC <- data.frame(
+  Title = "clustering_summary_filteredExpr10_TrapnellTCC",
+  Description = "Clustering results for sce_filteredExpr10_TrapnellTCC",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredHVG10_TrapnellTCC -------------------------- ##
+df_sce_filteredHVG10_TrapnellTCC <- data.frame(
+  Title = "sce_filteredHVG10_TrapnellTCC",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_TrapnellTCC <- data.frame(
+  Title = "clustering_summary_filteredHVG10_TrapnellTCC",
+  Description = "Clustering results for sce_filteredHVG10_TrapnellTCC",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+## -------------------- filteredM3Drop10_TrapnellTCC ------------------------ ##
+df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
+  Title = "sce_filteredM3Drop10_TrapnellTCC",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_TrapnellTCC",
+  Description = "Clustering results for sce_filteredM3Drop10_TrapnellTCC",
+  BiocVersion = "3.7",
+  Genome = "GRCh38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_TrapnellTCC.rds",
+  stringsAsFactors = FALSE
+)
+
+
 
 ## Combined meta-data
 df_all <- rbind(
@@ -492,7 +727,19 @@ df_all <- rbind(
   df_res_filteredM3Drop10_Kumar,
   df_res_filteredExpr10_KumarTCC,
   df_res_filteredHVG10_KumarTCC,
-  df_res_filteredM3Drop10_KumarTCC
+  df_res_filteredM3Drop10_KumarTCC,
+  df_sce_filteredExpr10_Trapnell,
+  df_sce_filteredHVG10_Trapnell,
+  df_sce_filteredM3Drop10_Trapnell,
+  df_sce_filteredExpr10_TrapnellTCC,
+  df_sce_filteredHVG10_TrapnellTCC,
+  df_sce_filteredM3Drop10_TrapnellTCC,
+  df_res_filteredExpr10_Trapnell,
+  df_res_filteredHVG10_Trapnell,
+  df_res_filteredM3Drop10_Trapnell,
+  df_res_filteredExpr10_TrapnellTCC,
+  df_res_filteredHVG10_TrapnellTCC,
+  df_res_filteredM3Drop10_TrapnellTCC
 )
 
 ## Save .csv file
