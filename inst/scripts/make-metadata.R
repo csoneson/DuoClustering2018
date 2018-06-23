@@ -700,6 +700,356 @@ df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
+## ---------------------- filteredExpr10_Zhengmix4eq ------------------------ ##
+df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
+  Title = "sce_filteredExpr10_Zhengmix4eq",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_Zhengmix4eq <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4eq",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+## ---------------------- filteredHVG10_Zhengmix4eq ------------------------- ##
+df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
+  Title = "sce_filteredHVG10_Zhengmix4eq",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_Zhengmix4eq <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4eq",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredM3Drop10_Zhengmix4eq ----------------------- ##
+df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
+  Title = "sce_filteredM3Drop10_Zhengmix4eq",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4eq",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix4eq.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredExpr10_Zhengmix4uneq ----------------------- ##
+df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
+  Title = "sce_filteredExpr10_Zhengmix4uneq",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4uneq",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4uneq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredHVG10_Zhengmix4uneq ------------------------ ##
+df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
+  Title = "sce_filteredHVG10_Zhengmix4uneq",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4uneq",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4uneq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+## -------------------- filteredM3Drop10_Zhengmix4uneq ---------------------- ##
+df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
+  Title = "sce_filteredM3Drop10_Zhengmix4uneq",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4uneq",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4uneq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix4uneq.rds",
+  stringsAsFactors = FALSE
+)
+
+## ---------------------- filteredExpr10_Zhengmix8eq ------------------------ ##
+df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
+  Title = "sce_filteredExpr10_Zhengmix8eq",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_Zhengmix8eq <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix8eq",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix8eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
+
+## ---------------------- filteredHVG10_Zhengmix8eq ------------------------- ##
+df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
+  Title = "sce_filteredHVG10_Zhengmix8eq",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_Zhengmix8eq <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix8eq",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix8eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredM3Drop10_Zhengmix8eq ----------------------- ##
+df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
+  Title = "sce_filteredM3Drop10_Zhengmix8eq",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix8eq",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix8eq",
+  BiocVersion = "3.7",
+  Genome = "hg19",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix8eq.rds",
+  stringsAsFactors = FALSE
+)
 
 
 ## Combined meta-data
@@ -739,7 +1089,25 @@ df_all <- rbind(
   df_res_filteredM3Drop10_Trapnell,
   df_res_filteredExpr10_TrapnellTCC,
   df_res_filteredHVG10_TrapnellTCC,
-  df_res_filteredM3Drop10_TrapnellTCC
+  df_res_filteredM3Drop10_TrapnellTCC,
+  df_sce_filteredExpr10_Zhengmix4eq,
+  df_sce_filteredHVG10_Zhengmix4eq,
+  df_sce_filteredM3Drop10_Zhengmix4eq,
+  df_res_filteredExpr10_Zhengmix4eq,
+  df_res_filteredHVG10_Zhengmix4eq,
+  df_res_filteredM3Drop10_Zhengmix4eq,
+  df_sce_filteredExpr10_Zhengmix4uneq,
+  df_sce_filteredHVG10_Zhengmix4uneq,
+  df_sce_filteredM3Drop10_Zhengmix4uneq,
+  df_res_filteredExpr10_Zhengmix4uneq,
+  df_res_filteredHVG10_Zhengmix4uneq,
+  df_res_filteredM3Drop10_Zhengmix4uneq,
+  df_sce_filteredExpr10_Zhengmix8eq,
+  df_sce_filteredHVG10_Zhengmix8eq,
+  df_sce_filteredM3Drop10_Zhengmix8eq,
+  df_res_filteredExpr10_Zhengmix8eq,
+  df_res_filteredHVG10_Zhengmix8eq,
+  df_res_filteredM3Drop10_Zhengmix8eq
 )
 
 ## Save .csv file
