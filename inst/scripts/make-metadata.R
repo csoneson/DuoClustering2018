@@ -1051,6 +1051,357 @@ df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
+## --------------------- filteredExpr10_SimKumar4easy ----------------------- ##
+df_sce_filteredExpr10_SimKumar4easy <- data.frame(
+  Title = "sce_filteredExpr10_SimKumar4easy",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_SimKumar4easy <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4easy",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4easy",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredHVG10_SimKumar4easy ------------------------ ##
+df_sce_filteredHVG10_SimKumar4easy <- data.frame(
+  Title = "sce_filteredHVG10_SimKumar4easy",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_SimKumar4easy <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4easy",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4easy",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+## -------------------- filteredM3Drop10_SimKumar4easy ---------------------- ##
+df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
+  Title = "sce_filteredM3Drop10_SimKumar4easy",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4easy",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4easy",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar4easy.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredExpr10_SimKumar4hard ----------------------- ##
+df_sce_filteredExpr10_SimKumar4hard <- data.frame(
+  Title = "sce_filteredExpr10_SimKumar4hard",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_SimKumar4hard <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4hard",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredHVG10_SimKumar4hard ------------------------ ##
+df_sce_filteredHVG10_SimKumar4hard <- data.frame(
+  Title = "sce_filteredHVG10_SimKumar4hard",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_SimKumar4hard <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4hard",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+## -------------------- filteredM3Drop10_SimKumar4hard ---------------------- ##
+df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
+  Title = "sce_filteredM3Drop10_SimKumar4hard",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4hard",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar4hard.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredExpr10_SimKumar8hard ----------------------- ##
+df_sce_filteredExpr10_SimKumar8hard <- data.frame(
+  Title = "sce_filteredExpr10_SimKumar8hard",
+  Description = "scRNA-seq of . Select genes by expression level.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredExpr10_SimKumar8hard <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar8hard",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar8hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
+## --------------------- filteredHVG10_SimKumar8hard ------------------------ ##
+df_sce_filteredHVG10_SimKumar8hard <- data.frame(
+  Title = "sce_filteredHVG10_SimKumar8hard",
+  Description = "scRNA-seq of . Select highly variable genes.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_SimKumar8hard <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar8hard",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar8hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
+## -------------------- filteredM3Drop10_SimKumar8hard ---------------------- ##
+df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
+  Title = "sce_filteredM3Drop10_SimKumar8hard",
+  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = "FASTQ",
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "SingleCellExperiment",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar8hard",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar8hard",
+  BiocVersion = "3.7",
+  Genome = "GRCm38",
+  SourceType = NA,
+  SourceUrl = "",
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "",
+  Coordinate_1_based = TRUE,
+  DataProvider = "",
+  Maintainer = "Charlotte Soneson <charlottesoneson@gmail.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "rds",
+  RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar8hard.rds",
+  stringsAsFactors = FALSE
+)
+
 
 ## Combined meta-data
 df_all <- rbind(
@@ -1107,7 +1458,25 @@ df_all <- rbind(
   df_sce_filteredM3Drop10_Zhengmix8eq,
   df_res_filteredExpr10_Zhengmix8eq,
   df_res_filteredHVG10_Zhengmix8eq,
-  df_res_filteredM3Drop10_Zhengmix8eq
+  df_res_filteredM3Drop10_Zhengmix8eq,
+  df_sce_filteredExpr10_SimKumar4easy,
+  df_sce_filteredHVG10_SimKumar4easy,
+  df_sce_filteredM3Drop10_SimKumar4easy,
+  df_res_filteredExpr10_SimKumar4easy,
+  df_res_filteredHVG10_SimKumar4easy,
+  df_res_filteredM3Drop10_SimKumar4easy,
+  df_sce_filteredExpr10_SimKumar4hard,
+  df_sce_filteredHVG10_SimKumar4hard,
+  df_sce_filteredM3Drop10_SimKumar4hard,
+  df_res_filteredExpr10_SimKumar4hard,
+  df_res_filteredHVG10_SimKumar4hard,
+  df_res_filteredM3Drop10_SimKumar4hard,
+  df_sce_filteredExpr10_SimKumar8hard,
+  df_sce_filteredHVG10_SimKumar8hard,
+  df_sce_filteredM3Drop10_SimKumar8hard,
+  df_res_filteredExpr10_SimKumar8hard,
+  df_res_filteredHVG10_SimKumar8hard,
+  df_res_filteredM3Drop10_SimKumar8hard
 )
 
 ## Save .csv file
