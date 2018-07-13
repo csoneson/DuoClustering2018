@@ -1,7 +1,7 @@
 ## -------------------------- filteredExpr10_Koh ---------------------------- ##
 df_sce_filteredExpr10_Koh <- data.frame(
   Title = "sce_filteredExpr10_Koh",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Select genes by expression level.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -40,7 +40,7 @@ df_res_filteredExpr10_Koh <- data.frame(
 ## -------------------------- filteredHVG10_Koh ----------------------------- ##
 df_sce_filteredHVG10_Koh <- data.frame(
   Title = "sce_filteredHVG10_Koh",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Select highly variable genes.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -79,7 +79,7 @@ df_res_filteredHVG10_Koh <- data.frame(
 ## ------------------------- filteredM3Drop10_Koh --------------------------- ##
 df_sce_filteredM3Drop10_Koh <- data.frame(
   Title = "sce_filteredM3Drop10_Koh",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -118,7 +118,7 @@ df_res_filteredM3Drop10_Koh <- data.frame(
 ## ------------------------ filteredExpr10_KohTCC --------------------------- ##
 df_sce_filteredExpr10_KohTCC <- data.frame(
   Title = "sce_filteredExpr10_KohTCC",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Select genes by expression level.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -157,7 +157,7 @@ df_res_filteredExpr10_KohTCC <- data.frame(
 ## ------------------------ filteredHVG10_KohTCC ---------------------------- ##
 df_sce_filteredHVG10_KohTCC <- data.frame(
   Title = "sce_filteredHVG10_KohTCC",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Select highly variable genes.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -196,7 +196,7 @@ df_res_filteredHVG10_KohTCC <- data.frame(
 ## ----------------------- filteredM3Drop10_KohTCC -------------------------- ##
 df_sce_filteredM3Drop10_KohTCC <- data.frame(
   Title = "sce_filteredM3Drop10_KohTCC",
-  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -235,7 +235,7 @@ df_res_filteredM3Drop10_KohTCC <- data.frame(
 ## ------------------------- filteredExpr10_Kumar --------------------------- ##
 df_sce_filteredExpr10_Kumar <- data.frame(
   Title = "sce_filteredExpr10_Kumar",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different medias. Select genes by expression level.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -274,7 +274,7 @@ df_res_filteredExpr10_Kumar <- data.frame(
 ## ------------------------- filteredHVG10_Kumar ---------------------------- ##
 df_sce_filteredHVG10_Kumar <- data.frame(
   Title = "sce_filteredHVG10_Kumar",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. Select highly variable genes.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -313,7 +313,7 @@ df_res_filteredHVG10_Kumar <- data.frame(
 ## ------------------------ filteredM3Drop10_Kumar -------------------------- ##
 df_sce_filteredM3Drop10_Kumar <- data.frame(
   Title = "sce_filteredM3Drop10_Kumar",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -352,7 +352,7 @@ df_res_filteredM3Drop10_Kumar <- data.frame(
 ## ----------------------- filteredExpr10_KumarTCC -------------------------- ##
 df_sce_filteredExpr10_KumarTCC <- data.frame(
   Title = "sce_filteredExpr10_KumarTCC",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. Select genes by expression level.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -391,7 +391,7 @@ df_res_filteredExpr10_KumarTCC <- data.frame(
 ## ----------------------- filteredHVG10_KumarTCC --------------------------- ##
 df_sce_filteredHVG10_KumarTCC <- data.frame(
   Title = "sce_filteredHVG10_KumarTCC",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. Select highly variable genes.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -430,7 +430,7 @@ df_res_filteredHVG10_KumarTCC <- data.frame(
 ## ---------------------- filteredM3Drop10_KumarTCC ------------------------- ##
 df_sce_filteredM3Drop10_KumarTCC <- data.frame(
   Title = "sce_filteredM3Drop10_KumarTCC",
-  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of mESCs with various genetic perturbations, cultured in different media. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "FASTQ",
@@ -469,7 +469,7 @@ df_res_filteredM3Drop10_KumarTCC <- data.frame(
 ## ----------------------- filteredExpr10_Trapnell -------------------------- ##
 df_sce_filteredExpr10_Trapnell <- data.frame(
   Title = "sce_filteredExpr10_Trapnell",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select genes by expression level.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -508,7 +508,7 @@ df_res_filteredExpr10_Trapnell <- data.frame(
 ## ----------------------- filteredHVG10_Trapnell --------------------------- ##
 df_sce_filteredHVG10_Trapnell <- data.frame(
   Title = "sce_filteredHVG10_Trapnell",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select highly variable genes.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -547,7 +547,7 @@ df_res_filteredHVG10_Trapnell <- data.frame(
 ## ---------------------- filteredM3Drop10_Trapnell ------------------------- ##
 df_sce_filteredM3Drop10_Trapnell <- data.frame(
   Title = "sce_filteredM3Drop10_Trapnell",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -586,7 +586,7 @@ df_res_filteredM3Drop10_Trapnell <- data.frame(
 ## --------------------- filteredExpr10_TrapnellTCC ------------------------- ##
 df_sce_filteredExpr10_TrapnellTCC <- data.frame(
   Title = "sce_filteredExpr10_TrapnellTCC",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select genes by expression level.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -625,7 +625,7 @@ df_res_filteredExpr10_TrapnellTCC <- data.frame(
 ## --------------------- filteredHVG10_TrapnellTCC -------------------------- ##
 df_sce_filteredHVG10_TrapnellTCC <- data.frame(
   Title = "sce_filteredHVG10_TrapnellTCC",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Select highly variable genes.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -664,7 +664,7 @@ df_res_filteredHVG10_TrapnellTCC <- data.frame(
 ## -------------------- filteredM3Drop10_TrapnellTCC ------------------------ ##
 df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
   Title = "sce_filteredM3Drop10_TrapnellTCC",
-  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "FASTQ",
@@ -703,7 +703,7 @@ df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
 ## ---------------------- filteredExpr10_Zhengmix4eq ------------------------ ##
 df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix4eq",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -742,7 +742,7 @@ df_res_filteredExpr10_Zhengmix4eq <- data.frame(
 ## ---------------------- filteredHVG10_Zhengmix4eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4eq",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -781,7 +781,7 @@ df_res_filteredHVG10_Zhengmix4eq <- data.frame(
 ## --------------------- filteredM3Drop10_Zhengmix4eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4eq",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -820,7 +820,7 @@ df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
 ## --------------------- filteredExpr10_Zhengmix4uneq ----------------------- ##
 df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix4uneq",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -859,7 +859,7 @@ df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
 ## --------------------- filteredHVG10_Zhengmix4uneq ------------------------ ##
 df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4uneq",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -898,7 +898,7 @@ df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
 ## -------------------- filteredM3Drop10_Zhengmix4uneq ---------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4uneq",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -937,7 +937,7 @@ df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
 ## ---------------------- filteredExpr10_Zhengmix8eq ------------------------ ##
 df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix8eq",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -976,7 +976,7 @@ df_res_filteredExpr10_Zhengmix8eq <- data.frame(
 ## ---------------------- filteredHVG10_Zhengmix8eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix8eq",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1015,7 +1015,7 @@ df_res_filteredHVG10_Zhengmix8eq <- data.frame(
 ## --------------------- filteredM3Drop10_Zhengmix8eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix8eq",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1054,7 +1054,7 @@ df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
 ## --------------------- filteredExpr10_SimKumar4easy ----------------------- ##
 df_sce_filteredExpr10_SimKumar4easy <- data.frame(
   Title = "sce_filteredExpr10_SimKumar4easy",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1093,7 +1093,7 @@ df_res_filteredExpr10_SimKumar4easy <- data.frame(
 ## --------------------- filteredHVG10_SimKumar4easy ------------------------ ##
 df_sce_filteredHVG10_SimKumar4easy <- data.frame(
   Title = "sce_filteredHVG10_SimKumar4easy",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1132,7 +1132,7 @@ df_res_filteredHVG10_SimKumar4easy <- data.frame(
 ## -------------------- filteredM3Drop10_SimKumar4easy ---------------------- ##
 df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
   Title = "sce_filteredM3Drop10_SimKumar4easy",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1171,7 +1171,7 @@ df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
 ## --------------------- filteredExpr10_SimKumar4hard ----------------------- ##
 df_sce_filteredExpr10_SimKumar4hard <- data.frame(
   Title = "sce_filteredExpr10_SimKumar4hard",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1210,7 +1210,7 @@ df_res_filteredExpr10_SimKumar4hard <- data.frame(
 ## --------------------- filteredHVG10_SimKumar4hard ------------------------ ##
 df_sce_filteredHVG10_SimKumar4hard <- data.frame(
   Title = "sce_filteredHVG10_SimKumar4hard",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1249,7 +1249,7 @@ df_res_filteredHVG10_SimKumar4hard <- data.frame(
 ## -------------------- filteredM3Drop10_SimKumar4hard ---------------------- ##
 df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
   Title = "sce_filteredM3Drop10_SimKumar4hard",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1288,7 +1288,7 @@ df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
 ## --------------------- filteredExpr10_SimKumar8hard ----------------------- ##
 df_sce_filteredExpr10_SimKumar8hard <- data.frame(
   Title = "sce_filteredExpr10_SimKumar8hard",
-  Description = "scRNA-seq of . Select genes by expression level.",
+  Description = "scRNA-seq of . The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1327,7 +1327,7 @@ df_res_filteredExpr10_SimKumar8hard <- data.frame(
 ## --------------------- filteredHVG10_SimKumar8hard ------------------------ ##
 df_sce_filteredHVG10_SimKumar8hard <- data.frame(
   Title = "sce_filteredHVG10_SimKumar8hard",
-  Description = "scRNA-seq of . Select highly variable genes.",
+  Description = "scRNA-seq of . The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1366,7 +1366,7 @@ df_res_filteredHVG10_SimKumar8hard <- data.frame(
 ## -------------------- filteredM3Drop10_SimKumar8hard ---------------------- ##
 df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
   Title = "sce_filteredM3Drop10_SimKumar8hard",
-  Description = "scRNA-seq of . Genes selected using the M3Drop package.",
+  Description = "scRNA-seq of . The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
