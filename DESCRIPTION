@@ -4,10 +4,15 @@ Title: Data, Clustering Results and Visualization Functions From Duo et al (2018
 Version: 0.1.0
 Author: Angelo Duo, Charlotte Soneson
 Maintainer: Charlotte Soneson <charlottesoneson@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Preprocessed experimental and simulated scRNA-seq data sets used in 
+    Duo et al (2018). Also contains results from applying several clustering 
+    methods to each of the data sets, and functions for plotting method 
+    performance.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: ExperimentHub,
     utils
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
