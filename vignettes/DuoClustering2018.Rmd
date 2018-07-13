@@ -16,18 +16,35 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r}
+suppressPackageStartupMessages({
+  library(DuoClustering2018)
+  library(SingleCellExperiment)
+})
+```
+
 # Load data
+
+```{r}
+sce <- sce_filteredExpr10_Koh()
+```
 
 # Load clustering results
 
+```{r}
+df <- clustering_summary_filteredExpr10_Koh()
+```
+
 # Plot performance
+
+# Apply a new clustering method
 
 # Session info
 
 ```{r}
-suppressPackageStartupMessages(
+suppressPackageStartupMessages({
   library(devtools)
-)
+})
 devtools::session_info()
 ```
 
