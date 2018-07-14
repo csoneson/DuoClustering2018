@@ -1,6 +1,6 @@
 ## -------------------------- filteredExpr10_Koh ---------------------------- ##
-df_sce_filteredExpr10_Koh <- data.frame(
-  Title = "sce_filteredExpr10_Koh",
+dfSCEFilteredExpr10Koh <- data.frame(
+  Title = "sceFilteredExpr10Koh",
   Description = "Gene counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -18,9 +18,9 @@ df_sce_filteredExpr10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Koh <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Koh",
-  Description = "Clustering results for sce_filteredExpr10_Koh",
+dfResFilteredExpr10Koh <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Koh",
+  Description = "Clustering results for sceFilteredExpr10Koh",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -38,8 +38,8 @@ df_res_filteredExpr10_Koh <- data.frame(
 )
 
 ## -------------------------- filteredHVG10_Koh ----------------------------- ##
-df_sce_filteredHVG10_Koh <- data.frame(
-  Title = "sce_filteredHVG10_Koh",
+dfSCEFilteredHVG10Koh <- data.frame(
+  Title = "sceFilteredHVG10Koh",
   Description = "Gene counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -57,9 +57,9 @@ df_sce_filteredHVG10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Koh <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Koh",
-  Description = "Clustering results for sce_filteredHVG10_Koh",
+dfResFilteredHVG10Koh <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Koh",
+  Description = "Clustering results for sceFilteredHVG10Koh",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -77,8 +77,8 @@ df_res_filteredHVG10_Koh <- data.frame(
 )
 
 ## ------------------------- filteredM3Drop10_Koh --------------------------- ##
-df_sce_filteredM3Drop10_Koh <- data.frame(
-  Title = "sce_filteredM3Drop10_Koh",
+dfSCEFilteredM3Drop10Koh <- data.frame(
+  Title = "sceFilteredM3Drop10Koh",
   Description = "Gene counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -96,9 +96,9 @@ df_sce_filteredM3Drop10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Koh <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Koh",
-  Description = "Clustering results for sce_filteredM3Drop10_Koh",
+dfResFilteredM3Drop10Koh <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Koh",
+  Description = "Clustering results for sceFilteredM3Drop10Koh",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -116,8 +116,8 @@ df_res_filteredM3Drop10_Koh <- data.frame(
 )
 
 ## ------------------------ filteredExpr10_KohTCC --------------------------- ##
-df_sce_filteredExpr10_KohTCC <- data.frame(
-  Title = "sce_filteredExpr10_KohTCC",
+dfSCEFilteredExpr10KohTCC <- data.frame(
+  Title = "sceFilteredExpr10KohTCC",
   Description = "TCC counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -135,9 +135,9 @@ df_sce_filteredExpr10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_KohTCC",
-  Description = "Clustering results for sce_filteredExpr10_KohTCC",
+dfResFilteredExpr10KohTCC <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10KohTCC",
+  Description = "Clustering results for sceFilteredExpr10KohTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -155,8 +155,8 @@ df_res_filteredExpr10_KohTCC <- data.frame(
 )
 
 ## ------------------------ filteredHVG10_KohTCC ---------------------------- ##
-df_sce_filteredHVG10_KohTCC <- data.frame(
-  Title = "sce_filteredHVG10_KohTCC",
+dfSCEFilteredHVG10KohTCC <- data.frame(
+  Title = "sceFilteredHVG10KohTCC",
   Description = "TCC counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -174,9 +174,9 @@ df_sce_filteredHVG10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_KohTCC",
-  Description = "Clustering results for sce_filteredHVG10_KohTCC",
+dfResFilteredHVG10KohTCC <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10KohTCC",
+  Description = "Clustering results for sceFilteredHVG10KohTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -194,8 +194,8 @@ df_res_filteredHVG10_KohTCC <- data.frame(
 )
 
 ## ----------------------- filteredM3Drop10_KohTCC -------------------------- ##
-df_sce_filteredM3Drop10_KohTCC <- data.frame(
-  Title = "sce_filteredM3Drop10_KohTCC",
+dfSCEFilteredM3Drop10KohTCC <- data.frame(
+  Title = "sceFilteredM3Drop10KohTCC",
   Description = "TCC counts for scRNA-seq data set of in vitro cultured H7 embryonic stem cells (WiCell) and H7-derived downstream early mesoderm progenitors. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -213,9 +213,9 @@ df_sce_filteredM3Drop10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_KohTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_KohTCC",
+dfResFilteredM3Drop10KohTCC <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10KohTCC",
+  Description = "Clustering results for sceFilteredM3Drop10KohTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -233,8 +233,8 @@ df_res_filteredM3Drop10_KohTCC <- data.frame(
 )
 
 ## ------------------------- filteredExpr10_Kumar --------------------------- ##
-df_sce_filteredExpr10_Kumar <- data.frame(
-  Title = "sce_filteredExpr10_Kumar",
+dfSCEFilteredExpr10Kumar <- data.frame(
+  Title = "sceFilteredExpr10Kumar",
   Description = "Gene counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -252,9 +252,9 @@ df_sce_filteredExpr10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Kumar",
-  Description = "Clustering results for sce_filteredExpr10_Kumar",
+dfResFilteredExpr10Kumar <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Kumar",
+  Description = "Clustering results for sceFilteredExpr10Kumar",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -272,8 +272,8 @@ df_res_filteredExpr10_Kumar <- data.frame(
 )
 
 ## ------------------------- filteredHVG10_Kumar ---------------------------- ##
-df_sce_filteredHVG10_Kumar <- data.frame(
-  Title = "sce_filteredHVG10_Kumar",
+dfSCEFilteredHVG10Kumar <- data.frame(
+  Title = "sceFilteredHVG10Kumar",
   Description = "Gene counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -291,9 +291,9 @@ df_sce_filteredHVG10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Kumar",
-  Description = "Clustering results for sce_filteredHVG10_Kumar",
+dfResFilteredHVG10Kumar <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Kumar",
+  Description = "Clustering results for sceFilteredHVG10Kumar",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -311,8 +311,8 @@ df_res_filteredHVG10_Kumar <- data.frame(
 )
 
 ## ------------------------ filteredM3Drop10_Kumar -------------------------- ##
-df_sce_filteredM3Drop10_Kumar <- data.frame(
-  Title = "sce_filteredM3Drop10_Kumar",
+dfSCEFilteredM3Drop10Kumar <- data.frame(
+  Title = "sceFilteredM3Drop10Kumar",
   Description = "Gene counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -330,9 +330,9 @@ df_sce_filteredM3Drop10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Kumar",
-  Description = "Clustering results for sce_filteredM3Drop10_Kumar",
+dfResFilteredM3Drop10Kumar <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Kumar",
+  Description = "Clustering results for sceFilteredM3Drop10Kumar",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -350,8 +350,8 @@ df_res_filteredM3Drop10_Kumar <- data.frame(
 )
 
 ## ----------------------- filteredExpr10_KumarTCC -------------------------- ##
-df_sce_filteredExpr10_KumarTCC <- data.frame(
-  Title = "sce_filteredExpr10_KumarTCC",
+dfSCEFilteredExpr10KumarTCC <- data.frame(
+  Title = "sceFilteredExpr10KumarTCC",
   Description = "TCC counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -369,9 +369,9 @@ df_sce_filteredExpr10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_KumarTCC",
-  Description = "Clustering results for sce_filteredExpr10_KumarTCC",
+dfResFilteredExpr10KumarTCC <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10KumarTCC",
+  Description = "Clustering results for sceFilteredExpr10KumarTCC",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -389,8 +389,8 @@ df_res_filteredExpr10_KumarTCC <- data.frame(
 )
 
 ## ----------------------- filteredHVG10_KumarTCC --------------------------- ##
-df_sce_filteredHVG10_KumarTCC <- data.frame(
-  Title = "sce_filteredHVG10_KumarTCC",
+dfSCEFilteredHVG10KumarTCC <- data.frame(
+  Title = "sceFilteredHVG10KumarTCC",
   Description = "TCC counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -408,9 +408,9 @@ df_sce_filteredHVG10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_KumarTCC",
-  Description = "Clustering results for sce_filteredHVG10_KumarTCC",
+dfResFilteredHVG10KumarTCC <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10KumarTCC",
+  Description = "Clustering results for sceFilteredHVG10KumarTCC",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -428,8 +428,8 @@ df_res_filteredHVG10_KumarTCC <- data.frame(
 )
 
 ## ---------------------- filteredM3Drop10_KumarTCC ------------------------- ##
-df_sce_filteredM3Drop10_KumarTCC <- data.frame(
-  Title = "sce_filteredM3Drop10_KumarTCC",
+dfSCEFilteredM3Drop10KumarTCC <- data.frame(
+  Title = "sceFilteredM3Drop10KumarTCC",
   Description = "TCC counts for scRNA-seq data set of mESCs with various genetic perturbations, cultured in different media. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -447,9 +447,9 @@ df_sce_filteredM3Drop10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_KumarTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_KumarTCC",
+dfResFilteredM3Drop10KumarTCC <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10KumarTCC",
+  Description = "Clustering results for sceFilteredM3Drop10KumarTCC",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -467,8 +467,8 @@ df_res_filteredM3Drop10_KumarTCC <- data.frame(
 )
 
 ## ----------------------- filteredExpr10_Trapnell -------------------------- ##
-df_sce_filteredExpr10_Trapnell <- data.frame(
-  Title = "sce_filteredExpr10_Trapnell",
+dfSCEFilteredExpr10Trapnell <- data.frame(
+  Title = "sceFilteredExpr10Trapnell",
   Description = "Gene counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -486,9 +486,9 @@ df_sce_filteredExpr10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Trapnell",
-  Description = "Clustering results for sce_filteredExpr10_Trapnell",
+dfResFilteredExpr10Trapnell <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Trapnell",
+  Description = "Clustering results for sceFilteredExpr10Trapnell",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -506,8 +506,8 @@ df_res_filteredExpr10_Trapnell <- data.frame(
 )
 
 ## ----------------------- filteredHVG10_Trapnell --------------------------- ##
-df_sce_filteredHVG10_Trapnell <- data.frame(
-  Title = "sce_filteredHVG10_Trapnell",
+dfSCEFilteredHVG10Trapnell <- data.frame(
+  Title = "sceFilteredHVG10Trapnell",
   Description = "Gene counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -525,9 +525,9 @@ df_sce_filteredHVG10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Trapnell",
-  Description = "Clustering results for sce_filteredHVG10_Trapnell",
+dfResFilteredHVG10Trapnell <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Trapnell",
+  Description = "Clustering results for sceFilteredHVG10Trapnell",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -545,8 +545,8 @@ df_res_filteredHVG10_Trapnell <- data.frame(
 )
 
 ## ---------------------- filteredM3Drop10_Trapnell ------------------------- ##
-df_sce_filteredM3Drop10_Trapnell <- data.frame(
-  Title = "sce_filteredM3Drop10_Trapnell",
+dfSCEFilteredM3Drop10Trapnell <- data.frame(
+  Title = "sceFilteredM3Drop10Trapnell",
   Description = "Gene counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -564,9 +564,9 @@ df_sce_filteredM3Drop10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Trapnell",
-  Description = "Clustering results for sce_filteredM3Drop10_Trapnell",
+dfResFilteredM3Drop10Trapnell <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Trapnell",
+  Description = "Clustering results for sceFilteredM3Drop10Trapnell",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -584,8 +584,8 @@ df_res_filteredM3Drop10_Trapnell <- data.frame(
 )
 
 ## --------------------- filteredExpr10_TrapnellTCC ------------------------- ##
-df_sce_filteredExpr10_TrapnellTCC <- data.frame(
-  Title = "sce_filteredExpr10_TrapnellTCC",
+dfSCEFilteredExpr10TrapnellTCC <- data.frame(
+  Title = "sceFilteredExpr10TrapnellTCC",
   Description = "TCC counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -603,9 +603,9 @@ df_sce_filteredExpr10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredExpr10_TrapnellTCC",
+dfResFilteredExpr10TrapnellTCC <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10TrapnellTCC",
+  Description = "Clustering results for sceFilteredExpr10TrapnellTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -623,8 +623,8 @@ df_res_filteredExpr10_TrapnellTCC <- data.frame(
 )
 
 ## --------------------- filteredHVG10_TrapnellTCC -------------------------- ##
-df_sce_filteredHVG10_TrapnellTCC <- data.frame(
-  Title = "sce_filteredHVG10_TrapnellTCC",
+dfSCEFilteredHVG10TrapnellTCC <- data.frame(
+  Title = "sceFilteredHVG10TrapnellTCC",
   Description = "TCC counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -642,9 +642,9 @@ df_sce_filteredHVG10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredHVG10_TrapnellTCC",
+dfResFilteredHVG10TrapnellTCC <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10TrapnellTCC",
+  Description = "Clustering results for sceFilteredHVG10TrapnellTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -662,8 +662,8 @@ df_res_filteredHVG10_TrapnellTCC <- data.frame(
 )
 
 ## -------------------- filteredM3Drop10_TrapnellTCC ------------------------ ##
-df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
-  Title = "sce_filteredM3Drop10_TrapnellTCC",
+dfSCEFilteredM3Drop10TrapnellTCC <- data.frame(
+  Title = "sceFilteredM3Drop10TrapnellTCC",
   Description = "TCC counts for scRNA-seq data set of primary myoblasts over a time course of serum-induced differentiation. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCh38",
@@ -681,9 +681,9 @@ df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_TrapnellTCC",
+dfResFilteredM3Drop10TrapnellTCC <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10TrapnellTCC",
+  Description = "Clustering results for sceFilteredM3Drop10TrapnellTCC",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = NA,
@@ -701,8 +701,8 @@ df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
 )
 
 ## ---------------------- filteredExpr10_Zhengmix4eq ------------------------ ##
-df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
-  Title = "sce_filteredExpr10_Zhengmix4eq",
+dfSCEFilteredExpr10Zhengmix4eq <- data.frame(
+  Title = "sceFilteredExpr10Zhengmix4eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -720,9 +720,9 @@ df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix4eq",
+dfResFilteredExpr10Zhengmix4eq <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Zhengmix4eq",
+  Description = "Clustering results for sceFilteredExpr10Zhengmix4eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -740,8 +740,8 @@ df_res_filteredExpr10_Zhengmix4eq <- data.frame(
 )
 
 ## ---------------------- filteredHVG10_Zhengmix4eq ------------------------- ##
-df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
-  Title = "sce_filteredHVG10_Zhengmix4eq",
+dfSCEFilteredHVG10Zhengmix4eq <- data.frame(
+  Title = "sceFilteredHVG10Zhengmix4eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -759,9 +759,9 @@ df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix4eq",
+dfResFilteredHVG10Zhengmix4eq <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Zhengmix4eq",
+  Description = "Clustering results for sceFilteredHVG10Zhengmix4eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -779,8 +779,8 @@ df_res_filteredHVG10_Zhengmix4eq <- data.frame(
 )
 
 ## --------------------- filteredM3Drop10_Zhengmix4eq ----------------------- ##
-df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
-  Title = "sce_filteredM3Drop10_Zhengmix4eq",
+dfSCEFilteredM3Drop10Zhengmix4eq <- data.frame(
+  Title = "sceFilteredM3Drop10Zhengmix4eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -798,9 +798,9 @@ df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4eq",
+dfResFilteredM3Drop10Zhengmix4eq <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Zhengmix4eq",
+  Description = "Clustering results for sceFilteredM3Drop10Zhengmix4eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -818,8 +818,8 @@ df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
 )
 
 ## --------------------- filteredExpr10_Zhengmix4uneq ----------------------- ##
-df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
-  Title = "sce_filteredExpr10_Zhengmix4uneq",
+dfSCEFilteredExpr10Zhengmix4uneq <- data.frame(
+  Title = "sceFilteredExpr10Zhengmix4uneq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -837,9 +837,9 @@ df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix4uneq",
+dfResFilteredExpr10Zhengmix4uneq <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Zhengmix4uneq",
+  Description = "Clustering results for sceFilteredExpr10Zhengmix4uneq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -857,8 +857,8 @@ df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
 )
 
 ## --------------------- filteredHVG10_Zhengmix4uneq ------------------------ ##
-df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
-  Title = "sce_filteredHVG10_Zhengmix4uneq",
+dfSCEFilteredHVG10Zhengmix4uneq <- data.frame(
+  Title = "sceFilteredHVG10Zhengmix4uneq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -876,9 +876,9 @@ df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix4uneq",
+dfResFilteredHVG10Zhengmix4uneq <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Zhengmix4uneq",
+  Description = "Clustering results for sceFilteredHVG10Zhengmix4uneq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -896,8 +896,8 @@ df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
 )
 
 ## -------------------- filteredM3Drop10_Zhengmix4uneq ---------------------- ##
-df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
-  Title = "sce_filteredM3Drop10_Zhengmix4uneq",
+dfSCEFilteredM3Drop10Zhengmix4uneq <- data.frame(
+  Title = "sceFilteredM3Drop10Zhengmix4uneq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -915,9 +915,9 @@ df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4uneq",
+dfResFilteredM3Drop10Zhengmix4uneq <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Zhengmix4uneq",
+  Description = "Clustering results for sceFilteredM3Drop10Zhengmix4uneq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -935,8 +935,8 @@ df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
 )
 
 ## ---------------------- filteredExpr10_Zhengmix8eq ------------------------ ##
-df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
-  Title = "sce_filteredExpr10_Zhengmix8eq",
+dfSCEFilteredExpr10Zhengmix8eq <- data.frame(
+  Title = "sceFilteredExpr10Zhengmix8eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -954,9 +954,9 @@ df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix8eq",
+dfResFilteredExpr10Zhengmix8eq <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10Zhengmix8eq",
+  Description = "Clustering results for sceFilteredExpr10Zhengmix8eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -974,8 +974,8 @@ df_res_filteredExpr10_Zhengmix8eq <- data.frame(
 )
 
 ## ---------------------- filteredHVG10_Zhengmix8eq ------------------------- ##
-df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
-  Title = "sce_filteredHVG10_Zhengmix8eq",
+dfSCEFilteredHVG10Zhengmix8eq <- data.frame(
+  Title = "sceFilteredHVG10Zhengmix8eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -993,9 +993,9 @@ df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix8eq",
+dfResFilteredHVG10Zhengmix8eq <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10Zhengmix8eq",
+  Description = "Clustering results for sceFilteredHVG10Zhengmix8eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -1013,8 +1013,8 @@ df_res_filteredHVG10_Zhengmix8eq <- data.frame(
 )
 
 ## --------------------- filteredM3Drop10_Zhengmix8eq ----------------------- ##
-df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
-  Title = "sce_filteredM3Drop10_Zhengmix8eq",
+dfSCEFilteredM3Drop10Zhengmix8eq <- data.frame(
+  Title = "sceFilteredM3Drop10Zhengmix8eq",
   Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
@@ -1032,9 +1032,9 @@ df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix8eq",
+dfResFilteredM3Drop10Zhengmix8eq <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10Zhengmix8eq",
+  Description = "Clustering results for sceFilteredM3Drop10Zhengmix8eq",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = NA,
@@ -1052,8 +1052,8 @@ df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
 )
 
 ## --------------------- filteredExpr10_SimKumar4easy ----------------------- ##
-df_sce_filteredExpr10_SimKumar4easy <- data.frame(
-  Title = "sce_filteredExpr10_SimKumar4easy",
+dfSCEFilteredExpr10SimKumar4easy <- data.frame(
+  Title = "sceFilteredExpr10SimKumar4easy",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1071,9 +1071,9 @@ df_sce_filteredExpr10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar4easy",
+dfResFilteredExpr10SimKumar4easy <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10SimKumar4easy",
+  Description = "Clustering results for sceFilteredExpr10SimKumar4easy",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1091,8 +1091,8 @@ df_res_filteredExpr10_SimKumar4easy <- data.frame(
 )
 
 ## --------------------- filteredHVG10_SimKumar4easy ------------------------ ##
-df_sce_filteredHVG10_SimKumar4easy <- data.frame(
-  Title = "sce_filteredHVG10_SimKumar4easy",
+dfSCEFilteredHVG10SimKumar4easy <- data.frame(
+  Title = "sceFilteredHVG10SimKumar4easy",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1110,9 +1110,9 @@ df_sce_filteredHVG10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar4easy",
+dfResFilteredHVG10SimKumar4easy <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10SimKumar4easy",
+  Description = "Clustering results for sceFilteredHVG10SimKumar4easy",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1130,8 +1130,8 @@ df_res_filteredHVG10_SimKumar4easy <- data.frame(
 )
 
 ## -------------------- filteredM3Drop10_SimKumar4easy ---------------------- ##
-df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
-  Title = "sce_filteredM3Drop10_SimKumar4easy",
+dfSCEFilteredM3Drop10SimKumar4easy <- data.frame(
+  Title = "sceFilteredM3Drop10SimKumar4easy",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1149,9 +1149,9 @@ df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4easy",
+dfResFilteredM3Drop10SimKumar4easy <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10SimKumar4easy",
+  Description = "Clustering results for sceFilteredM3Drop10SimKumar4easy",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1169,8 +1169,8 @@ df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
 )
 
 ## --------------------- filteredExpr10_SimKumar4hard ----------------------- ##
-df_sce_filteredExpr10_SimKumar4hard <- data.frame(
-  Title = "sce_filteredExpr10_SimKumar4hard",
+dfSCEFilteredExpr10SimKumar4hard <- data.frame(
+  Title = "sceFilteredExpr10SimKumar4hard",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1188,9 +1188,9 @@ df_sce_filteredExpr10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar4hard",
+dfResFilteredExpr10SimKumar4hard <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10SimKumar4hard",
+  Description = "Clustering results for sceFilteredExpr10SimKumar4hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1208,8 +1208,8 @@ df_res_filteredExpr10_SimKumar4hard <- data.frame(
 )
 
 ## --------------------- filteredHVG10_SimKumar4hard ------------------------ ##
-df_sce_filteredHVG10_SimKumar4hard <- data.frame(
-  Title = "sce_filteredHVG10_SimKumar4hard",
+dfSCEFilteredHVG10SimKumar4hard <- data.frame(
+  Title = "sceFilteredHVG10SimKumar4hard",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1227,9 +1227,9 @@ df_sce_filteredHVG10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar4hard",
+dfResFilteredHVG10SimKumar4hard <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10SimKumar4hard",
+  Description = "Clustering results for sceFilteredHVG10SimKumar4hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1247,8 +1247,8 @@ df_res_filteredHVG10_SimKumar4hard <- data.frame(
 )
 
 ## -------------------- filteredM3Drop10_SimKumar4hard ---------------------- ##
-df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
-  Title = "sce_filteredM3Drop10_SimKumar4hard",
+dfSCEFilteredM3Drop10SimKumar4hard <- data.frame(
+  Title = "sceFilteredM3Drop10SimKumar4hard",
   Description = "Gene counts for simulated scRNA-seq data set with four subpopulations. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1266,9 +1266,9 @@ df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4hard",
+dfResFilteredM3Drop10SimKumar4hard <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10SimKumar4hard",
+  Description = "Clustering results for sceFilteredM3Drop10SimKumar4hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1286,8 +1286,8 @@ df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
 )
 
 ## --------------------- filteredExpr10_SimKumar8hard ----------------------- ##
-df_sce_filteredExpr10_SimKumar8hard <- data.frame(
-  Title = "sce_filteredExpr10_SimKumar8hard",
+dfSCEFilteredExpr10SimKumar8hard <- data.frame(
+  Title = "sceFilteredExpr10SimKumar8hard",
   Description = "Gene counts for simulated scRNA-seq data set with eight subpopulations. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1305,9 +1305,9 @@ df_sce_filteredExpr10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar8hard",
+dfResFilteredExpr10SimKumar8hard <- data.frame(
+  Title = "clusteringSummaryFilteredExpr10SimKumar8hard",
+  Description = "Clustering results for sceFilteredExpr10SimKumar8hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1325,8 +1325,8 @@ df_res_filteredExpr10_SimKumar8hard <- data.frame(
 )
 
 ## --------------------- filteredHVG10_SimKumar8hard ------------------------ ##
-df_sce_filteredHVG10_SimKumar8hard <- data.frame(
-  Title = "sce_filteredHVG10_SimKumar8hard",
+dfSCEFilteredHVG10SimKumar8hard <- data.frame(
+  Title = "sceFilteredHVG10SimKumar8hard",
   Description = "Gene counts for simulated scRNA-seq data set with eight subpopulations. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1344,9 +1344,9 @@ df_sce_filteredHVG10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar8hard",
+dfResFilteredHVG10SimKumar8hard <- data.frame(
+  Title = "clusteringSummaryFilteredHVG10SimKumar8hard",
+  Description = "Clustering results for sceFilteredHVG10SimKumar8hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1364,8 +1364,8 @@ df_res_filteredHVG10_SimKumar8hard <- data.frame(
 )
 
 ## -------------------- filteredM3Drop10_SimKumar8hard ---------------------- ##
-df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
-  Title = "sce_filteredM3Drop10_SimKumar8hard",
+dfSCEFilteredM3Drop10SimKumar8hard <- data.frame(
+  Title = "sceFilteredM3Drop10SimKumar8hard",
   Description = "Gene counts for simulated scRNA-seq data set with eight subpopulations. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "GRCm38",
@@ -1383,9 +1383,9 @@ df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar8hard",
+dfResFilteredM3Drop10SimKumar8hard <- data.frame(
+  Title = "clusteringSummaryFilteredM3Drop10SimKumar8hard",
+  Description = "Clustering results for sceFilteredM3Drop10SimKumar8hard",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = NA,
@@ -1404,78 +1404,78 @@ df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
 
 ## Combined meta-data
 df_all <- rbind(
-  df_sce_filteredExpr10_Koh,
-  df_sce_filteredHVG10_Koh,
-  df_sce_filteredM3Drop10_Koh,
-  df_sce_filteredExpr10_KohTCC,
-  df_sce_filteredHVG10_KohTCC,
-  df_sce_filteredM3Drop10_KohTCC,
-  df_sce_filteredExpr10_Kumar,
-  df_sce_filteredHVG10_Kumar,
-  df_sce_filteredM3Drop10_Kumar,
-  df_sce_filteredExpr10_KumarTCC,
-  df_sce_filteredHVG10_KumarTCC,
-  df_sce_filteredM3Drop10_KumarTCC,
-  df_sce_filteredExpr10_Trapnell,
-  df_sce_filteredHVG10_Trapnell,
-  df_sce_filteredM3Drop10_Trapnell,
-  df_sce_filteredExpr10_TrapnellTCC,
-  df_sce_filteredHVG10_TrapnellTCC,
-  df_sce_filteredM3Drop10_TrapnellTCC,
-  df_sce_filteredExpr10_Zhengmix4eq,
-  df_sce_filteredHVG10_Zhengmix4eq,
-  df_sce_filteredM3Drop10_Zhengmix4eq,
-  df_sce_filteredExpr10_Zhengmix4uneq,
-  df_sce_filteredHVG10_Zhengmix4uneq,
-  df_sce_filteredM3Drop10_Zhengmix4uneq,
-  df_sce_filteredExpr10_Zhengmix8eq,
-  df_sce_filteredHVG10_Zhengmix8eq,
-  df_sce_filteredM3Drop10_Zhengmix8eq,
-  df_sce_filteredExpr10_SimKumar4easy,
-  df_sce_filteredHVG10_SimKumar4easy,
-  df_sce_filteredM3Drop10_SimKumar4easy,
-  df_sce_filteredExpr10_SimKumar4hard,
-  df_sce_filteredHVG10_SimKumar4hard,
-  df_sce_filteredM3Drop10_SimKumar4hard,
-  df_sce_filteredExpr10_SimKumar8hard,
-  df_sce_filteredHVG10_SimKumar8hard,
-  df_sce_filteredM3Drop10_SimKumar8hard,
-  df_res_filteredExpr10_Koh,
-  df_res_filteredHVG10_Koh,
-  df_res_filteredM3Drop10_Koh,
-  df_res_filteredExpr10_KohTCC,
-  df_res_filteredHVG10_KohTCC,
-  df_res_filteredM3Drop10_KohTCC,
-  df_res_filteredExpr10_Kumar,
-  df_res_filteredHVG10_Kumar,
-  df_res_filteredM3Drop10_Kumar,
-  df_res_filteredExpr10_KumarTCC,
-  df_res_filteredHVG10_KumarTCC,
-  df_res_filteredM3Drop10_KumarTCC,
-  df_res_filteredExpr10_Trapnell,
-  df_res_filteredHVG10_Trapnell,
-  df_res_filteredM3Drop10_Trapnell,
-  df_res_filteredExpr10_TrapnellTCC,
-  df_res_filteredHVG10_TrapnellTCC,
-  df_res_filteredM3Drop10_TrapnellTCC,
-  df_res_filteredExpr10_Zhengmix4eq,
-  df_res_filteredHVG10_Zhengmix4eq,
-  df_res_filteredM3Drop10_Zhengmix4eq,
-  df_res_filteredExpr10_Zhengmix4uneq,
-  df_res_filteredHVG10_Zhengmix4uneq,
-  df_res_filteredM3Drop10_Zhengmix4uneq,
-  df_res_filteredExpr10_Zhengmix8eq,
-  df_res_filteredHVG10_Zhengmix8eq,
-  df_res_filteredM3Drop10_Zhengmix8eq,
-  df_res_filteredExpr10_SimKumar4easy,
-  df_res_filteredHVG10_SimKumar4easy,
-  df_res_filteredM3Drop10_SimKumar4easy,
-  df_res_filteredExpr10_SimKumar4hard,
-  df_res_filteredHVG10_SimKumar4hard,
-  df_res_filteredM3Drop10_SimKumar4hard,
-  df_res_filteredExpr10_SimKumar8hard,
-  df_res_filteredHVG10_SimKumar8hard,
-  df_res_filteredM3Drop10_SimKumar8hard
+  dfSCEFilteredExpr10Koh,
+  dfSCEFilteredHVG10Koh,
+  dfSCEFilteredM3Drop10Koh,
+  dfSCEFilteredExpr10KohTCC,
+  dfSCEFilteredHVG10KohTCC,
+  dfSCEFilteredM3Drop10KohTCC,
+  dfSCEFilteredExpr10Kumar,
+  dfSCEFilteredHVG10Kumar,
+  dfSCEFilteredM3Drop10Kumar,
+  dfSCEFilteredExpr10KumarTCC,
+  dfSCEFilteredHVG10KumarTCC,
+  dfSCEFilteredM3Drop10KumarTCC,
+  dfSCEFilteredExpr10Trapnell,
+  dfSCEFilteredHVG10Trapnell,
+  dfSCEFilteredM3Drop10Trapnell,
+  dfSCEFilteredExpr10TrapnellTCC,
+  dfSCEFilteredHVG10TrapnellTCC,
+  dfSCEFilteredM3Drop10TrapnellTCC,
+  dfSCEFilteredExpr10Zhengmix4eq,
+  dfSCEFilteredHVG10Zhengmix4eq,
+  dfSCEFilteredM3Drop10Zhengmix4eq,
+  dfSCEFilteredExpr10Zhengmix4uneq,
+  dfSCEFilteredHVG10Zhengmix4uneq,
+  dfSCEFilteredM3Drop10Zhengmix4uneq,
+  dfSCEFilteredExpr10Zhengmix8eq,
+  dfSCEFilteredHVG10Zhengmix8eq,
+  dfSCEFilteredM3Drop10Zhengmix8eq,
+  dfSCEFilteredExpr10SimKumar4easy,
+  dfSCEFilteredHVG10SimKumar4easy,
+  dfSCEFilteredM3Drop10SimKumar4easy,
+  dfSCEFilteredExpr10SimKumar4hard,
+  dfSCEFilteredHVG10SimKumar4hard,
+  dfSCEFilteredM3Drop10SimKumar4hard,
+  dfSCEFilteredExpr10SimKumar8hard,
+  dfSCEFilteredHVG10SimKumar8hard,
+  dfSCEFilteredM3Drop10SimKumar8hard,
+  dfResFilteredExpr10Koh,
+  dfResFilteredHVG10Koh,
+  dfResFilteredM3Drop10Koh,
+  dfResFilteredExpr10KohTCC,
+  dfResFilteredHVG10KohTCC,
+  dfResFilteredM3Drop10KohTCC,
+  dfResFilteredExpr10Kumar,
+  dfResFilteredHVG10Kumar,
+  dfResFilteredM3Drop10Kumar,
+  dfResFilteredExpr10KumarTCC,
+  dfResFilteredHVG10KumarTCC,
+  dfResFilteredM3Drop10KumarTCC,
+  dfResFilteredExpr10Trapnell,
+  dfResFilteredHVG10Trapnell,
+  dfResFilteredM3Drop10Trapnell,
+  dfResFilteredExpr10TrapnellTCC,
+  dfResFilteredHVG10TrapnellTCC,
+  dfResFilteredM3Drop10TrapnellTCC,
+  dfResFilteredExpr10Zhengmix4eq,
+  dfResFilteredHVG10Zhengmix4eq,
+  dfResFilteredM3Drop10Zhengmix4eq,
+  dfResFilteredExpr10Zhengmix4uneq,
+  dfResFilteredHVG10Zhengmix4uneq,
+  dfResFilteredM3Drop10Zhengmix4uneq,
+  dfResFilteredExpr10Zhengmix8eq,
+  dfResFilteredHVG10Zhengmix8eq,
+  dfResFilteredM3Drop10Zhengmix8eq,
+  dfResFilteredExpr10SimKumar4easy,
+  dfResFilteredHVG10SimKumar4easy,
+  dfResFilteredM3Drop10SimKumar4easy,
+  dfResFilteredExpr10SimKumar4hard,
+  dfResFilteredHVG10SimKumar4hard,
+  dfResFilteredM3Drop10SimKumar4hard,
+  dfResFilteredExpr10SimKumar8hard,
+  dfResFilteredHVG10SimKumar8hard,
+  dfResFilteredM3Drop10SimKumar8hard
 )
 
 ## Save .csv file

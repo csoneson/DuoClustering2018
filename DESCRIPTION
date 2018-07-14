@@ -22,5 +22,6 @@ Imports: ExperimentHub,
     reshape2,
     viridis
 Suggests: knitr,
-    rmarkdown
+    rmarkdown,
+    BiocStyle
 VignetteBuilder: knitr
