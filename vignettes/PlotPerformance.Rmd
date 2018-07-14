@@ -1,0 +1,96 @@
+---
+title: "Plot performance summaries"
+author: 
+- name: Charlotte Soneson
+- name: Angelo Duo
+date: "`r Sys.Date()`"
+package: DuoClustering2018
+output:
+  BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{Plot performance summaries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Load the package
+
+```{r}
+suppressPackageStartupMessages({
+  library(DuoClustering2018)
+  library(plyr)
+})
+```
+
+# Read a set of clustering results
+
+```{r}
+res <- plyr::rbind.fill(
+  clusteringSummaryFilteredExpr10Koh(),
+  clusteringSummaryFilteredHVG10Koh(),
+  clusteringSummaryFilteredExpr10Zhengmix4eq(),
+  clusteringSummaryFilteredHVG10Zhengmix4eq()
+)
+```
+
+# Define consistent method colors
+
+```{r}
+methodColors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE", 
+                  PCAKmeans = "#44AA99", pcaReduce = "#117733",
+                  RtsneKmeans = "#999933", Seurat = "#DDCC77", SC3svm = "#661100",
+                  SC3 = "#CC6677", TSCAN = "grey34",  ascend = "orange", SAFE = "black")
+```
+
+# Plot
+
+## Performance
+
+```{r}
+perf <- plotPerformance(res, methodColors = methodColors)
+names(perf)
+```
+
+## Stability
+
+```{r}
+stab <- plotStability(res, methodColors = methodColors)
+names(stab)
+```
+
+## Entropy
+
+```{r}
+entr <- plotEntropy(res, methodColors = methodColors)
+names(entr)
+```
+
+## Timing
+
+```{r}
+timing <- plotTiming(res, methodColors = methodColors, scaleMethod = "RtsneKmeans")
+names(timing)
+```
+
+## Differences in k
+
+```{r}
+kdiff <- plotKDiff(res, methodColors = methodColors)
+names(kdiff)
+```
+
+# Session info
+
+```{r}
+sessionInfo()
+```
+
