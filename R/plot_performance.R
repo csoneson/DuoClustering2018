@@ -4,7 +4,7 @@
 #' partitioning of the cells, quantified by the adjusted Rand index (ARI).
 #'
 #' @param res A data.frame with clustering results.
-#' @param methodColors A named vector with colors to use for the different
+#' @param method_colors A named vector with colors to use for the different
 #'   clustering methods. Can be NULL, in which case colors are chosen
 #'   automatically.
 #'
@@ -24,19 +24,19 @@
 #'
 #' @examples
 #'
-plotPerformance <- function(res, methodColors = NULL) {
+plot_performance <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots
   plots <- list()
 
-  if (is.null(methodColors)) {
-    manualScale <- ggplot2::scale_colour_discrete(name = "")
+  if (is.null(method_colors)) {
+    manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manualScale <- ggplot2::scale_colour_manual(name = "", values = methodColors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
   }
 
-  sharedTheme <- list(
+  shared_theme <- list(
     ggplot2::theme_bw(),
-    manualScale,
+    manual_scale,
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
@@ -45,7 +45,7 @@ plotPerformance <- function(res, methodColors = NULL) {
                    strip.text = ggplot2::element_text(size = 13))
   )
 
-  sharedThemeHeatmap <- list(
+  shared_theme_heatmap <- list(
     ggplot2::geom_tile(color = "white", size = 0.5, na.rm = FALSE),
     ggplot2::facet_wrap(~ filtering),
     viridis::scale_fill_viridis(name = "Median ARI", direction = -1, na.value = "white"),
@@ -82,7 +82,7 @@ plotPerformance <- function(res, methodColors = NULL) {
                                        truenclust = unique(truenclust)) %>%
                       dplyr::ungroup(),
                     ggplot2::aes(x = k, y = medianARI, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_vline(aes(xintercept = truenclust), linetype = "dashed") +
     ggplot2::geom_line(size = 1) +
     ggplot2::facet_grid(filtering ~ dataset, scales = "free_x") +
@@ -93,7 +93,7 @@ plotPerformance <- function(res, methodColors = NULL) {
   plots[["scatter_time_vs_ari_truek"]] <-
     ggplot2::ggplot(res_summary %>% dplyr::filter(k == truenclust),
                     ggplot2::aes(x = ARI, y = elapsed, color = method, shape = filtering)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_point(size = 6, alpha = 0.8) +
     ggplot2::scale_y_log10() +
     ggplot2::facet_wrap(~ dataset, scales = "free") +
@@ -110,7 +110,7 @@ plotPerformance <- function(res, methodColors = NULL) {
                     ggplot2::aes(x = stats::reorder(method, medianARI, FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, medianARI, FUN = mean, na.rm = TRUE),
                                  fill = medianARI)) +
-    sharedThemeHeatmap +
+    shared_theme_heatmap +
     ggplot2::ggtitle("Median ARI, true number of clusters")
 
   ## Heatmap of median ARI at k giving best performance
@@ -135,7 +135,7 @@ plotPerformance <- function(res, methodColors = NULL) {
                     ggplot2::aes(x = stats::reorder(method, medianARI, FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, medianARI, FUN = mean, na.rm = TRUE),
                                  fill = medianARI)) +
-    sharedThemeHeatmap +
+    shared_theme_heatmap +
     ggplot2::ggtitle("Median ARI, estimated number of clusters")
 
   plots

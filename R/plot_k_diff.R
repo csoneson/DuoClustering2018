@@ -1,7 +1,7 @@
 #' Plot differences between optimal, estimated and true number of clusters
 #'
 #' @param res A data.frame with clustering results.
-#' @param methodColors A named vector with colors to use for the different
+#' @param method_colors A named vector with colors to use for the different
 #'   clustering methods. Can be NULL, in which case colors are chosen
 #'   automatically.
 #'
@@ -20,19 +20,19 @@
 #'
 #' @examples
 #'
-plotKDiff <- function(res, methodColors = NULL) {
+plot_k_diff <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots
   plots <- list()
 
-  if (is.null(methodColors)) {
-    manualScale <- ggplot2::scale_colour_discrete(name = "")
+  if (is.null(method_colors)) {
+    manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manualScale <- ggplot2::scale_colour_manual(name = "", values = methodColors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
   }
 
-  sharedTheme <- list(
+  shared_theme <- list(
     ggplot2::theme_bw(),
-    manualScale,
+    manual_scale,
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
@@ -67,7 +67,7 @@ plotKDiff <- function(res, methodColors = NULL) {
   plots[["diff_kmax_ktrue"]] <-
     ggplot2::ggplot(diff_abs,
                     ggplot2::aes(x = method, y = k_diff, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::labs(y = "Difference between number of clusters giving \nmaximal ARI and true number of clusters",
                   x = "", title = "") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
@@ -83,7 +83,7 @@ plotKDiff <- function(res, methodColors = NULL) {
   plots[["diff_kest_ktrue"]] <-
     ggplot2::ggplot(na.omit(diff_estnclust),
                     ggplot2::aes(x = method, y = k_diff, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::labs(y = "Difference between estimated and true number of clusters", x = "", title = "") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
 

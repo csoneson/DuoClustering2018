@@ -23,7 +23,7 @@ ARIdf <- function(x) {
 #' Plot the stability of the clusterings obtained for each method
 #'
 #' @param res A data.frame with clustering results.
-#' @param methodColors A named vector with colors to use for the different
+#' @param method_colors A named vector with colors to use for the different
 #'   clustering methods. Can be NULL, in which case colors are chosen
 #'   automatically.
 #'
@@ -44,19 +44,19 @@ ARIdf <- function(x) {
 #'
 #' @examples
 #'
-plotStability <- function(res, met hodColors = NULL) {
+plot_stability <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots
   plots <- list()
 
-  if (is.null(methodColors)) {
-    manualScale <- ggplot2::scale_colour_discrete(name = "")
+  if (is.null(method_colors)) {
+    manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manualScale <- ggplot2::scale_colour_manual(name = "", values = methodColors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
   }
 
-  sharedTheme <- list(
+  shared_theme <- list(
     ggplot2::theme_bw(),
-    manualScale,
+    manual_scale,
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
@@ -101,7 +101,7 @@ plotStability <- function(res, met hodColors = NULL) {
                       dplyr::group_by(dataset, method, filtering, k, truenclust) %>%
                       dplyr::summarize(ari.stab = median(ari.stab, na.rm = TRUE)),
                     ggplot2::aes(x = k, y = ari.stab, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_vline(aes(xintercept = truenclust), linetype = "dashed") +
     ggplot2::geom_line(size = 1) +
     ggplot2::labs(y = "Stability (ARI)", x = "Number of clusters") +
@@ -111,7 +111,7 @@ plotStability <- function(res, met hodColors = NULL) {
   plots[["stability_truek"]] <-
     ggplot2::ggplot(res_stab %>% dplyr::filter(k == truenclust),
                     ggplot2::aes(x = method, y = ari.stab, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_boxplot() +
     ggplot2::labs(y = "Stability (ARI) at true number of clusters") +
     ggplot2::theme(axis.text.x = element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))

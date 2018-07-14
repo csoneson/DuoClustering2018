@@ -3,7 +3,7 @@
 #' Plot the elapsed time for each clustering method
 #'
 #' @param res A data.frame with clustering results.
-#' @param methodColors A named vector with colors to use for the different
+#' @param method_colors A named vector with colors to use for the different
 #'   clustering methods. Can be NULL, in which case colors are chosen
 #'   automatically.
 #' @param scaleMethod Either NULL or one of the clustering methods in the result
@@ -26,20 +26,20 @@
 #'
 #' @examples
 #'
-plotTiming <- function(res, methodColors = NULL, scaleMethod = NULL) {
+plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   ## Initialize list to hold plots
   plots <- list()
 
-  if (is.null(methodColors)) {
-    manualScale <- ggplot2::scale_colour_discrete(name = "")
+  if (is.null(method_colors)) {
+    manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manualScale <- ggplot2::scale_colour_manual(name = "", values = methodColors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
   }
 
-  sharedTheme <- list(
+  shared_theme <- list(
     ggplot2::scale_y_log10(),
     ggplot2::theme_bw(),
-    manualScale,
+    manual_scale,
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
@@ -64,7 +64,7 @@ plotTiming <- function(res, methodColors = NULL, scaleMethod = NULL) {
     ggplot2::ggplot(res_summary,
                     ggplot2::aes(x = reorder(method, elapsed, FUN = median, order = TRUE, na.rm = TRUE),
                                  y = elapsed, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_boxplot() +
     ggplot2::facet_grid(filtering ~ dataset, scales = "free") +
     ggplot2::labs(title = "", x = "", y = "Elapsed time (s)") +
@@ -89,7 +89,7 @@ plotTiming <- function(res, methodColors = NULL, scaleMethod = NULL) {
       ggplot2::ggplot(res.time,
                       ggplot2::aes(x = reorder(method, norm.time, FUN = median, order = TRUE, na.rm = TRUE),
                                    y = norm.time, group = method, color = method)) +
-      sharedTheme +
+      shared_theme +
       ggplot2::geom_boxplot() +
       ggplot2::labs(x = "", y = paste0("Run time, normalized by ", scaleMethod), size = 16)+
       ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, vjust = 0.5, hjust = 1),
@@ -101,7 +101,7 @@ plotTiming <- function(res, methodColors = NULL, scaleMethod = NULL) {
                       dplyr::summarize(medianelapsed = median(elapsed)) %>%
                       dplyr::ungroup(),
                     ggplot2::aes(x = k, y = medianelapsed, group = method, color = method)) +
-    sharedTheme +
+    shared_theme +
     ggplot2::geom_line(size = 1) +
     ggplot2::facet_grid(filtering ~ dataset, scales = "free") +
     ggplot2::labs(title = "", y = "Elapsed time (s)", x = "Number of clusters") +

@@ -35,20 +35,20 @@ suppressPackageStartupMessages({
 
 ```{r}
 res <- plyr::rbind.fill(
-  clusteringSummaryFilteredExpr10Koh(),
-  clusteringSummaryFilteredHVG10Koh(),
-  clusteringSummaryFilteredExpr10Zhengmix4eq(),
-  clusteringSummaryFilteredHVG10Zhengmix4eq()
+  clustering_summary_filteredExpr10_Koh(),
+  clustering_summary_filteredHVG10_Koh(),
+  clustering_summary_filteredExpr10_Zhengmix4eq(),
+  clustering_summary_filteredHVG10_Zhengmix4eq()
 )
 ```
 
 # Define consistent method colors
 
 ```{r}
-methodColors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE", 
-                  PCAKmeans = "#44AA99", pcaReduce = "#117733",
-                  RtsneKmeans = "#999933", Seurat = "#DDCC77", SC3svm = "#661100",
-                  SC3 = "#CC6677", TSCAN = "grey34",  ascend = "orange", SAFE = "black")
+method_colors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE", 
+                   PCAKmeans = "#44AA99", pcaReduce = "#117733",
+                   RtsneKmeans = "#999933", Seurat = "#DDCC77", SC3svm = "#661100",
+                   SC3 = "#CC6677", TSCAN = "grey34",  ascend = "orange", SAFE = "black")
 ```
 
 # Plot
@@ -56,35 +56,35 @@ methodColors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE",
 ## Performance
 
 ```{r}
-perf <- plotPerformance(res, methodColors = methodColors)
+perf <- plot_performance(res, method_colors = method_colors)
 names(perf)
 ```
 
 ## Stability
 
 ```{r}
-stab <- plotStability(res, methodColors = methodColors)
+stab <- plot_stability(res, method_colors = method_colors)
 names(stab)
 ```
 
 ## Entropy
 
 ```{r}
-entr <- plotEntropy(res, methodColors = methodColors)
+entr <- plot_entropy(res, method_colors = method_colors)
 names(entr)
 ```
 
 ## Timing
 
 ```{r}
-timing <- plotTiming(res, methodColors = methodColors, scaleMethod = "RtsneKmeans")
+timing <- plot_timing(res, method_colors = method_colors, scaleMethod = "RtsneKmeans")
 names(timing)
 ```
 
 ## Differences in k
 
 ```{r}
-kdiff <- plotKDiff(res, methodColors = methodColors)
+kdiff <- plot_k_diff(res, method_colors = method_colors)
 names(kdiff)
 ```
 
