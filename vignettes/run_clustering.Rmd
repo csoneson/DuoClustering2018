@@ -15,7 +15,28 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r}
+This vignette describes how each of the included clustering methods was applied
+to the collection of data sets in order to generate the clustering result
+summaries provided with the package. In order to apply a new clustering
+algorithm to one of the data sets using the same framework, you need to generate
+a function consistent with the included `apply_*()` functions (see e.g.
+`?apply_PCAHC`. The input arguments to this function should be:
+
+- a `SingleCellExperiment` object
+- a list of parameter values (can be empty, if no parameters are used for the method)
+- the desired number of clusters (k). 
+
+The function should return a list with three elements:
+
+- `st` - a vector with the timing information. Should have five elements, named `user.self`, `sys.self`, `user.child`, `sys.child` and `elapsed`.
+- `cluster` - a named vector of cluster assignments.
+- `est_k` - the number of clusters estimated by the method (if available, otherwise `NA`).
+
+If the method does not allow specification of the desired number of clusters,
+but has another parameter affecting the resolution, this can be accommodated as
+well (see the solution for `Seurat` in the code below).
+
+```{r, eval = FALSE}
 suppressPackageStartupMessages({
   library(DuoClustering2018)
 })
@@ -29,7 +50,7 @@ method <- "PCAHC"
 ```{r, eval = FALSE}
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
-params <- list()
+params <- all_parameter_settings()[[paste0(scename, "_", method)]]
 
 ## Set number of times to run clustering for each k
 n_rep <- 5
@@ -128,10 +149,20 @@ truth <- data.frame(cell = as.character(rownames(colData(sce))),
                     stringsAsFactors = FALSE)
 assignments$trueclass <- truth$trueclass[match(assignments$cell, truth$cell)]
 
-## Save results
+## Combine results
 res <- list(assignments = assignments, timings = timings,
             k_estimates = k_estimates)
+
+df <- dplyr::full_join(res$assignments %>%
+                         dplyr::select(dataset, method, cell, run, k, 
+                                       resolution, cluster, trueclass),
+                       res$k_estimates %>%
+                         dplyr::select(dataset, method, run, k, resolution, est_k)
+) %>% dplyr::full_join(res$timings %>% dplyr::select(dataset, method, run, k,
+                                                     resolution, elapsed))
 ```
+
+The `df` data frames can then be combined across data sets, filterings and methods.  
 
 # Session info
 
