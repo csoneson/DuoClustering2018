@@ -2,11 +2,6 @@
 #'
 #' @import FlowSOM
 #'
-suppressPackageStartupMessages({
-  library(flowCore)
-  library(FlowSOM)
-})
-
 apply_FlowSOM <- function(sce, params, k) {
   tryCatch({
     dat <- logcounts(sce)

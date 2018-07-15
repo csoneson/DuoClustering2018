@@ -14,7 +14,8 @@
 #' @importFrom tidyr separate
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom ggplot2 scale_colour_manual theme element_text facet_wrap
-#'   geom_boxplot geom_dotplot aes labs ggplot geom_hline
+#'   geom_boxplot geom_dotplot aes labs ggplot geom_hline scale_colour_discrete
+#'   theme_bw
 #'
 #' @return A named list of ggplot2 objects
 #'
