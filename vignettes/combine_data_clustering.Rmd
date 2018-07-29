@@ -1,0 +1,81 @@
+---
+title: "Visualize with `iSEE`"
+author: 
+- name: Charlotte Soneson
+- name: Angelo Duo
+date: "`r Sys.Date()`"
+package: DuoClustering2018
+output:
+  BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{Plot performance summaries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+editor_options: 
+  chunk_output_type: console
+---
+
+In this vignette we describe how to generate a `SingleCellExperiment` object combining observed values and clustering results for a data set from the `DuoClustering2018` package. 
+
+# Load the package
+
+```{r}
+suppressPackageStartupMessages({
+  library(SingleCellExperiment)
+  library(DuoClustering2018)
+  library(dplyr)
+  library(tidyr)
+})
+```
+
+# Retrieve a data set
+
+The different ways of retrieving a data set from the package are described in the `plot_performance` vignette. Here, we will load a data set using the shortcut functions provided in the package. 
+
+```{r}
+dat <- sce_filteredExpr10_Koh()
+```
+
+# Read a set of clustering results
+
+For this data set, we also load a set of clustering results obtained using different clustering methods. 
+
+```{r}
+res <- clustering_summary_filteredExpr10_Koh()
+```
+
+# Merge data and clustering results
+
+We add the cluster labels for one run and for a set of different imposed number of clusters to the data set.
+
+```{r}
+res <- res %>% dplyr::filter(run == 1 & k %in% c(3, 5, 9)) %>%
+  dplyr::group_by(method, k) %>% 
+  dplyr::filter(is.na(resolution) | resolution == resolution[1]) %>%
+  dplyr::ungroup() %>% 
+  tidyr::unite(col = method_k, method, k, sep = "_", remove = TRUE) %>% 
+  dplyr::select(cell, method_k, cluster) %>%
+  tidyr::spread(key = method_k, value = cluster)
+
+colData(dat) <- DataFrame(
+  as.data.frame(colData(dat)) %>% 
+    dplyr::left_join(res, by = c("Run" = "cell"))
+)
+```
+
+# Visualize with `iSEE`
+
+The resulting `SingleCellExperiment` can be interactively explored using, e.g., the `iSEE` package. This can be useful to gain additional understanding of the partitions inferred by the different clustering methods, to visualize these in low-dimensional representations (PCA or t-SNE), and to investigate how well they agree with known or inferred groupings of the cells. 
+
+```{r}
+if (require(iSEE)) {
+  iSEE(dat)
+}
+```
+
+# Session info
+
+```{r}
+sessionInfo()
+```
+

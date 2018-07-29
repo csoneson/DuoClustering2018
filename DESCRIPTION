@@ -39,7 +39,8 @@ Suggests: knitr,
     clue,
     pcaReduce,
     scater,
-    TSCAN
+    TSCAN,
+    iSEE
 VignetteBuilder: knitr
 Remotes: VCCRI/CIDR,
     IMB-Computational-Genomics-Lab/ascend,
