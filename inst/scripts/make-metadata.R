@@ -10,10 +10,10 @@ df_all_parameter_values <- data.frame(
   Species = NA,
   TaxonomyId = NA,
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "list",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/all_parameter_values.rds",
   stringsAsFactors = FALSE
 )
@@ -33,7 +33,7 @@ df_sce_full_Koh <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -53,7 +53,7 @@ df_sce_filteredExpr10_Koh <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -69,10 +69,10 @@ df_res_filteredExpr10_Koh <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -92,7 +92,7 @@ df_sce_filteredHVG10_Koh <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -108,10 +108,10 @@ df_res_filteredHVG10_Koh <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -131,7 +131,7 @@ df_sce_filteredM3Drop10_Koh <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -147,10 +147,10 @@ df_res_filteredM3Drop10_Koh <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Koh.rds",
   stringsAsFactors = FALSE
 )
@@ -170,7 +170,7 @@ df_sce_full_KohTCC <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -190,7 +190,7 @@ df_sce_filteredExpr10_KohTCC <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -206,10 +206,10 @@ df_res_filteredExpr10_KohTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -229,7 +229,7 @@ df_sce_filteredHVG10_KohTCC <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -245,10 +245,10 @@ df_res_filteredHVG10_KohTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -268,7 +268,7 @@ df_sce_filteredM3Drop10_KohTCC <- data.frame(
   DataProvider = "SRA (SRP073808), Koh et al. (2016)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -284,10 +284,10 @@ df_res_filteredM3Drop10_KohTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_KohTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -307,7 +307,7 @@ df_sce_full_Kumar <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -327,7 +327,7 @@ df_sce_filteredExpr10_Kumar <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -343,10 +343,10 @@ df_res_filteredExpr10_Kumar <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -366,7 +366,7 @@ df_sce_filteredHVG10_Kumar <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -382,10 +382,10 @@ df_res_filteredHVG10_Kumar <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -405,7 +405,7 @@ df_sce_filteredM3Drop10_Kumar <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -421,10 +421,10 @@ df_res_filteredM3Drop10_Kumar <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Kumar.rds",
   stringsAsFactors = FALSE
 )
@@ -444,7 +444,7 @@ df_sce_full_KumarTCC <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -464,7 +464,7 @@ df_sce_filteredExpr10_KumarTCC <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -480,10 +480,10 @@ df_res_filteredExpr10_KumarTCC <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -503,7 +503,7 @@ df_sce_filteredHVG10_KumarTCC <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -519,10 +519,10 @@ df_res_filteredHVG10_KumarTCC <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -542,7 +542,7 @@ df_sce_filteredM3Drop10_KumarTCC <- data.frame(
   DataProvider = "GEO (GSE60749), Kumar et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -558,10 +558,10 @@ df_res_filteredM3Drop10_KumarTCC <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_KumarTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -581,7 +581,7 @@ df_sce_full_Trapnell <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -601,7 +601,7 @@ df_sce_filteredExpr10_Trapnell <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -617,10 +617,10 @@ df_res_filteredExpr10_Trapnell <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -640,7 +640,7 @@ df_sce_filteredHVG10_Trapnell <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -656,10 +656,10 @@ df_res_filteredHVG10_Trapnell <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -679,7 +679,7 @@ df_sce_filteredM3Drop10_Trapnell <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -695,10 +695,10 @@ df_res_filteredM3Drop10_Trapnell <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Trapnell.rds",
   stringsAsFactors = FALSE
 )
@@ -718,7 +718,7 @@ df_sce_full_TrapnellTCC <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -738,7 +738,7 @@ df_sce_filteredExpr10_TrapnellTCC <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -754,10 +754,10 @@ df_res_filteredExpr10_TrapnellTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -777,7 +777,7 @@ df_sce_filteredHVG10_TrapnellTCC <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -793,10 +793,10 @@ df_res_filteredHVG10_TrapnellTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -816,7 +816,7 @@ df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
   DataProvider = "GEO (GSE52529), Trapnell et al. (2014)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -832,10 +832,10 @@ df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_TrapnellTCC.rds",
   stringsAsFactors = FALSE
 )
@@ -855,7 +855,7 @@ df_sce_full_Zhengmix4eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -875,7 +875,7 @@ df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -891,10 +891,10 @@ df_res_filteredExpr10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -914,7 +914,7 @@ df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -930,10 +930,10 @@ df_res_filteredHVG10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -953,7 +953,7 @@ df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -969,10 +969,10 @@ df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix4eq.rds",
   stringsAsFactors = FALSE
 )
@@ -992,7 +992,7 @@ df_sce_full_Zhengmix4uneq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1012,7 +1012,7 @@ df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1028,10 +1028,10 @@ df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1051,7 +1051,7 @@ df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1067,10 +1067,10 @@ df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1090,7 +1090,7 @@ df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1106,10 +1106,10 @@ df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix4uneq.rds",
   stringsAsFactors = FALSE
 )
@@ -1129,7 +1129,7 @@ df_sce_full_Zhengmix8eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1149,7 +1149,7 @@ df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1165,10 +1165,10 @@ df_res_filteredExpr10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1188,7 +1188,7 @@ df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1204,10 +1204,10 @@ df_res_filteredHVG10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1227,7 +1227,7 @@ df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   DataProvider = "10x Genomics",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1243,10 +1243,10 @@ df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_Zhengmix8eq.rds",
   stringsAsFactors = FALSE
 )
@@ -1263,10 +1263,10 @@ df_sce_full_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1283,10 +1283,10 @@ df_sce_filteredExpr10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1302,10 +1302,10 @@ df_res_filteredExpr10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1322,10 +1322,10 @@ df_sce_filteredHVG10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1341,10 +1341,10 @@ df_res_filteredHVG10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1361,10 +1361,10 @@ df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1380,10 +1380,10 @@ df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar4easy.rds",
   stringsAsFactors = FALSE
 )
@@ -1400,10 +1400,10 @@ df_sce_full_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1420,10 +1420,10 @@ df_sce_filteredExpr10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1439,10 +1439,10 @@ df_res_filteredExpr10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1459,10 +1459,10 @@ df_sce_filteredHVG10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1478,10 +1478,10 @@ df_res_filteredHVG10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1498,10 +1498,10 @@ df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1517,10 +1517,10 @@ df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar4hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1537,10 +1537,10 @@ df_sce_full_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_full_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1557,10 +1557,10 @@ df_sce_filteredExpr10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredExpr10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1576,10 +1576,10 @@ df_res_filteredExpr10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredExpr10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1596,10 +1596,10 @@ df_sce_filteredHVG10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredHVG10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1615,10 +1615,10 @@ df_res_filteredHVG10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredHVG10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1635,10 +1635,10 @@ df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/sce_filteredM3Drop10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
@@ -1654,10 +1654,10 @@ df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
   Species = "Mus musculus",
   TaxonomyId = "10090",
   Coordinate_1_based = NA,
-  DataProvider = NA,
+  DataProvider = "Robinson group (UZH)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
-  DispatchClass = "rds",
+  DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/clustering_summary_filteredM3Drop10_SimKumar8hard.rds",
   stringsAsFactors = FALSE
 )
