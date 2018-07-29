@@ -1,7 +1,7 @@
 ## --------------------------- parameter values ----------------------------- ##
-df_all_parameter_values <- data.frame(
-  Title = "all_parameter_values",
-  Description = "Hyperparameter values used for all clustering algorithms and data sets",
+df_all_parameter_settings <- data.frame(
+  Title = "duo_clustering_all_parameter_settings_v1",
+  Description = "Hyperparameter values used for all clustering algorithms and data sets in v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = NA,
   SourceType = "rds",
@@ -14,7 +14,7 @@ df_all_parameter_values <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "list",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/all_parameter_values.rds",
+  RDataPath = "DuoClustering2018/parameter_settings/all_parameter_settings_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -58,9 +58,9 @@ df_sce_filteredExpr10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Koh <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Koh",
-  Description = "Clustering results for sce_filteredExpr10_Koh",
+df_res_filteredExpr10_Koh_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Koh_v1",
+  Description = "Clustering results for sce_filteredExpr10_Koh, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -73,7 +73,7 @@ df_res_filteredExpr10_Koh <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Koh.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Koh_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -97,9 +97,9 @@ df_sce_filteredHVG10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Koh <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Koh",
-  Description = "Clustering results for sce_filteredHVG10_Koh",
+df_res_filteredHVG10_Koh_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Koh_v1",
+  Description = "Clustering results for sce_filteredHVG10_Koh, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -112,7 +112,7 @@ df_res_filteredHVG10_Koh <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Koh.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Koh_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -136,9 +136,9 @@ df_sce_filteredM3Drop10_Koh <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Koh <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Koh",
-  Description = "Clustering results for sce_filteredM3Drop10_Koh",
+df_res_filteredM3Drop10_Koh_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Koh_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Koh, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -151,7 +151,7 @@ df_res_filteredM3Drop10_Koh <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Koh.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Koh_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -195,9 +195,9 @@ df_sce_filteredExpr10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_KohTCC",
-  Description = "Clustering results for sce_filteredExpr10_KohTCC",
+df_res_filteredExpr10_KohTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_KohTCC_v1",
+  Description = "Clustering results for sce_filteredExpr10_KohTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -210,7 +210,7 @@ df_res_filteredExpr10_KohTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KohTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KohTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -234,9 +234,9 @@ df_sce_filteredHVG10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_KohTCC",
-  Description = "Clustering results for sce_filteredHVG10_KohTCC",
+df_res_filteredHVG10_KohTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_KohTCC_v1",
+  Description = "Clustering results for sce_filteredHVG10_KohTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -249,7 +249,7 @@ df_res_filteredHVG10_KohTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KohTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KohTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -273,9 +273,9 @@ df_sce_filteredM3Drop10_KohTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_KohTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_KohTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_KohTCC",
+df_res_filteredM3Drop10_KohTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_KohTCC_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_KohTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -288,7 +288,7 @@ df_res_filteredM3Drop10_KohTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KohTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KohTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -332,9 +332,9 @@ df_sce_filteredExpr10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Kumar",
-  Description = "Clustering results for sce_filteredExpr10_Kumar",
+df_res_filteredExpr10_Kumar_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Kumar_v1",
+  Description = "Clustering results for sce_filteredExpr10_Kumar, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -347,7 +347,7 @@ df_res_filteredExpr10_Kumar <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Kumar.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Kumar_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -371,9 +371,9 @@ df_sce_filteredHVG10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Kumar",
-  Description = "Clustering results for sce_filteredHVG10_Kumar",
+df_res_filteredHVG10_Kumar_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Kumar_v1",
+  Description = "Clustering results for sce_filteredHVG10_Kumar, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -386,7 +386,7 @@ df_res_filteredHVG10_Kumar <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Kumar.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Kumar_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -410,9 +410,9 @@ df_sce_filteredM3Drop10_Kumar <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Kumar <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Kumar",
-  Description = "Clustering results for sce_filteredM3Drop10_Kumar",
+df_res_filteredM3Drop10_Kumar_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Kumar_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Kumar, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -425,7 +425,7 @@ df_res_filteredM3Drop10_Kumar <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Kumar.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Kumar_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -469,9 +469,9 @@ df_sce_filteredExpr10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_KumarTCC",
-  Description = "Clustering results for sce_filteredExpr10_KumarTCC",
+df_res_filteredExpr10_KumarTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_KumarTCC_v1",
+  Description = "Clustering results for sce_filteredExpr10_KumarTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -484,7 +484,7 @@ df_res_filteredExpr10_KumarTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KumarTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KumarTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -508,9 +508,9 @@ df_sce_filteredHVG10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_KumarTCC",
-  Description = "Clustering results for sce_filteredHVG10_KumarTCC",
+df_res_filteredHVG10_KumarTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_KumarTCC_v1",
+  Description = "Clustering results for sce_filteredHVG10_KumarTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -523,7 +523,7 @@ df_res_filteredHVG10_KumarTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KumarTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KumarTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -547,9 +547,9 @@ df_sce_filteredM3Drop10_KumarTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_KumarTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_KumarTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_KumarTCC",
+df_res_filteredM3Drop10_KumarTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_KumarTCC_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_KumarTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -562,7 +562,7 @@ df_res_filteredM3Drop10_KumarTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KumarTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KumarTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -606,9 +606,9 @@ df_sce_filteredExpr10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Trapnell",
-  Description = "Clustering results for sce_filteredExpr10_Trapnell",
+df_res_filteredExpr10_Trapnell_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Trapnell_v1",
+  Description = "Clustering results for sce_filteredExpr10_Trapnell, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -621,7 +621,7 @@ df_res_filteredExpr10_Trapnell <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Trapnell.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Trapnell_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -645,9 +645,9 @@ df_sce_filteredHVG10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Trapnell",
-  Description = "Clustering results for sce_filteredHVG10_Trapnell",
+df_res_filteredHVG10_Trapnell_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Trapnell_v1",
+  Description = "Clustering results for sce_filteredHVG10_Trapnell, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -660,7 +660,7 @@ df_res_filteredHVG10_Trapnell <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Trapnell.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Trapnell_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -684,9 +684,9 @@ df_sce_filteredM3Drop10_Trapnell <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Trapnell <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Trapnell",
-  Description = "Clustering results for sce_filteredM3Drop10_Trapnell",
+df_res_filteredM3Drop10_Trapnell_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Trapnell_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Trapnell, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -699,7 +699,7 @@ df_res_filteredM3Drop10_Trapnell <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Trapnell.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Trapnell_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -743,9 +743,9 @@ df_sce_filteredExpr10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredExpr10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredExpr10_TrapnellTCC",
+df_res_filteredExpr10_TrapnellTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_TrapnellTCC_v1",
+  Description = "Clustering results for sce_filteredExpr10_TrapnellTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -758,7 +758,7 @@ df_res_filteredExpr10_TrapnellTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_TrapnellTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_TrapnellTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -782,9 +782,9 @@ df_sce_filteredHVG10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredHVG10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredHVG10_TrapnellTCC",
+df_res_filteredHVG10_TrapnellTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_TrapnellTCC_v1",
+  Description = "Clustering results for sce_filteredHVG10_TrapnellTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -797,7 +797,7 @@ df_res_filteredHVG10_TrapnellTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_TrapnellTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_TrapnellTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -821,9 +821,9 @@ df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_TrapnellTCC",
-  Description = "Clustering results for sce_filteredM3Drop10_TrapnellTCC",
+df_res_filteredM3Drop10_TrapnellTCC_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_TrapnellTCC_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_TrapnellTCC, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCh38",
   SourceType = "rds",
@@ -836,14 +836,14 @@ df_res_filteredM3Drop10_TrapnellTCC <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_TrapnellTCC.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_TrapnellTCC_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## --------------------------- full_Zhengmix4eq ----------------------------- ##
 df_sce_full_Zhengmix4eq <- data.frame(
   Title = "sce_full_Zhengmix4eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. All genes except those with zero counts across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in equal proportions. All genes except those with zero counts across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -852,7 +852,7 @@ df_sce_full_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -863,7 +863,7 @@ df_sce_full_Zhengmix4eq <- data.frame(
 ## ---------------------- filteredExpr10_Zhengmix4eq ------------------------ ##
 df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix4eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -872,7 +872,7 @@ df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -880,9 +880,9 @@ df_sce_filteredExpr10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix4eq",
+df_res_filteredExpr10_Zhengmix4eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4eq_v1",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -895,14 +895,14 @@ df_res_filteredExpr10_Zhengmix4eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## ---------------------- filteredHVG10_Zhengmix4eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% most highly variable genes are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in equal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -911,7 +911,7 @@ df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -919,9 +919,9 @@ df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix4eq",
+df_res_filteredHVG10_Zhengmix4eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4eq_v1",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -934,14 +934,14 @@ df_res_filteredHVG10_Zhengmix4eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## --------------------- filteredM3Drop10_Zhengmix4eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -950,7 +950,7 @@ df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -958,9 +958,9 @@ df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix4eq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4eq",
+df_res_filteredM3Drop10_Zhengmix4eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4eq_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -973,14 +973,14 @@ df_res_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## -------------------------- full_Zhengmix4uneq ---------------------------- ##
 df_sce_full_Zhengmix4uneq <- data.frame(
   Title = "sce_full_Zhengmix4uneq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. All genes except those with zero counts across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in unequal proportions. All genes except those with zero counts across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -989,7 +989,7 @@ df_sce_full_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1000,7 +1000,7 @@ df_sce_full_Zhengmix4uneq <- data.frame(
 ## --------------------- filteredExpr10_Zhengmix4uneq ----------------------- ##
 df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix4uneq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% genes with the highest average expression across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in unequal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1009,7 +1009,7 @@ df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1017,9 +1017,9 @@ df_sce_filteredExpr10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix4uneq",
+df_res_filteredExpr10_Zhengmix4uneq_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4uneq_v1",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4uneq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1032,14 +1032,14 @@ df_res_filteredExpr10_Zhengmix4uneq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4uneq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4uneq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## --------------------- filteredHVG10_Zhengmix4uneq ------------------------ ##
 df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4uneq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% most highly variable genes are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in unequal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1048,7 +1048,7 @@ df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1056,9 +1056,9 @@ df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix4uneq",
+df_res_filteredHVG10_Zhengmix4uneq_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4uneq_v1",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4uneq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1071,14 +1071,14 @@ df_res_filteredHVG10_Zhengmix4uneq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4uneq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4uneq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## -------------------- filteredM3Drop10_Zhengmix4uneq ---------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4uneq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic and regulatory T-cells in unequal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells in unequal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1087,7 +1087,7 @@ df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1095,9 +1095,9 @@ df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix4uneq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4uneq",
+df_res_filteredM3Drop10_Zhengmix4uneq_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4uneq_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4uneq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1110,14 +1110,14 @@ df_res_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4uneq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4uneq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## --------------------------- full_Zhengmix8eq ----------------------------- ##
 df_sce_full_Zhengmix8eq <- data.frame(
   Title = "sce_full_Zhengmix8eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. All genes except those with zero counts across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. All genes except those with zero counts across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1126,7 +1126,7 @@ df_sce_full_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1137,7 +1137,7 @@ df_sce_full_Zhengmix8eq <- data.frame(
 ## ---------------------- filteredExpr10_Zhengmix8eq ------------------------ ##
 df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredExpr10_Zhengmix8eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes with the highest average expression across all cells are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1146,7 +1146,7 @@ df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1154,9 +1154,9 @@ df_sce_filteredExpr10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredExpr10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredExpr10_Zhengmix8eq",
+df_res_filteredExpr10_Zhengmix8eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix8eq_v1",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix8eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1169,14 +1169,14 @@ df_res_filteredExpr10_Zhengmix8eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix8eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix8eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## ---------------------- filteredHVG10_Zhengmix8eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix8eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% most highly variable genes are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% most highly variable genes are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1185,7 +1185,7 @@ df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1193,9 +1193,9 @@ df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredHVG10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredHVG10_Zhengmix8eq",
+df_res_filteredHVG10_Zhengmix8eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix8eq_v1",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix8eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1208,14 +1208,14 @@ df_res_filteredHVG10_Zhengmix8eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix8eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix8eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## --------------------- filteredM3Drop10_Zhengmix8eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix8eq",
-  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
+  Description = "UMI counts for scRNA-seq data set consisting of sorted B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells in approximately equal proportions. The top 10% genes ranked by z-scores from the M3Drop package are retained.",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "TXT",
@@ -1224,7 +1224,7 @@ df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = "10x Genomics",
+  DataProvider = "10x Genomics, Zheng et al (2017)",
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "SingleCellExperiment",
   DispatchClass = "Rds",
@@ -1232,9 +1232,9 @@ df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_Zhengmix8eq",
-  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix8eq",
+df_res_filteredM3Drop10_Zhengmix8eq_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix8eq_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix8eq, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "hg19",
   SourceType = "rds",
@@ -1247,7 +1247,7 @@ df_res_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix8eq.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix8eq_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1291,9 +1291,9 @@ df_sce_filteredExpr10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar4easy",
+df_res_filteredExpr10_SimKumar4easy_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4easy_v1",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4easy, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1306,7 +1306,7 @@ df_res_filteredExpr10_SimKumar4easy <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4easy.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4easy_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1330,9 +1330,9 @@ df_sce_filteredHVG10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar4easy",
+df_res_filteredHVG10_SimKumar4easy_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4easy_v1",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4easy, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1345,7 +1345,7 @@ df_res_filteredHVG10_SimKumar4easy <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4easy.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4easy_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1369,9 +1369,9 @@ df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar4easy",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4easy",
+df_res_filteredM3Drop10_SimKumar4easy_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4easy_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4easy, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1384,7 +1384,7 @@ df_res_filteredM3Drop10_SimKumar4easy <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4easy.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4easy_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1428,9 +1428,9 @@ df_sce_filteredExpr10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar4hard",
+df_res_filteredExpr10_SimKumar4hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4hard_v1",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1443,7 +1443,7 @@ df_res_filteredExpr10_SimKumar4hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1467,9 +1467,9 @@ df_sce_filteredHVG10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar4hard",
+df_res_filteredHVG10_SimKumar4hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4hard_v1",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1482,7 +1482,7 @@ df_res_filteredHVG10_SimKumar4hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1506,9 +1506,9 @@ df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar4hard",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4hard",
+df_res_filteredM3Drop10_SimKumar4hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4hard_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1521,7 +1521,7 @@ df_res_filteredM3Drop10_SimKumar4hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1565,9 +1565,9 @@ df_sce_filteredExpr10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredExpr10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredExpr10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredExpr10_SimKumar8hard",
+df_res_filteredExpr10_SimKumar8hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar8hard_v1",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar8hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1580,7 +1580,7 @@ df_res_filteredExpr10_SimKumar8hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar8hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar8hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1604,9 +1604,9 @@ df_sce_filteredHVG10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredHVG10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredHVG10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredHVG10_SimKumar8hard",
+df_res_filteredHVG10_SimKumar8hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar8hard_v1",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar8hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1619,7 +1619,7 @@ df_res_filteredHVG10_SimKumar8hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar8hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar8hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1643,9 +1643,9 @@ df_sce_filteredM3Drop10_SimKumar8hard <- data.frame(
   stringsAsFactors = FALSE
 )
 
-df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
-  Title = "clustering_summary_filteredM3Drop10_SimKumar8hard",
-  Description = "Clustering results for sce_filteredM3Drop10_SimKumar8hard",
+df_res_filteredM3Drop10_SimKumar8hard_v1 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar8hard_v1",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar8hard, corresponding to v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.7",
   Genome = "GRCm38",
   SourceType = "rds",
@@ -1658,13 +1658,13 @@ df_res_filteredM3Drop10_SimKumar8hard <- data.frame(
   Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
   RDataClass = "data.frame",
   DispatchClass = "Rds",
-  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar8hard.rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar8hard_v1.rds",
   stringsAsFactors = FALSE
 )
 
 ## Combined meta-data
 df_all <- base::rbind(
-  df_all_parameter_values,
+  df_all_parameter_settings,
   df_sce_full_Koh,
   df_sce_filteredExpr10_Koh,
   df_sce_filteredHVG10_Koh,
@@ -1713,42 +1713,42 @@ df_all <- base::rbind(
   df_sce_filteredExpr10_SimKumar8hard,
   df_sce_filteredHVG10_SimKumar8hard,
   df_sce_filteredM3Drop10_SimKumar8hard,
-  df_res_filteredExpr10_Koh,
-  df_res_filteredHVG10_Koh,
-  df_res_filteredM3Drop10_Koh,
-  df_res_filteredExpr10_KohTCC,
-  df_res_filteredHVG10_KohTCC,
-  df_res_filteredM3Drop10_KohTCC,
-  df_res_filteredExpr10_Kumar,
-  df_res_filteredHVG10_Kumar,
-  df_res_filteredM3Drop10_Kumar,
-  df_res_filteredExpr10_KumarTCC,
-  df_res_filteredHVG10_KumarTCC,
-  df_res_filteredM3Drop10_KumarTCC,
-  df_res_filteredExpr10_Trapnell,
-  df_res_filteredHVG10_Trapnell,
-  df_res_filteredM3Drop10_Trapnell,
-  df_res_filteredExpr10_TrapnellTCC,
-  df_res_filteredHVG10_TrapnellTCC,
-  df_res_filteredM3Drop10_TrapnellTCC,
-  df_res_filteredExpr10_Zhengmix4eq,
-  df_res_filteredHVG10_Zhengmix4eq,
-  df_res_filteredM3Drop10_Zhengmix4eq,
-  df_res_filteredExpr10_Zhengmix4uneq,
-  df_res_filteredHVG10_Zhengmix4uneq,
-  df_res_filteredM3Drop10_Zhengmix4uneq,
-  df_res_filteredExpr10_Zhengmix8eq,
-  df_res_filteredHVG10_Zhengmix8eq,
-  df_res_filteredM3Drop10_Zhengmix8eq,
-  df_res_filteredExpr10_SimKumar4easy,
-  df_res_filteredHVG10_SimKumar4easy,
-  df_res_filteredM3Drop10_SimKumar4easy,
-  df_res_filteredExpr10_SimKumar4hard,
-  df_res_filteredHVG10_SimKumar4hard,
-  df_res_filteredM3Drop10_SimKumar4hard,
-  df_res_filteredExpr10_SimKumar8hard,
-  df_res_filteredHVG10_SimKumar8hard,
-  df_res_filteredM3Drop10_SimKumar8hard
+  df_res_filteredExpr10_Koh_v1,
+  df_res_filteredHVG10_Koh_v1,
+  df_res_filteredM3Drop10_Koh_v1,
+  df_res_filteredExpr10_KohTCC_v1,
+  df_res_filteredHVG10_KohTCC_v1,
+  df_res_filteredM3Drop10_KohTCC_v1,
+  df_res_filteredExpr10_Kumar_v1,
+  df_res_filteredHVG10_Kumar_v1,
+  df_res_filteredM3Drop10_Kumar_v1,
+  df_res_filteredExpr10_KumarTCC_v1,
+  df_res_filteredHVG10_KumarTCC_v1,
+  df_res_filteredM3Drop10_KumarTCC_v1,
+  df_res_filteredExpr10_Trapnell_v1,
+  df_res_filteredHVG10_Trapnell_v1,
+  df_res_filteredM3Drop10_Trapnell_v1,
+  df_res_filteredExpr10_TrapnellTCC_v1,
+  df_res_filteredHVG10_TrapnellTCC_v1,
+  df_res_filteredM3Drop10_TrapnellTCC_v1,
+  df_res_filteredExpr10_Zhengmix4eq_v1,
+  df_res_filteredHVG10_Zhengmix4eq_v1,
+  df_res_filteredM3Drop10_Zhengmix4eq_v1,
+  df_res_filteredExpr10_Zhengmix4uneq_v1,
+  df_res_filteredHVG10_Zhengmix4uneq_v1,
+  df_res_filteredM3Drop10_Zhengmix4uneq_v1,
+  df_res_filteredExpr10_Zhengmix8eq_v1,
+  df_res_filteredHVG10_Zhengmix8eq_v1,
+  df_res_filteredM3Drop10_Zhengmix8eq_v1,
+  df_res_filteredExpr10_SimKumar4easy_v1,
+  df_res_filteredHVG10_SimKumar4easy_v1,
+  df_res_filteredM3Drop10_SimKumar4easy_v1,
+  df_res_filteredExpr10_SimKumar4hard_v1,
+  df_res_filteredHVG10_SimKumar4hard_v1,
+  df_res_filteredM3Drop10_SimKumar4hard_v1,
+  df_res_filteredExpr10_SimKumar8hard_v1,
+  df_res_filteredHVG10_SimKumar8hard_v1,
+  df_res_filteredM3Drop10_SimKumar8hard_v1
 )
 
 ## Save .csv file
