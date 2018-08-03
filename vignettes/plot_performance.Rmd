@@ -15,6 +15,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+# Introduction
+
 In this vignette we describe the basic usage of the `DuoClustering2018` package:
 how to retrieve data sets and clustering results, and how to construct various
 plots summarizing the performance of different methods across several data sets.
@@ -39,21 +41,30 @@ genes with zero counts across all cells) as well as three filtered versions of
 each data set (by expression, variability and dropout pattern, respectively),
 each containing 10% of the genes in the full data sets.
 
-To get an overview, we can list all data sets from this package that are
-available in `ExperimentHub`:
+To get an overview, we can list all records from this package that are available
+in `ExperimentHub`:
 
 ```{r}
 eh <- ExperimentHub()
 query(eh, "DuoClustering2018")
 ```
 
-To retrieve a data set, we can use the `ExperimentHub` ID:
+The records with names starting in `sce_` represents (filtered or unfiltered)
+data sets (in `SingleCellExperiment` format). The records with names starting in
+`clustering_summary_` correspond to `data.frame` objects with clustering results
+for each of the filtered data sets. Finally, the
+`duo_clustering_all_parameter_settings` object contains the parameter settings
+we used for all the clustering methods. For clustering summaries and parameter
+settings, the version number (e.g., `_v1`) corresponds to the version of the
+publication.
+
+The records can be retrieved using their `ExperimentHub` ID, e.g.:
 
 ```{r}
 eh[["EH1500"]]
 ```
 
-Alternatively, we can use the shortcut functions provided by this package:
+Alternatively, the shortcut functions provided by this package can be used:
 
 ```{r}
 #sce_filteredExpr10_Koh()
@@ -61,15 +72,15 @@ Alternatively, we can use the shortcut functions provided by this package:
 
 # Read a set of clustering results
 
-For each included data set, we have applied a broad range of clustering methods
-(see the `run_clustering` vignette for more details on how this was done, and
-how to apply additional methods). The results of these clusterings are also
-available on `ExperimentHub`, and can be loaded either by their `ExperimentHub`
-ID or using the provided shortcut functions, as above. For simplicity, the
-results of all methods for a given data set are combined into one data frame. As
-an illustration, we load the clustering summaries for two different data sets
-(`Koh` and `Zhengmix4eq`), each with two different gene filterings (`Expr10` and
-`HVG10`):
+For each included data set, we have applied a range of clustering methods (see
+the `run_clustering` vignette for more details on how this was done, and how to
+apply additional methods). As mentioned above, the results of these clusterings
+are also available from `ExperimentHub`, and can be loaded either by their
+`ExperimentHub` ID or using the provided shortcut functions, as above. For
+simplicity, the results of all methods for a given data set are combined into
+one data frame. As an illustration, we load the clustering summaries for two
+different data sets (`Koh` and `Zhengmix4eq`), each with two different gene
+filterings (`Expr10` and `HVG10`):
 
 ```{r}
 res <- plyr::rbind.fill(

@@ -2,7 +2,7 @@
 title: "Run clustering method"
 author: 
 - name: Charlotte Soneson
-- name: Angelo Duo
+- name: Angelo Duò
 date: "`r Sys.Date()`"
 package: DuoClustering2018
 output:
@@ -15,22 +15,32 @@ editor_options:
   chunk_output_type: console
 ---
 
+# Introduction
+
 This vignette describes how each of the included clustering methods was applied
 to the collection of data sets in order to generate the clustering result
-summaries provided with the package. In order to apply a new clustering
-algorithm to one of the data sets using the same framework, you need to generate
-a function consistent with the included `apply_*()` functions (see e.g.
-`?apply_PCAHC`. The input arguments to this function should be:
+summaries provided with the package. 
+
+# Applying a new clustering algorithm to a provided data set
+In order to apply a new clustering algorithm to one of the data sets using the
+same framework, you need to generate a function consistent with the `apply_*()`
+functions provided in the [GitHub
+repository](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison/tree/master/Rscripts/clustering)
+corresponding to the publication. The input arguments to this function should
+be:
 
 - a `SingleCellExperiment` object
-- a list of parameter values (can be empty, if no parameters are used for the method)
+- a list of parameter values (can be empty, if no parameters are used for the
+method)
 - the desired number of clusters (k). 
 
 The function should return a list with three elements:
 
-- `st` - a vector with the timing information. Should have five elements, named `user.self`, `sys.self`, `user.child`, `sys.child` and `elapsed`.
-- `cluster` - a named vector of cluster assignments.
-- `est_k` - the number of clusters estimated by the method (if available, otherwise `NA`).
+- `st` - a vector with the timing information. Should have five elements, named
+`user.self`, `sys.self`, `user.child`, `sys.child` and `elapsed`.
+- `cluster` - a named vector of cluster assignments for all cells.
+- `est_k` - the number of clusters estimated by the method (if available,
+otherwise `NA`).
 
 If the method does not allow specification of the desired number of clusters,
 but has another parameter affecting the resolution, this can be accommodated as
@@ -50,7 +60,8 @@ method <- "PCAHC"
 ```{r, eval=FALSE}
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
-params <- duo_clustering_all_parameter_settings_v1()[[paste0(scename, "_", method)]]
+params <- duo_clustering_all_parameter_settings_v1()[[paste0(scename, "_", 
+                                                             method)]]
 
 ## Set number of times to run clustering for each k
 n_rep <- 5
@@ -60,10 +71,12 @@ set.seed(1234)
 L <- lapply(seq_len(n_rep), function(i) {  ## For each run
   cat(paste0("run = ", i, "\n"))
   if (method == "Seurat") {
-    tmp <- lapply(params$range_resolutions, function(resolution) {  ## For each resolution
+    tmp <- lapply(params$range_resolutions, function(resolution) {  
+      ## For each resolution
       cat(paste0("resolution = ", resolution, "\n"))
       ## Run clustering
-      res <- get(paste0("apply_", method))(sce = sce, params = params, resolution = resolution)
+      res <- get(paste0("apply_", method))(sce = sce, params = params, 
+                                           resolution = resolution)
       
       ## Put output in data frame
       df <- data.frame(dataset = scename, 
@@ -157,12 +170,14 @@ df <- dplyr::full_join(res$assignments %>%
                          dplyr::select(dataset, method, cell, run, k, 
                                        resolution, cluster, trueclass),
                        res$k_estimates %>%
-                         dplyr::select(dataset, method, run, k, resolution, est_k)
+                         dplyr::select(dataset, method, run, k, 
+                                       resolution, est_k)
 ) %>% dplyr::full_join(res$timings %>% dplyr::select(dataset, method, run, k,
                                                      resolution, elapsed))
 ```
 
-The `df` data frames can then be combined across data sets, filterings and methods.  
+The `df` data frames can then be combined across data sets, filterings and
+methods.
 
 # Session info
 
