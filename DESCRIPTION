@@ -12,8 +12,7 @@ Description: Preprocessed experimental and simulated scRNA-seq data sets used
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
-biocViews: SingleCellData, 
-    SingleCell
+biocViews: SingleCellData
 Imports: ExperimentHub,
     utils,
     magrittr,
