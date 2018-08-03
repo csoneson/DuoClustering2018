@@ -1,0 +1,185 @@
+---
+title: "Import and QC of SimKumar data set"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load-packages}
+suppressPackageStartupMessages({
+  library(MultiAssayExperiment)
+  library(SingleCellExperiment)
+  library(scater)
+  library(scran)
+  library(plyr)
+  library(dplyr)
+  library(ggplot2)
+  library(splatter)
+})
+```
+
+## Load MultiAssayExperiment object
+
+```{r load-dataset}
+(maex <- readRDS("../../data/data_raw/GSE60749-GPL13112.rds"))
+
+## Extract the gene-level length-scaled TPMs
+cts <- assays(experiments(maex)[["gene"]])[["count_lstpm"]]
+
+## Extract the phenotype data.
+phn <- colData(maex)
+phn$phenoid <- as.character(interaction(as.data.frame(phn[, c("source_name_ch1",
+                                                              "characteristics_ch1.1")])))
+## Simplify labels
+phn$phenoid <-  plyr::revalue(
+  phn$phenoid, 
+  c("Dgcr8 knockout mouse embryonic stem cells.culture conditions: serum+LIF" = "Dgcr8 knockout mouse serum+LIF", 
+    "v6.5 mouse embryonic stem cells.culture conditions: 2i+LIF" = "v6.5 mouse 2i+LIF",
+    "v6.5 mouse embryonic stem cells.culture conditions: serum+LIF" = "v6.5 mouse serum+LIF")
+)
+table(phn$phenoid)
+```
+
+## Extract one subpopulation
+
+```{r}
+stopifnot(all(colnames(cts) == rownames(phn)))
+
+sub.cts <- cts[, phn$phenoid == "v6.5 mouse 2i+LIF"]
+dim(sub.cts)
+```
+
+## Remove the ERCC spike-ins
+
+```{r remove-spikes}
+is.spike <- grepl("^ERCC", rownames(sub.cts))
+sub.cts <- sub.cts[!is.spike, ]
+```
+
+## Estimate parameters for simulation
+
+```{r estimate-parameters}
+(params <- splatEstimate(sub.cts))
+```
+
+## Simulate new counts
+
+```{r simulate-counts}
+sce <- splatSimulate(params = params, batchCells = 500,
+                     group.prob = c(0.13, 0.07, 0.1, 0.05, 0.4, 0.1, 0.1, 0.05), 
+                     method = "groups", 
+                     de.prob = c(0.03, 0.03, 0.03, 0.05, 0.05, 0.07, 0.08, 0.1),
+                     verbose = FALSE)
+sce <- normalise(sce, exprs_values = "counts", return_log = TRUE, 
+                 return_norm_as_exprs = TRUE) ## generates logcounts(sce)
+sce$phenoid <- colData(sce)$Group
+```
+
+Exclude features that are not expressed
+
+```{r reduce-expression-matrix}
+keep_features <- rowSums(counts(sce) > 0) > 0
+table(keep_features)
+sce <- sce[keep_features, ]
+dim(sce)
+```
+
+## Calculate QC metrics
+
+```{r QC}
+sce <- calculateQCMetrics(sce)
+```
+
+## Quality control using PCA on column data
+
+We create a PCA plot based the quality metrics for each cell, e.g., the total
+number of reads and the total number of features.
+
+```{r qc-pca}
+sce <- scater::runPCA(sce, pca_data_input = "coldata")
+scater::plotPCA(sce, colour_by = "phenoid")
+```
+
+## Filter cells
+
+We remove cells with log-library sizes (or total features) that are more than 3
+median absolute deviations (MADs) below the median log-library size (or total
+features).
+
+```{r histogram}
+colData(sce)$libsize.drop <- isOutlier(sce$total_counts, nmads = 3, type = "lower", log = TRUE)
+ggplot(as.data.frame(colData(sce)), aes(x = total_counts)) + 
+  geom_histogram(bins = 20, fill = "grey80") + xlab("Total count") + 
+  ylab("Number of cells") + 
+  geom_vline(xintercept = min(sce$total_counts[!sce$libsize.drop]), 
+             color = "red", linetype = "dashed") + 
+  theme_bw()
+
+colData(sce)$feature.drop <- isOutlier(sce$total_features, nmads = 3, type = "lower", log = TRUE)
+ggplot(as.data.frame(colData(sce)), aes(x = total_features)) + 
+  geom_histogram(bins = 20, fill = "grey80") + xlab("Number of detected features") + 
+  ylab("Number of cells") + 
+  geom_vline(xintercept = min(sce$total_features[!sce$feature.drop]), 
+             color = "red", linetype = "dashed") + 
+  theme_bw()
+```
+
+```{r filter-cells}
+table(libsize = sce$libsize.drop, feature = sce$feature.drop)
+sce <- sce[, !(sce$libsize.drop | sce$feature.drop)]
+dim(sce)
+```
+
+## Quality control using highest expressed genes
+
+```{r qc-filt}
+plotQC(sce, type = "highest-expression", n = 50)
+```
+
+## Data normalization
+
+```{r sizefactors}
+sce <- computeSumFactors(sce, sizes = pmin(ncol(sce), seq(20, 120, 20)), min.mean = 0.1)
+summary(sizeFactors(sce))
+```
+
+```{r normalization}
+sce <- normalise(sce, exprs_values = "counts", return_log = TRUE, 
+                 return_norm_as_exprs = TRUE)
+sce <- normalise(sce, exprs_values = "counts", return_log = FALSE, 
+                 return_norm_as_exprs = FALSE)
+```
+
+## Plot the proportion of explained variances
+
+```{r explained-variance, warning = FALSE} 
+expl_vars <- c("phenoid", "log10_total_counts", "log10_total_features", "pct_dropout",
+               "pct_counts_top_200_features", "log10_counts_feature_controls",
+               "pct_counts_feature_controls")
+plotQC(sce, type = "explanatory-variables", variables = expl_vars)
+```
+
+## Plot t-SNE representations
+
+```{r tSNE}
+set.seed(1234)
+sce <- runTSNE(sce, exprs_values = "logcounts", perplexity = 10)
+plotTSNE(sce, colour_by = "phenoid")
+plotTSNE(sce, colour_by = "total_features", size_by = "total_counts")
+```
+
+## Save the normalized and cell filtered dataset
+
+```{r save-data}
+dim(sce)
+table(sce$phenoid)
+saveRDS(sce, file = "../../data/sce_full/sce_full_SimKumar8hard.rds")
+```
+
+## Session info
+
+```{r}
+date()
+sessionInfo()
+```
+

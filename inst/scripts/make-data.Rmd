@@ -1,0 +1,92 @@
+---
+title: "Downloading and processing raw data files"
+author: ""
+date: ""
+output: html_document
+---
+
+Below, we summarize the process of generating the data sets provided in this package. More information is available from the GitHub repository corresponding to the publication (Duò et al., F1000Research 7:1141 (2018)): [https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison).
+
+First, we download the raw data files, either from the conquer repository [http://imlspenticton.uzh.ch:3838/conquer/](http://imlspenticton.uzh.ch:3838/conquer/) or from the 10x Genomics website [https://support.10xgenomics.com/single-cell-gene-expression/datasets](https://support.10xgenomics.com/single-cell-gene-expression/datasets).
+
+```{bash, eval=FALSE}
+wget -P data/data_raw http://imlspenticton.uzh.ch/robinson_lab/conquer/data-mae/GSE60749-GPL13112.rds
+wget -P data/data_raw http://imlspenticton.uzh.ch/robinson_lab/conquer/data-mae/GSE52529-GPL16791.rds
+wget -P data/data_raw http://imlspenticton.uzh.ch/robinson_lab/conquer/data-mae/SRP073808.rds
+wget -O data/data_raw/SRP073808TCC.rds http://imlspenticton.uzh.ch/robinson_lab/conquer/data-tcc/SRP073808.rds
+wget -O data/data_raw/GSE52529-GPL16791TCC.rds http://imlspenticton.uzh.ch/robinson_lab/conquer/data-tcc/GSE52529-GPL16791.rds
+wget -O data/data_raw/GSE60749-GPL13112TCC.rds http://imlspenticton.uzh.ch/robinson_lab/conquer/data-tcc/GSE60749-GPL13112.rds
+
+for D in b_cells naive_cytotoxic cd14_monocytes regulatory_t cd56_nk memory_t cd4_t_helper naive_t; do \
+mkdir -p data/data_raw/zheng/${D}; \
+wget -P data/data_raw/zheng http://cf.10xgenomics.com/samples/cell-exp/1.1.0/${D}/${D}_filtered_gene_bc_matrices.tar.gz; \
+tar zxvf data/data_raw/zheng/${D}_filtered_gene_bc_matrices.tar.gz -C data/data_raw/zheng/${D}; \
+rm -f data/data_raw/zheng/${D}_filtered_gene_bc_matrices.tar.gz; \
+done
+
+```
+
+Next, we run each `import_QC_*.Rmd` file to generate the "full" data sets (retaining all genes with at least 1 read in at least one of the good-quality cells). From the "full" data sets, we then generate the filtered data sets using the following wrapper code:
+
+```{r, eval=FALSE}
+suppressPackageStartupMessages({
+  library(SingleCellExperiment)
+  library(scater)
+  library(Seurat)
+  library(scran)
+  library(M3Drop)
+})
+
+sce <- readRDS(scefile)
+
+sce_filt <- get(paste0("filter", method))(sce = sce, pctkeep = pctkeep)
+
+sce_filt <- calculateQCMetrics(sce_filt)
+sce_filt <- computeSumFactors(sce_filt, sizes = pmin(ncol(sce_filt), seq(20, 120, 20)), min.mean = 0.5)
+table(sizeFactors(sce_filt) < 0)
+sce_filt <- sce_filt[, sizeFactors(sce_filt) > 0]
+sce_filt <- normalise(sce_filt, exprs_values = "counts", return_log = TRUE, 
+                      return_norm_as_exprs = TRUE)
+sce_filt <- normalise(sce_filt, exprs_values = "counts", return_log = FALSE, 
+                      return_norm_as_exprs = FALSE)
+sce_filt <- runTSNE(sce_filt, exprs_values = "logcounts", perplexity = 10)
+
+saveRDS(sce_filt, file = outrds)
+```
+
+We use three filtering methods (indicated by `method` in the code chunk above): `Expr`, `HVG` and `M3Drop`. The percentage of genes to keep (`pctkeep`) is always 10.
+
+```{r, eval=FALSE}
+## Expr filtering
+filterExpr <- function(sce, pctkeep) {
+  exprsn <- rowMeans(logcounts(sce))
+  keep <- order(exprsn, decreasing = TRUE)[seq_len(pctkeep/100*length(exprsn))]
+  sce[keep, ]
+}
+
+## HVG filtering
+filterHVG <- function(sce, pctkeep) {
+  seurat <- CreateSeuratObject(raw.data = counts(sce), meta.data = as.data.frame(colData(sce)),
+                               min.cells = 0, min.genes = 0, project = "scRNAseq")
+  seurat <- NormalizeData(seurat)
+  seurat <- ScaleData(seurat, vars.to.regress = "nUMI", display.progress = FALSE)
+  seurat <- FindVariableGenes(seurat, do.plot = FALSE)
+  keep <- rownames(head(seurat@hvg.info, n = round(pctkeep/100*nrow(sce))))
+  sce[keep, ]
+}
+
+## M3Drop filtering
+filterM3Drop <- function(sce, pctkeep) {
+  cpm <- calculateCPM(sce)
+  cpm <- cpm[rowMeans(cpm) > 0.05, ]
+  res <- M3DropDifferentialExpression(expr_mat = cpm, 
+                                      mt_method = "none", mt_threshold = 1, 
+                                      suppress.plot = TRUE)
+  res <- res[order(res$p.value), ]
+  stopifnot(nrow(res) > round(pctkeep/100*nrow(sce)))
+  keep <- rownames(head(res, n = round(pctkeep/100*nrow(sce))))
+  sce[keep, ]
+}
+```
+
+

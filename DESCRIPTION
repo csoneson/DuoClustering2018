@@ -29,23 +29,7 @@ Imports: ExperimentHub,
 Suggests: knitr,
     rmarkdown,
     BiocStyle,
-    CIDR,
-    SC3,
-    Seurat,
-    Rtsne,
-    FlowSOM,
-    ascend,
-    BiocParallel,
-    class,
-    flowCore,
-    clue,
-    pcaReduce,
     scater,
-    TSCAN,
-    iSEE,
-    cidr
+    iSEE
 VignetteBuilder: knitr
-Remotes: VCCRI/CIDR,
-    IMB-Computational-Genomics-Lab/ascend,
-    JustinaZ/pcaReduce
 RoxygenNote: 6.1.0
