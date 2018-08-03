@@ -20,6 +20,8 @@ A named list of ggplot2 objects
 Plot entropy of cluster assignments
 }
 \examples{
+res <- clustering_summary_filteredExpr10_Koh_v1()
+plots <- plot_entropy(res)
 
 }
 \author{

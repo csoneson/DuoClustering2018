@@ -4,6 +4,10 @@
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom dplyr select
 #'
+#' @param x A \code{data.frame} with clustering results.
+#'
+#' @return a \code{data.frame} with ARI values for each pair of runs.
+#'
 ARIdf <- function(x) {
   stopifnot(is(x, "data.frame"))
   stopifnot(is(x[, 1], "character"))
@@ -43,6 +47,8 @@ ARIdf <- function(x) {
 #' @return A named list of \code{ggplot2} objects
 #'
 #' @examples
+#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' plots <- plot_stability(res)
 #'
 plot_stability <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots

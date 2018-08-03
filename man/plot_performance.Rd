@@ -21,6 +21,8 @@ Generate various plots of the agreement between each clustering and the true
 partitioning of the cells, quantified by the adjusted Rand index (ARI).
 }
 \examples{
+res <- clustering_summary_filteredExpr10_Koh_v1()
+plots <- plot_performance(res)
 
 }
 \author{

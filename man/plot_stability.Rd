@@ -20,6 +20,8 @@ A named list of \code{ggplot2} objects
 Plot the stability of the clusterings obtained for each method
 }
 \examples{
+res <- clustering_summary_filteredExpr10_Koh_v1()
+plots <- plot_stability(res)
 
 }
 \author{

@@ -6,6 +6,12 @@
 \usage{
 shannonEntropy(clusterAssignments)
 }
+\arguments{
+\item{clusterAssignments}{A vector with cluster assignments}
+}
+\value{
+The Shannon entropy of the assignment vector
+}
 \description{
 Calculate Shannon entropy
 }

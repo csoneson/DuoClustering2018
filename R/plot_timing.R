@@ -25,6 +25,8 @@
 #' @return A named list of ggplot2 objects
 #'
 #' @examples
+#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' plots <- plot_timing(res)
 #'
 plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   ## Initialize list to hold plots

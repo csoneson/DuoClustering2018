@@ -6,6 +6,17 @@
 \usage{
 apply_ascend(sce, params, k)
 }
+\arguments{
+\item{sce}{A \code{SingleCellExperiment} object}
+
+\item{params}{A list of parameter settings}
+
+\item{k}{An integer giving the number of clusters to generate}
+}
+\value{
+A list with timing information, cluster assignments and the estimated
+  number of clusters.
+}
 \description{
 Apply ascend
 }

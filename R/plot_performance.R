@@ -23,6 +23,8 @@
 #' @return A named list of \code{ggplot2} objects
 #'
 #' @examples
+#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' plots <- plot_performance(res)
 #'
 plot_performance <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots

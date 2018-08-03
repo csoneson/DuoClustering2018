@@ -25,6 +25,8 @@ A named list of ggplot2 objects
 Plot the elapsed time for each clustering method
 }
 \examples{
+res <- clustering_summary_filteredExpr10_Koh_v1()
+plots <- plot_timing(res)
 
 }
 \author{

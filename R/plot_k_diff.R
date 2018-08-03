@@ -20,6 +20,8 @@
 #' @return A named list of ggplot2 objects
 #'
 #' @examples
+#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' plots <- plot_kdiff(res)
 #'
 plot_k_diff <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots

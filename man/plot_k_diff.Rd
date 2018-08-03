@@ -20,6 +20,8 @@ A named list of ggplot2 objects
 Plot differences between optimal, estimated and true number of clusters
 }
 \examples{
+res <- clustering_summary_filteredExpr10_Koh_v1()
+plots <- plot_kdiff(res)
 
 }
 \author{

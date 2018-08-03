@@ -1,4 +1,9 @@
 #' Calculate Shannon entropy
+#'
+#' @param clusterAssignments A vector with cluster assignments
+#'
+#' @return The Shannon entropy of the assignment vector
+#'
 shannonEntropy <- function(clusterAssignments) {
   p <- c(table(clusterAssignments)) / length(clusterAssignments)
   -1 * sum(p * log2(p))
@@ -24,6 +29,8 @@ shannonEntropy <- function(clusterAssignments) {
 #' @return A named list of ggplot2 objects
 #'
 #' @examples
+#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' plots <- plot_entropy(res)
 #'
 plot_entropy <- function(res, method_colors = NULL) {
   ## Initialize list to hold plots

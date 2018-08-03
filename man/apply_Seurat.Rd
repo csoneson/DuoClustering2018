@@ -6,6 +6,17 @@
 \usage{
 apply_Seurat(sce, params, resolution)
 }
+\arguments{
+\item{sce}{A \code{SingleCellExperiment} object}
+
+\item{params}{A list of parameter settings}
+
+\item{resolution}{An numeric value giving the resolution to use for the clustering}
+}
+\value{
+A list with timing information, cluster assignments and the estimated
+  number of clusters.
+}
 \description{
 Apply Seurat
 }

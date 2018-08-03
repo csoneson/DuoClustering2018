@@ -6,6 +6,12 @@
 \usage{
 ARIdf(x)
 }
+\arguments{
+\item{x}{A \code{data.frame} with clustering results.}
+}
+\value{
+a \code{data.frame} with ARI values for each pair of runs.
+}
 \description{
 Help function for computing ARI
 }
