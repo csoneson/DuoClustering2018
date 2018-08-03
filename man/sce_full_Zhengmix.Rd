@@ -20,25 +20,25 @@ Gene counts for scRNA-seq data sets from Zheng et al. (2017), consisting of pre-
 \details{
 This is a scRNA-seq data set originally from Zheng et al. (2017). The data set consist of eigth pre-sorted cell types (B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells) from \emph{Homo sapiens} combined into three artificial data sets with different cell proportions. The annotated cell type (obtained by pre-sorting of the cells) is used as the true cell label. The data sets have been used to evaluate the performance of clustering algorithms in Duò et al. (2018).
 
-For the \code{\link{Zhengmix4eq}} data set, randomly selected B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells were combined in equal proportions (1,000 cells per subpopulation). 
-The \code{\link{Zhengmix4uneq}} data set consists of four cell types, combined in unequal proportions (1,000 B-cells, 500 naive cytotoxic T-cells, 2,000 CD14 monocytes and 3,000 regulatory T-cells). For the \code{\link{Zhengmix8eq}} data set, all eight populations were combined in approximately equal proportions (400–600 cells per population). 
+For the \code{\link{Zhengmix4eq}} data set, randomly selected B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells were combined in equal proportions (1,000 cells per subpopulation).
+The \code{\link{Zhengmix4uneq}} data set consists of four cell types, combined in unequal proportions (1,000 B-cells, 500 naive cytotoxic T-cells, 2,000 CD14 monocytes and 3,000 regulatory T-cells). For the \code{\link{Zhengmix8eq}} data set, all eight populations were combined in approximately equal proportions (400–600 cells per population).
 
 All genes except those with zero counts across all cells are retained. The gene counts are unique molecular identifiers (UMIs) counts.
-The \code{\link{scater}} package was used to perform quality control of the data (Lun et. al (2016)). 
+The \code{\link{scater}} package was used to perform quality control of the data (Lun et. al (2016)).
 Features with zero counts across all cells, as well as all cells with total count or total number of detected features more than 3 median absolute deviations (MADs) below the median across all cells (on the log scale), were excluded.
 
-The \code{\link{sce_full_Zhengmix4eq}} data set consists of 3,994 cells and 15,568 features, the \code{\link{sce_full_Zhengmix4uneq}} data set of 6,498 cells and 16,443 features and the \code{\link{sce_full_Zhengmix8eq}} of 3,994 cells and 16,443 features, respectively. 
-The \code{\link{filteredExpr}}, \code{\link{filteredHVG}} and \code{\link{filteredM3Drop10}} are further reduced data sets. 
-For each of the filtering method, we retained 10 percent of the original number of genes 
-(with a non-zero count in at least one cell) in the original data sets. 
+The \code{\link{sce_full_Zhengmix4eq}} data set consists of 3,994 cells and 15,568 features, the \code{\link{sce_full_Zhengmix4uneq}} data set of 6,498 cells and 16,443 features and the \code{\link{sce_full_Zhengmix8eq}} of 3,994 cells and 16,443 features, respectively.
+The \code{\link{filteredExpr}}, \code{\link{filteredHVG}} and \code{\link{filteredM3Drop10}} are further reduced data sets.
+For each of the filtering method, we retained 10 percent of the original number of genes
+(with a non-zero count in at least one cell) in the original data sets.
 
 For the \code{\link{filteredExpr}} data sets, only the genes with the highest average expression (log-normalized count) value across all cells were retained.
-Using the \code{\link{Seurat}} package, the \code{\link{filteredHVG}} data sets were filtered on the variability of the features and only the most highly variable ones were retained (Satija et al. (2015)). Finally, the \code{\link{M3Drop}} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation for the \code{\link{filteredM3Drop10}} data sets (Andrews et. al (2018)). 
+Using the \code{\link{Seurat}} package, the \code{\link{filteredHVG}} data sets were filtered on the variability of the features and only the most highly variable ones were retained (Satija et al. (2015)). Finally, the \code{\link{M3Drop}} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation for the \code{\link{filteredM3Drop10}} data sets (Andrews et. al (2018)).
 
 The \code{\link{scater}} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{\link{scran}} package.
 
 This data set is provided as a S4 class for Single Cell Data. For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files for the original data sets are available from https://support.10xgenomics.com/single-cell-gene-expression/datasets.}
-}
+
 \usage{
 \code{\link{sce_full_Zhengmix4eq()}}
 \code{\link{sce_filteredExpr10_Zhengmix4eq()}}
@@ -60,8 +60,8 @@ sce_full_Zhengmix4uneq()
 \references{
 Andrews, T.S., Hemberg, M. (2018). \emph{Dropout-based feature selection for scRNASeq}. bioRxiv.
 
-Duò, A., Robinson, M.D., and Soneson, C. (2018). 
-\emph{A systematic performance evaluation of clustering methods for single-cell RNA-seq data.} 
+Duò, A., Robinson, M.D., and Soneson, C. (2018).
+\emph{A systematic performance evaluation of clustering methods for single-cell RNA-seq data.}
 F1000Research, 7:1141.
 
 Lun, A.T., Bach, K. and Marioni, J.C. (2016) \emph{Pooling across cells to normalize single-cell RNA sequencing data with many zero counts.} Genome Biol., 17(1): 75.

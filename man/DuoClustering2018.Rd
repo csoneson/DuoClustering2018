@@ -8,7 +8,7 @@ DuoClustering2018
 \description{
 Data package containing scRNA-seq data sets, clustering results and functions for running and summarizing the performance of different scRNA-seq clustering methods.
 }
-}
+
 \details{
 This package contains publicly available scRNA-seq data sets and the accompanying results from clustering using general-purpose methods and scRNA-seq clustering methods. Several real data sets a well as simulated data sets are provided. The data sets have been used to evaluate the performance of clustering algorithms in our previous work and publication (Duò et al, F1000Research 2018). The data sets ara available as \code{\link{SingleCellExperiment}} classes. For additional details on the data sets, see the help files for the respective data sets.
 

@@ -45,7 +45,7 @@ Clustering results for the performance evaluation of clustering methods for scRN
 }
 \details{
 These objects contain clustering results from the performance evaluation of clustering methods for scRNA-seq data. The clustering results are provided as a \code{\link{data.frame}} object containing 10 variables (columns) named \code{\link{dataset}}, \code{\link{method}}, \code{\link{cell}}, \code{\link{run}}, \code{\link{k}}, \code{\link{resolution}}, \code{\link{cluster}}, \code{\link{trueclass}}, \code{\link{est_k}} and \code{\link{elapsed}}. For further information see Duò et al., F1000Research 2018. }
-}
+
 \usage{
 \code{\link{clustering_summary_filteredExpr10_Koh_v1()}}
 }
