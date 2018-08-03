@@ -36,7 +36,7 @@ For each of the filtering methods, we retained 10 percent of the number of genes
 For the \code{\link{filteredExpr}} data sets, only the genes/TCCs with the highest average expression (log-normalized count) value across all cells were retained.
 Using the \code{\link{Seurat}} package (Satija et al. (2015)), the \code{\link{filteredHVG}} data sets were filtered on the variability of the features and only the most highly variable ones were retained. Finally, the \code{\link{M3Drop}} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{\link{filteredM3Drop10}} data sets (Andrews and Hemberg (2018)).
 
-The \code{\link{scater} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{\link{scran}} package (Lun et al. (2016)).
+The \code{\link{scater}} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{\link{scran}} package (Lun et al. (2016)).
 
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). Raw data files for the original data set (SRA SRP073808) are available from https://www.ncbi.nlm.nih.gov/sra?term=SRP073808.}
 
