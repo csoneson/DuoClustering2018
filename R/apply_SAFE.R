@@ -1,8 +1,10 @@
 #' Apply SAFE clustering
 #'
+#' @importFrom SingleCellExperiment counts
+#'
 apply_SAFE <- function(sce, params, k) {
   tryCatch({
-    dat <- counts(sce)
+    dat <- SingleCellExperiment::counts(sce)
     st <- system.time({
       indc <- individual_clustering(inputTags = dat, datatype = "count",
                                     SC3 = TRUE, gene_filter = FALSE,

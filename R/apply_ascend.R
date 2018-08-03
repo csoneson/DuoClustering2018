@@ -1,23 +1,26 @@
 #' Apply ascend
 #'
-#' @import ascend
-#' @import BiocParallel
-#' @import class
+#' @importFrom ascend NewEMSet NormaliseByRLE RunPCA ReduceDimensions RunCORE
+#' @importFrom BiocParallel MulticoreParam
+#' @importFrom class knn
+#' @importFrom SingleCellExperiment counts
 #'
 apply_ascend <- function(sce, params, k) {
-  register(MulticoreParam(workers = 1, progressbar = TRUE), default = TRUE)
+  BiocParallel::register(BiocParallel::MulticoreParam(workers = 1,
+                                                      progressbar = TRUE),
+                         default = TRUE)
   tryCatch({
-    dat <- counts(sce)
+    dat <- SingleCellExperiment::counts(sce)
     st <- system.time({
-      emset <- NewEMSet(ExpressionMatrix = dat)
-      normset <- NormaliseByRLE(emset)
-      pcaset <- RunPCA(normset)
-      pcaset <- ReduceDimensions(pcaset, n = params$nPC)
+      emset <- ascend::NewEMSet(ExpressionMatrix = dat)
+      normset <- ascend::NormaliseByRLE(emset)
+      pcaset <- ascend::RunPCA(normset)
+      pcaset <- ascend::ReduceDimensions(pcaset, n = params$nPC)
       ## Try to cluster all cells. If it fails (if there are outliers), cluster
       ## the ones that can be clustered and assign the remaining ones to a
       ## cluster with kNN on the extracted PCs.
-      resset <- RunCORE(pcaset, conservative = TRUE, nres = 40,
-                        remove_outlier = TRUE)
+      resset <- ascend::RunCORE(pcaset, conservative = TRUE, nres = 40,
+                                remove_outlier = TRUE)
       ## Select the height to use
       ks <- resset@Clusters$KeyStats
       ks <- subset(ks, ClusterCount == k)

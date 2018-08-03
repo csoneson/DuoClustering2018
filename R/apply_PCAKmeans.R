@@ -1,12 +1,15 @@
 #' Apply PCA + K-means.
 #'
+#' @importFrom SingleCellExperiment logcounts
+#' @importFrom stats prcomp kmeans
+#'
 apply_PCAKmeans <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperiment::logcounts(sce)
     st <- system.time({
-      pca <- prcomp(t(dat), center = TRUE, scale. = FALSE)
+      pca <- stats::prcomp(t(dat), center = TRUE, scale. = FALSE)
       pca <- pca$x[, seq_len(params$nPC), drop = FALSE]
-      cluster <- kmeans(pca, centers = k, nstart = 25)$cluster
+      cluster <- stats::kmeans(pca, centers = k, nstart = 25)$cluster
       names(cluster) = colnames(dat)
     })
 

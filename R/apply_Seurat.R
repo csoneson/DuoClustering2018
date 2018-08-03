@@ -1,24 +1,25 @@
 #' Apply Seurat
 #'
-#' @import Seurat
+#' @importFrom Seurat CreateSeuratObject NormalizeData ScaleData RunPCA FindClusters
+#' @importFrom SingleCellExperiment counts
 #'
 apply_Seurat <- function(sce, params, resolution) {
   (seed <- round(1e6*runif(1)))
   tryCatch({
-    dat <- counts(sce)
+    dat <- SingleCellExperiment::counts(sce)
     st <- system.time({
-      data <- CreateSeuratObject(raw.data = dat, min.cells = params$min.cells,
-                                 min.genes = params$min.genes, project = "scRNAseq",
-                                 display.progress = FALSE)
-      data <- NormalizeData(object = data, normalization.method = "LogNormalize",
-                            scale.factor = 1e4, display.progress = FALSE)
-      data <- ScaleData(object = data, display.progress = FALSE)
-      data <- RunPCA(object = data, pc.genes = rownames(data@data), do.print = FALSE,
-                     pcs.compute = max(params$dims.use), seed.use = seed)
-      data <- FindClusters(object = data, reduction.type = "pca", save.SNN = TRUE,
-                           dims.use = params$dims.use, k.param = 30,
-                           resolution = resolution, print.output = 0,
-                           random.seed = seed)
+      data <- Seurat::CreateSeuratObject(raw.data = dat, min.cells = params$min.cells,
+                                         min.genes = params$min.genes, project = "scRNAseq",
+                                         display.progress = FALSE)
+      data <- Seurat::NormalizeData(object = data, normalization.method = "LogNormalize",
+                                    scale.factor = 1e4, display.progress = FALSE)
+      data <- Seurat::ScaleData(object = data, display.progress = FALSE)
+      data <- Seurat::RunPCA(object = data, pc.genes = rownames(data@data), do.print = FALSE,
+                             pcs.compute = max(params$dims.use), seed.use = seed)
+      data <- Seurat::FindClusters(object = data, reduction.type = "pca", save.SNN = TRUE,
+                                   dims.use = params$dims.use, k.param = 30,
+                                   resolution = resolution, print.output = 0,
+                                   random.seed = seed)
       cluster <- data@ident
     })
 

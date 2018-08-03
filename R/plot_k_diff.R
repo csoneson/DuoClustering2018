@@ -88,4 +88,5 @@ plot_k_diff <- function(res, method_colors = NULL) {
     ggplot2::labs(y = "Difference between estimated and true number of clusters", x = "", title = "") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
 
+  plots
 }

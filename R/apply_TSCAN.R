@@ -1,19 +1,21 @@
 #' Apply TSCAN
 #'
-#' @import TSCAN
+#' @importFrom TSCAN exprmclust
+#' @importFrom SingleCellExperiment logcounts
 #'
 apply_TSCAN <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperiment::logcounts(sce)
     ## Remove genes with variance = 0
     dat <- dat[rowVars(dat) > 0, ]
     st <- system.time({
-      cluster <- exprmclust(dat, clusternum = k, modelNames = "VVV", reduce = TRUE)$clusterid
+      cluster <- TSCAN::exprmclust(dat, clusternum = k,
+                                   modelNames = "VVV", reduce = TRUE)$clusterid
     })
 
     ## Determine number of clusters automatically
-    est_k <- length(unique(exprmclust(dat, clusternum = params$range_clusters,
-                                      modelNames = "VVV", reduce = TRUE)$clusterid))
+    est_k <- length(unique(TSCAN::exprmclust(dat, clusternum = params$range_clusters,
+                                             modelNames = "VVV", reduce = TRUE)$clusterid))
 
     st <- c(user.self = st[["user.self"]], sys.self = st[["sys.self"]],
             user.child = st[["user.child"]], sys.child = st[["sys.child"]],

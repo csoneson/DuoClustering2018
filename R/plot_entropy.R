@@ -1,3 +1,4 @@
+#' Calculate Shannon entropy
 shannonEntropy <- function(clusterAssignments) {
   p <- c(table(clusterAssignments)) / length(clusterAssignments)
   -1 * sum(p * log2(p))
@@ -125,4 +126,5 @@ plot_entropy <- function(res, method_colors = NULL) {
                    axis.text.x = ggplot2::element_text(angle = 90, size = 13, vjust = 0.5, hjust = 1)) +
     ggplot2::labs(x = "", y = "Difference between normalised entropy \nfor clustering and truth, for true number of clusters")
 
+  plots
 }

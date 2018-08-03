@@ -67,7 +67,7 @@ colData(dat) <- DataFrame(
 
 The resulting `SingleCellExperiment` can be interactively explored using, e.g., the `iSEE` package. This can be useful to gain additional understanding of the partitions inferred by the different clustering methods, to visualize these in low-dimensional representations (PCA or t-SNE), and to investigate how well they agree with known or inferred groupings of the cells. 
 
-```{r}
+```{r, eval=FALSE}
 if (require(iSEE)) {
   iSEE(dat)
 }

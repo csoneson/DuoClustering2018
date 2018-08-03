@@ -1,27 +1,28 @@
 #' Apply CIDR
 #'
-#' @import cidr
+#' @importFrom cidr scDataConstructor determineDropoutCandidates wThreshold scDissim scPCA nPC scCluster
+#' @importFrom SingleCellExperiment counts
 #'
 apply_CIDR <- function(sce, params, k) {
   tryCatch({
-    dat <- counts(sce)
+    dat <- SingleCellExperiment::counts(sce)
     st <- system.time({
-      sData <- scDataConstructor(dat, tagType = "raw")
-      sData <- determineDropoutCandidates(sData)
-      sData <- wThreshold(sData)
-      sData <- scDissim(sData, threads = 1)
-      sData <- scPCA(sData, plotPC = FALSE)
-      sData <- nPC(sData)
+      sData <- cidr::scDataConstructor(dat, tagType = "raw")
+      sData <- cidr::determineDropoutCandidates(sData)
+      sData <- cidr::wThreshold(sData)
+      sData <- cidr::scDissim(sData, threads = 1)
+      sData <- cidr::scPCA(sData, plotPC = FALSE)
+      sData <- cidr::nPC(sData)
 
       ## Cluster with preset number of clusters
-      sDataC <- scCluster(object = sData, nCluster = k,
-                          nPC = sData@nPC, cMethod = "ward.D2")
+      sDataC <- cidr::scCluster(object = sData, nCluster = k,
+                                nPC = sData@nPC, cMethod = "ward.D2")
       cluster <- sDataC@clusters
       names(cluster) <- colnames(sDataC@tags)
     })
     ## Determine number of clusters automatically
-    sDataA <- scCluster(object = sData, n = max(params$range_clusters),
-                        nPC = sData@nPC, cMethod = "ward.D2")
+    sDataA <- cidr::scCluster(object = sData, n = max(params$range_clusters),
+                              nPC = sData@nPC, cMethod = "ward.D2")
     est_k <- sDataA@nCluster
 
     st <- c(user.self = st[["user.self"]], sys.self = st[["sys.self"]],

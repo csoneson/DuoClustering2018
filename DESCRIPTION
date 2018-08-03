@@ -45,3 +45,4 @@ VignetteBuilder: knitr
 Remotes: VCCRI/CIDR,
     IMB-Computational-Genomics-Lab/ascend,
     JustinaZ/pcaReduce
+RoxygenNote: 6.1.0

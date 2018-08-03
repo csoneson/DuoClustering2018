@@ -1,19 +1,22 @@
 #' Apply FlowSOM
 #'
-#' @import FlowSOM
+#' @importFrom FlowSOM ReadInput BuildSOM metaClustering_consensus
+#' @importFrom flowCore flowFrame
+#' @importFrom stats prcomp
+#' @importFrom SingleCellExperiment logcounts
 #'
 apply_FlowSOM <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperiment::logcounts(sce)
     st <- system.time({
-      pca <- prcomp(t(dat), center = TRUE, scale. = FALSE)
+      pca <- stats::prcomp(t(dat), center = TRUE, scale. = FALSE)
       pca <- pca$x[, seq_len(params$nPC), drop = FALSE]
-      ff <- flowFrame(exprs = pca)
+      ff <- flowCore::flowFrame(exprs = pca)
       fSOM <- FlowSOM::ReadInput(ff, compensate = FALSE, transform = FALSE,
                                  scale = FALSE, silent = TRUE)
       fSOM <- FlowSOM::BuildSOM(fSOM, silent = TRUE, xdim = params$xdim,
                                 ydim = params$ydim)
-      metaClustering <- metaClustering_consensus(fSOM$map$codes, k = k)
+      metaClustering <- FlowSOM::metaClustering_consensus(fSOM$map$codes, k = k)
       cluster <- metaClustering[fSOM$map$mapping[, 1]]
       names(cluster) <- colnames(dat)
     })

@@ -1,13 +1,16 @@
 #' Apply PCA + Hierarchical clustering
 #'
+#' @importFrom SingleCellExperiment logcounts
+#' @importFrom stats prcomp hclust cutree
+#'
 apply_PCAHC <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperiment::logcounts(sce)
     st <- system.time({
-      pca <- prcomp(t(dat), center = TRUE, scale. = FALSE)
+      pca <- stats::prcomp(t(dat), center = TRUE, scale. = FALSE)
       pca <- pca$x[, seq_len(params$nPC), drop = FALSE]
-      hcl <- hclust(dist(pca), method = "ward.D2")
-      cluster <- cutree(hcl, k = k)
+      hcl <- stats::hclust(dist(pca), method = "ward.D2")
+      cluster <- stats::cutree(hcl, k = k)
       names(cluster) = colnames(dat)
     })
 

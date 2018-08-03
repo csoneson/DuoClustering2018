@@ -1,15 +1,17 @@
 #' Apply t-SNE + K-means.
 #'
-#' @import Rtsne
+#' @importFrom Rtsne Rtsne
+#' @importFrom SingleCellExperiment logcounts
+#' @importFrom stats kmeans
 #'
 apply_RtsneKmeans <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperiment::logcounts(sce)
     st <- system.time({
-      rtsne <- Rtsne(X = t(dat), dims = params$dims,
-                     perplexity = params$perplexity, pca = TRUE,
-                     initial_dims = params$initial_dims, check_duplicates = FALSE)
-      cluster <- kmeans(rtsne$Y, centers = k, nstart = 25)$cluster
+      rtsne <- Rtsne::Rtsne(X = t(dat), dims = params$dims,
+                            perplexity = params$perplexity, pca = TRUE,
+                            initial_dims = params$initial_dims, check_duplicates = FALSE)
+      cluster <- stats::kmeans(rtsne$Y, centers = k, nstart = 25)$cluster
       names(cluster) = colnames(dat)
     })
 

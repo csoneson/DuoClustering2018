@@ -25,6 +25,8 @@ plots summarizing the performance of different methods across several data sets.
 suppressPackageStartupMessages({
   library(DuoClustering2018)
   library(plyr)
+  library(ExperimentHub)
+  library(SingleCellExperiment)
 })
 ```
 
@@ -41,19 +43,20 @@ To get an overview, we can list all data sets from this package that are
 available in `ExperimentHub`:
 
 ```{r}
-
+eh <- ExperimentHub()
+query(eh, "DuoClustering2018")
 ```
 
 To retrieve a data set, we can use the `ExperimentHub` ID:
 
 ```{r}
-
+eh[["EH1500"]]
 ```
 
 Alternatively, we can use the shortcut functions provided by this package:
 
 ```{r}
-dat <- sce_filteredExpr10_Koh()
+#sce_filteredExpr10_Koh()
 ```
 
 # Read a set of clustering results
@@ -70,11 +73,13 @@ an illustration, we load the clustering summaries for two different data sets
 
 ```{r}
 res <- plyr::rbind.fill(
-  clustering_summary_filteredExpr10_Koh(),
-  clustering_summary_filteredHVG10_Koh(),
-  clustering_summary_filteredExpr10_Zhengmix4eq(),
-  clustering_summary_filteredHVG10_Zhengmix4eq()
+  clustering_summary_filteredExpr10_Koh_v1(),
+  clustering_summary_filteredHVG10_Koh_v1(),
+  clustering_summary_filteredExpr10_Zhengmix4eq_v1(),
+  clustering_summary_filteredHVG10_Zhengmix4eq_v1()
 )
+dim(res)
+head(res)
 ```
 
 # Define consistent method colors
@@ -86,8 +91,9 @@ by defining a named vector of colors to use for all plots.
 ```{r}
 method_colors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE", 
                    PCAKmeans = "#44AA99", pcaReduce = "#117733",
-                   RtsneKmeans = "#999933", Seurat = "#DDCC77", SC3svm = "#661100",
-                   SC3 = "#CC6677", TSCAN = "grey34",  ascend = "orange", SAFE = "black")
+                   RtsneKmeans = "#999933", Seurat = "#DDCC77", 
+                   SC3svm = "#661100", SC3 = "#CC6677", 
+                   TSCAN = "grey34",  ascend = "orange", SAFE = "black")
 ```
 
 # Plot
@@ -108,6 +114,8 @@ clusters were defined for each of the data sets.
 ```{r}
 perf <- plot_performance(res, method_colors = method_colors)
 names(perf)
+perf$median_ari_vs_k
+perf$median_ari_heatmap_truek
 ```
 
 ## Stability
@@ -120,6 +128,8 @@ comparing each pair of such runs using the adjusted Rand Index.
 ```{r}
 stab <- plot_stability(res, method_colors = method_colors)
 names(stab)
+stab$stability_allmethods
+stab$stability_heatmap_truek
 ```
 
 ## Entropy
@@ -135,6 +145,8 @@ the clusterings to the entropy of the true partition for each data set.
 ```{r}
 entr <- plot_entropy(res, method_colors = method_colors)
 names(entr)
+entr$entropy_byds_byk
+entr$normentropy_by_ds
 ```
 
 ## Timing
@@ -145,6 +157,7 @@ different methods.
 ```{r}
 timing <- plot_timing(res, method_colors = method_colors, scaleMethod = "RtsneKmeans")
 names(timing)
+timing$time_normalized_by_ref
 ```
 
 ## Differences in k
@@ -159,6 +172,7 @@ methods that allow estimation of k.
 ```{r}
 kdiff <- plot_k_diff(res, method_colors = method_colors)
 names(kdiff)
+kdiff$diff_kest_ktrue
 ```
 
 # Session info

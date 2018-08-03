@@ -1,19 +1,21 @@
 #' Apply pcaReduce.
 #'
-#' @import pcaReduce
-#' @import clue
+#' @importFrom pcaReduce PCAreduce
+#' @importFrom clue as.cl_partition cl_consensus cl_class_ids as.cl_ensemble
+#' @importFrom SingleCellExperiment logcounts
 #'
 apply_pcaReduce <- function(sce, params, k) {
   tryCatch({
-    dat <- logcounts(sce)
+    dat <- SingleCellExperimentlogcounts(sce)
     st <- system.time({
-      pca <- PCAreduce(t(dat), nbt = params$nbt, q = params$q, method = "S")
+      pca <- pcaReduce::PCAreduce(t(dat), nbt = params$nbt, q = params$q, method = "S")
       part <- lapply(pca, function(x) {
         colnames(x) <- paste0("k", (params$q + 1):2)
-        as.cl_partition(x[, paste0("k", k)])
+        clue::as.cl_partition(x[, paste0("k", k)])
       })
-      cons <- cl_consensus(as.cl_ensemble(part), method = "SE", control = list(nruns = 50))
-      cluster <- c(cl_class_ids(cons))
+      cons <- clue::cl_consensus(clue::as.cl_ensemble(part), method = "SE",
+                                 control = list(nruns = 50))
+      cluster <- c(clue::cl_class_ids(cons))
     })
 
     st <- c(user.self = st[["user.self"]], sys.self = st[["sys.self"]],

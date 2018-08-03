@@ -36,7 +36,7 @@ If the method does not allow specification of the desired number of clusters,
 but has another parameter affecting the resolution, this can be accommodated as
 well (see the solution for `Seurat` in the code below).
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 suppressPackageStartupMessages({
   library(DuoClustering2018)
 })
@@ -47,10 +47,10 @@ method <- "PCAHC"
 ```
 
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
-params <- all_parameter_settings()[[paste0(scename, "_", method)]]
+params <- duo_clustering_all_parameter_settings_v1()[[paste0(scename, "_", method)]]
 
 ## Set number of times to run clustering for each k
 n_rep <- 5

@@ -12,13 +12,13 @@
 #'
 #' @author Angelo Duo, Charlotte Soneson
 #'
-#' @importFrom ggplot2 scale_colour_manual scale_y_log10, theme_bw, element_text aes theme ggplot geom_tile facet_wrap labs coord_equal element_blank geom_line geom_vline facet_grid geom_point ggtitle guides
+#' @importFrom ggplot2 scale_colour_manual scale_y_log10 theme_bw element_text aes theme ggplot geom_tile facet_wrap labs coord_equal element_blank geom_line geom_vline facet_grid geom_point ggtitle guides unit
 #' @importFrom dplyr group_by summarize select ungroup
 #' @importFrom tidyr separate
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom stats reorder
 #' @importFrom viridis scale_fill_viridis
-#' @importForm ggthemes theme_tufte
+#' @importFrom ggthemes theme_tufte
 #'
 #' @return A named list of \code{ggplot2} objects
 #'
@@ -58,8 +58,8 @@ plot_performance <- function(res, method_colors = NULL) {
                    legend.title.align = 1,
                    legend.text = ggplot2::element_text(size = 13),
                    legend.position = "right",
-                   legend.key.size = unit(2, "cm"),
-                   legend.key.width = unit(0.5, "cm"),
+                   legend.key.size = ggplot2::unit(2, "cm"),
+                   legend.key.width = ggplot2::unit(0.5, "cm"),
                    axis.ticks = ggplot2::element_blank(),
                    strip.text = ggplot2::element_text(size = 13))
   )
@@ -123,7 +123,7 @@ plot_performance <- function(res, method_colors = NULL) {
                     ggplot2::aes(x = stats::reorder(method, medianARI, FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, medianARI, FUN = mean, na.rm = TRUE),
                                  fill = medianARI)) +
-    sharedTimeHeatmap +
+    shared_theme_heatmap +
     ggplot2::ggtitle("Median ARI, number of clusters giving highest ARI")
 
   ## Heatmap of ARI at estimated number of clusters
