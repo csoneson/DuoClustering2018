@@ -3,6 +3,13 @@
 #' @importFrom Seurat CreateSeuratObject NormalizeData ScaleData RunPCA FindClusters
 #' @importFrom SingleCellExperiment counts
 #'
+#' @param sce A \code{SingleCellExperiment} object
+#' @param params A list of parameter settings
+#' @param resolution An numeric value giving the resolution to use for the clustering
+#'
+#' @return A list with timing information, cluster assignments and the estimated
+#'   number of clusters.
+#'
 apply_Seurat <- function(sce, params, resolution) {
   (seed <- round(1e6*runif(1)))
   tryCatch({

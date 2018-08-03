@@ -4,6 +4,13 @@
 #' @importFrom clue as.cl_partition cl_consensus cl_class_ids as.cl_ensemble
 #' @importFrom SingleCellExperiment logcounts
 #'
+#' @param sce A \code{SingleCellExperiment} object
+#' @param params A list of parameter settings
+#' @param k An integer giving the number of clusters to generate
+#'
+#' @return A list with timing information, cluster assignments and the estimated
+#'   number of clusters.
+#'
 apply_pcaReduce <- function(sce, params, k) {
   tryCatch({
     dat <- SingleCellExperimentlogcounts(sce)

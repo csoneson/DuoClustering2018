@@ -4,6 +4,13 @@
 #' @importFrom SingleCellExperiment logcounts
 #' @importFrom stats kmeans
 #'
+#' @param sce A \code{SingleCellExperiment} object
+#' @param params A list of parameter settings
+#' @param k An integer giving the number of clusters to generate
+#'
+#' @return A list with timing information, cluster assignments and the estimated
+#'   number of clusters.
+#'
 apply_RtsneKmeans <- function(sce, params, k) {
   tryCatch({
     dat <- SingleCellExperiment::logcounts(sce)

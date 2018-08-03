@@ -5,6 +5,13 @@
 #' @importFrom class knn
 #' @importFrom SingleCellExperiment counts
 #'
+#' @param sce A \code{SingleCellExperiment} object
+#' @param params A list of parameter settings
+#' @param k An integer giving the number of clusters to generate
+#'
+#' @return A list with timing information, cluster assignments and the estimated
+#'   number of clusters.
+#'
 apply_ascend <- function(sce, params, k) {
   BiocParallel::register(BiocParallel::MulticoreParam(workers = 1,
                                                       progressbar = TRUE),

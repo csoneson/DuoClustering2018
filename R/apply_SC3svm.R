@@ -4,6 +4,13 @@
 #' @importFrom SingleCellExperiment counts
 #' @importFrom SummarizedExperiment rowData
 #'
+#' @param sce A \code{SingleCellExperiment} object
+#' @param params A list of parameter settings
+#' @param k An integer giving the number of clusters to generate
+#'
+#' @return A list with timing information, cluster assignments and the estimated
+#'   number of clusters.
+#'
 apply_SC3svm <- function(sce, params, k) {
   (seed <- round(1e6*runif(1)))
   tryCatch({
