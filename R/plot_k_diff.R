@@ -30,7 +30,8 @@ plot_k_diff <- function(res, method_colors = NULL) {
   if (is.null(method_colors)) {
     manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "",
+                                                 values = method_colors)
   }
 
   shared_theme <- list(
@@ -46,7 +47,8 @@ plot_k_diff <- function(res, method_colors = NULL) {
     ggplot2::facet_wrap(~ filtering, scales = "free"),
     ggplot2::geom_hline(yintercept = 0, linetype = "dashed"),
     ggplot2::geom_boxplot(outlier.color = NA, alpha = 0.5),
-    ggplot2::geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.2, stackratio = 1)
+    ggplot2::geom_dotplot(binaxis = "y", stackdir = "center",
+                          dotsize = 0.2, stackratio = 1)
   )
 
   ## Compute ARI, true number of clusters, estimated number of clusters,
@@ -57,10 +59,12 @@ plot_k_diff <- function(res, method_colors = NULL) {
                      truenclust = length(unique(trueclass)),
                      estnclust = unique(est_k),
                      elapsed = median(elapsed)) %>%
-    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering", "dataset")) %>%
+    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering",
+                                                 "dataset")) %>%
     dplyr::select(-sce) %>% dplyr::ungroup()
 
-  ## Calculate the difference between the k that gives the maximal ARI and the true k
+  ## Calculate the difference between the k that gives the maximal ARI and the
+  ## true k
   diff_abs <- res_summary %>%
     dplyr::group_by(dataset, filtering, method, truenclust, k) %>%
     dplyr::summarize(medARI = median(ARI, na.rm = TRUE)) %>%
@@ -69,11 +73,14 @@ plot_k_diff <- function(res, method_colors = NULL) {
 
   plots[["diff_kmax_ktrue"]] <-
     ggplot2::ggplot(diff_abs,
-                    ggplot2::aes(x = method, y = k_diff, group = method, color = method)) +
+                    ggplot2::aes(x = method, y = k_diff, group = method,
+                                 color = method)) +
     shared_theme +
-    ggplot2::labs(y = "Difference between number of clusters giving \nmaximal ARI and true number of clusters",
+    ggplot2::labs(y = paste("Difference between number of clusters giving ",
+                            "\nmaximal ARI and true number of clusters"),
                   x = "", title = "") +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
+    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
+                                                       hjust = 1, vjust = 0.5))
 
   ## Calculate the difference between the estimated and true number of clusters
   diff_estnclust <- res_summary %>%
@@ -87,8 +94,10 @@ plot_k_diff <- function(res, method_colors = NULL) {
     ggplot2::ggplot(na.omit(diff_estnclust),
                     ggplot2::aes(x = method, y = k_diff, color = method)) +
     shared_theme +
-    ggplot2::labs(y = "Difference between estimated and true number of clusters", x = "", title = "") +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
+    ggplot2::labs(y = "Difference between estimated and true number of clusters",
+                  x = "", title = "") +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
+                                                       hjust = 1, vjust = 0.5))
 
   plots
 }

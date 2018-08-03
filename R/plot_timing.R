@@ -35,7 +35,8 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   if (is.null(method_colors)) {
     manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "",
+                                                 values = method_colors)
   }
 
   shared_theme <- list(
@@ -58,19 +59,22 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
                      truenclust = length(unique(trueclass)),
                      estnclust = unique(est_k),
                      elapsed = median(elapsed)) %>%
-    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering", "dataset")) %>%
+    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering",
+                                                 "dataset")) %>%
     dplyr::select(-sce) %>% dplyr::ungroup()
 
   ## Elapsed time, one boxplot per dataset, over all ks and runs
   plots[["time_boxplot_perds"]] <-
     ggplot2::ggplot(res_summary,
-                    ggplot2::aes(x = reorder(method, elapsed, FUN = median, order = TRUE, na.rm = TRUE),
+                    ggplot2::aes(x = reorder(method, elapsed, FUN = median,
+                                             order = TRUE, na.rm = TRUE),
                                  y = elapsed, group = method, color = method)) +
     shared_theme +
     ggplot2::geom_boxplot() +
     ggplot2::facet_grid(filtering ~ dataset, scales = "free") +
     ggplot2::labs(title = "", x = "", y = "Elapsed time (s)") +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, vjust = 0.5, hjust = 1),
+    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
+                                                       vjust = 0.5, hjust = 1),
                    legend.position = "none")
 
   ## Elapsed time, normalized by median time for scaleMethod
@@ -78,35 +82,44 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
     median.ref <- res_summary %>%
       dplyr::select(filtering, dataset, method, k, run, truenclust, elapsed) %>%
       dplyr::group_by(dataset, filtering, k) %>%
-      dplyr::filter(method == scaleMethod) %>% dplyr::summarise(med.t = median(elapsed)) %>%
+      dplyr::filter(method == scaleMethod) %>%
+      dplyr::summarise(med.t = median(elapsed)) %>%
       dplyr::ungroup()
     res.time <- res_summary %>%
       dplyr::group_by(filtering, dataset, method, k) %>%
       dplyr::summarise(median.elapsed = median(elapsed))%>%
       dplyr::ungroup()
-    res.time <- dplyr::full_join(res.time, median.ref, by = c("dataset", "filtering", "k")) %>%
+    res.time <- dplyr::full_join(res.time, median.ref,
+                                 by = c("dataset", "filtering", "k")) %>%
       dplyr::mutate(norm.time = median.elapsed/med.t)
 
     plots[["time_normalized_by_ref"]] <-
       ggplot2::ggplot(res.time,
-                      ggplot2::aes(x = reorder(method, norm.time, FUN = median, order = TRUE, na.rm = TRUE),
-                                   y = norm.time, group = method, color = method)) +
+                      ggplot2::aes(x = reorder(method, norm.time, FUN = median,
+                                               order = TRUE, na.rm = TRUE),
+                                   y = norm.time, group = method,
+                                   color = method)) +
       shared_theme +
       ggplot2::geom_boxplot() +
-      ggplot2::labs(x = "", y = paste0("Run time, normalized by ", scaleMethod), size = 16)+
-      ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, vjust = 0.5, hjust = 1),
+      ggplot2::labs(x = "", y = paste0("Run time, normalized by ",
+                                       scaleMethod), size = 16)+
+      ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
+                                                         vjust = 0.5, hjust = 1),
                      legend.position = "none")
   }
 
   plots[["time_by_k"]] <-
-    ggplot2::ggplot(res_summary %>% dplyr::group_by(dataset, filtering, method, k) %>%
+    ggplot2::ggplot(res_summary %>% dplyr::group_by(dataset, filtering,
+                                                    method, k) %>%
                       dplyr::summarize(medianelapsed = median(elapsed)) %>%
                       dplyr::ungroup(),
-                    ggplot2::aes(x = k, y = medianelapsed, group = method, color = method)) +
+                    ggplot2::aes(x = k, y = medianelapsed, group = method,
+                                 color = method)) +
     shared_theme +
     ggplot2::geom_line(size = 1) +
     ggplot2::facet_grid(filtering ~ dataset, scales = "free") +
-    ggplot2::labs(title = "", y = "Elapsed time (s)", x = "Number of clusters") +
+    ggplot2::labs(title = "", y = "Elapsed time (s)",
+                  x = "Number of clusters") +
     ggplot2::theme(legend.position = "right")
 
   plots

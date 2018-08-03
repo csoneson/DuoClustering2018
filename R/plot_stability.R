@@ -16,7 +16,8 @@ ARIdf <- function(x) {
   columns <- utils::combn(ncol(x), 2)
   ari.nk <- array(NA, ncol(columns))
   for (i in seq_len(length(ari.nk))) {
-    ari.nk[i] <- mclust::adjustedRandIndex(x[, columns[1, i]], x[, columns[2, i]])
+    ari.nk[i] <- mclust::adjustedRandIndex(x[, columns[1, i]],
+                                           x[, columns[2, i]])
   }
   data.frame(ari.stab = ari.nk, run1 = columns[1, ], run2 = columns[2, ],
              stringsAsFactors = FALSE)
@@ -40,7 +41,9 @@ ARIdf <- function(x) {
 #' @importFrom tidyr nest unnest separate
 #' @importFrom purrr map_int map
 #' @importFrom reshape2 dcast
-#' @importFrom ggplot2 scale_colour_manual ggplot aes geom_line geom_vline theme_bw theme facet_grid ylim labs element_text element_blank geom_boxplot geom_tile coord_equal
+#' @importFrom ggplot2 scale_colour_manual ggplot aes geom_line geom_vline
+#'   theme_bw theme facet_grid ylim labs element_text element_blank geom_boxplot
+#'   geom_tile coord_equal
 #' @importFrom viridis scale_fill_viridis
 #' @importFrom ggthemes theme_tufte
 #'
@@ -57,7 +60,8 @@ plot_stability <- function(res, method_colors = NULL) {
   if (is.null(method_colors)) {
     manual_scale <- ggplot2::scale_colour_discrete(name = "")
   } else {
-    manual_scale <- ggplot2::scale_colour_manual(name = "", values = method_colors)
+    manual_scale <- ggplot2::scale_colour_manual(name = "",
+                                                 values = method_colors)
   }
 
   shared_theme <- list(
@@ -97,16 +101,20 @@ plot_stability <- function(res, method_colors = NULL) {
   res_stab <- res_stab.tmp %>%
     dplyr::select(dataset, method, k, stability, truenclust) %>%
     tidyr::unnest() %>%
-    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering", "dataset")) %>%
+    tidyr::separate(dataset, sep = "_", into = c("sce", "filtering",
+                                                 "dataset")) %>%
     dplyr::select(-sce)
   res_stab$k <- as.integer(res_stab$k)
 
   ## methods combined
   plots[["stability_allmethods"]] <-
     ggplot2::ggplot(res_stab %>%
-                      dplyr::group_by(dataset, method, filtering, k, truenclust) %>%
-                      dplyr::summarize(ari.stab = median(ari.stab, na.rm = TRUE)),
-                    ggplot2::aes(x = k, y = ari.stab, group = method, color = method)) +
+                      dplyr::group_by(dataset, method, filtering, k,
+                                      truenclust) %>%
+                      dplyr::summarize(ari.stab = median(ari.stab,
+                                                         na.rm = TRUE)),
+                    ggplot2::aes(x = k, y = ari.stab, group = method,
+                                 color = method)) +
     shared_theme +
     ggplot2::geom_vline(aes(xintercept = truenclust), linetype = "dashed") +
     ggplot2::geom_line(size = 1) +
@@ -116,28 +124,35 @@ plot_stability <- function(res, method_colors = NULL) {
   ## stability at truenclust
   plots[["stability_truek"]] <-
     ggplot2::ggplot(res_stab %>% dplyr::filter(k == truenclust),
-                    ggplot2::aes(x = method, y = ari.stab, group = method, color = method)) +
+                    ggplot2::aes(x = method, y = ari.stab, group = method,
+                                 color = method)) +
     shared_theme +
     ggplot2::geom_boxplot() +
     ggplot2::labs(y = "Stability (ARI) at true number of clusters") +
-    ggplot2::theme(axis.text.x = element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5))
+    ggplot2::theme(axis.text.x = element_text(size = 13, angle = 90,
+                                              hjust = 1, vjust = 0.5))
 
   ## plot heat map on median stability with truenclust
   plots[["stability_heatmap_truek"]] <-
     ggplot2::ggplot(res_stab %>% dplyr::filter(k == truenclust) %>%
                       dplyr::group_by(filtering, dataset, method, k) %>%
                       dplyr::summarise(median.stability = median(ari.stab)),
-                    ggplot2::aes(x = stats::reorder(method, median.stability, FUN = mean, na.rm = TRUE),
-                                 y = stats::reorder(dataset, median.stability, FUN = mean, na.rm = TRUE),
+                    ggplot2::aes(x = stats::reorder(method, median.stability,
+                                                    FUN = mean, na.rm = TRUE),
+                                 y = stats::reorder(dataset, median.stability,
+                                                    FUN = mean, na.rm = TRUE),
                                  fill = median.stability)) +
     ggplot2::geom_tile(color = "white", size = 0.5, na.rm = FALSE) +
     ggplot2::facet_wrap(~ filtering) +
-    viridis::scale_fill_viridis(name = "Median \nstability \n(ARI)", direction = -1,
+    viridis::scale_fill_viridis(name = "Median \nstability \n(ARI)",
+                                direction = -1,
                                 limits = c(0, 1), na.value = "white") +
     ggthemes::theme_tufte(base_family = "Helvetica") +
-    ggplot2::labs(x = NULL, y = NULL, title = "median stability (ARI) at true number of clusters") +
+    ggplot2::labs(x = NULL, y = NULL,
+                  title = "median stability (ARI) at true number of clusters") +
     ggplot2::coord_equal() +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90, hjust = 1, vjust = 0.5),
+    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
+                                                       hjust = 1, vjust = 0.5),
                    axis.text.y = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    legend.title.align = 0,
