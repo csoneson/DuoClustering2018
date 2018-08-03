@@ -39,7 +39,7 @@ the `plot_performance` vignette. Here, we will load a data set using the
 shortcut functions provided in the package.
 
 ```{r}
-#dat <- sce_filteredExpr10_Koh()
+dat <- sce_filteredExpr10_Koh()
 ```
 
 # Read a set of clustering results
@@ -65,10 +65,11 @@ res <- res %>% dplyr::filter(run == 1 & k %in% c(3, 5, 9)) %>%
   dplyr::select(cell, method_k, cluster) %>%
   tidyr::spread(key = method_k, value = cluster)
 
-# colData(dat) <- DataFrame(
-#   as.data.frame(colData(dat)) %>% 
-#     dplyr::left_join(res, by = c("Run" = "cell"))
-# )
+colData(dat) <- DataFrame(
+  as.data.frame(colData(dat)) %>%
+    dplyr::left_join(res, by = c("Run" = "cell"))
+)
+head(colData(dat))
 ```
 
 # Visualize with `iSEE`
@@ -80,9 +81,9 @@ low-dimensional representations (PCA or t-SNE), and to investigate how well they
 agree with known or inferred groupings of the cells.
 
 ```{r, eval=FALSE}
-# if (require(iSEE)) {
-#   iSEE(dat)
-# }
+if (require(iSEE)) {
+  iSEE(dat)
+}
 ```
 
 # Session info

@@ -67,7 +67,7 @@ eh[["EH1500"]]
 Alternatively, the shortcut functions provided by this package can be used:
 
 ```{r}
-#sce_filteredExpr10_Koh()
+sce_filteredExpr10_Koh()
 ```
 
 # Read a set of clustering results
