@@ -22,7 +22,10 @@ Imports: ExperimentHub,
     ggplot2,
     purrr,
     reshape2,
-    viridis
+    viridis,
+    SingleCellExperiment,
+    SummarizedExperiment,
+    ggthemes
 Suggests: knitr,
     rmarkdown,
     BiocStyle,
@@ -39,7 +42,8 @@ Suggests: knitr,
     pcaReduce,
     scater,
     TSCAN,
-    iSEE
+    iSEE,
+    cidr
 VignetteBuilder: knitr
 Remotes: VCCRI/CIDR,
     IMB-Computational-Genomics-Lab/ascend,

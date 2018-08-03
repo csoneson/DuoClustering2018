@@ -5,8 +5,8 @@
 #' @importFrom dplyr select
 #'
 ARIdf <- function(x) {
-  stopifnot(class(x) == "data.frame")
-  stopifnot(class(x[, 1]) == "character")
+  stopifnot(is(x, "data.frame"))
+  stopifnot(is(x[, 1], "character"))
 
   x <- dplyr::select(x, -cell)
   columns <- utils::combn(ncol(x), 2)
