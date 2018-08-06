@@ -22,35 +22,35 @@ early mesoderm progenitors. It contains 9 subpopulations, defined by the
 cell phenotype given by the authors' annotations. The data sets have been used to evaluate the performance of clustering algorithms in Duò et al. (2018).
 
 For the \code{sce_full_Koh} data set, all genes except those with zero counts across all cells are retained. The gene counts are
-gene-level length-scaled TPM values derived from Salmon quantifications (see Soneson and Robinson (2018)). For the TCC data set we estimated transcripts compatibility counts using \code{\link{kallisto}} as an alternative to the gene-level count matrix (Bray et al. (2016)).
+gene-level length-scaled TPM values derived from Salmon quantifications (see Soneson and Robinson (2018)). For the TCC data set we estimated transcripts compatibility counts using \code{kallisto} as an alternative to the gene-level count matrix (Bray et al. (2016)).
 
-The \code{\link{scater}} package was used to perform quality control of the data sets (McCarthy et al. (2017)).
+The \code{scater} package was used to perform quality control of the data sets (McCarthy et al. (2017)).
 Features with zero counts across all cells, as well as all cells with total count or total number
 of detected features more than 3 median absolute deviations (MADs) below the median across all cells (on the log scale), were excluded. Additionally, cells that were classified as doublets or debris were filtered out.
 
-The \code{\link{sce_full_Koh}} data set consists of 531 cells and 48,981 features, and the \code{\link{sce_full_KohTCC}} data set of 531 cells and 811,938 features.
-The \code{\link{filteredExpr}}, \code{\link{filteredHVG}} and \code{\link{filteredM3Drop10}} are further reduced data sets.
+The \code{sce_full_Koh} data set consists of 531 cells and 48,981 features, and the \code{sce_full_KohTCC} data set of 531 cells and 811,938 features.
+The \code{filteredExpr}, \code{filteredHVG} and \code{filteredM3Drop10} are further reduced data sets.
 For each of the filtering methods, we retained 10 percent of the number of genes
 (with a non-zero count in at least one cell) in the original data sets.
 
-For the \code{\link{filteredExpr}} data sets, only the genes/TCCs with the highest average expression (log-normalized count) value across all cells were retained.
-Using the \code{\link{Seurat}} package (Satija et al. (2015)), the \code{\link{filteredHVG}} data sets were filtered on the variability of the features and only the most highly variable ones were retained. Finally, the \code{\link{M3Drop}} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{\link{filteredM3Drop10}} data sets (Andrews and Hemberg (2018)).
+For the \code{filteredExpr} data sets, only the genes/TCCs with the highest average expression (log-normalized count) value across all cells were retained.
+Using the \code{Seurat} package (Satija et al. (2015)), the \code{filteredHVG} data sets were filtered on the variability of the features and only the most highly variable ones were retained. Finally, the \code{M3Drop} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{filteredM3Drop10} data sets (Andrews and Hemberg (2018)).
 
-The \code{\link{scater}} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{\link{scran}} package (Lun et al. (2016)).
+The \code{scater} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{scran} package (Lun et al. (2016)).
 
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). Raw data files for the original data set (SRA SRP073808) are available from https://www.ncbi.nlm.nih.gov/sra?term=SRP073808.}
 
-}
 \usage{
-\code{\link{sce_full_Koh()}}
-\code{\link{sce_filteredExpr10_Koh()}}
-\code{\link{sce_filteredHVG10_Koh()}}
-\code{\link{sce_filteredM3Drop10_Koh()}}
-\code{\link{sce_full_KohTCC()}}
-\code{\link{sce_filteredExpr10_KohTCC()}}
-\code{\link{sce_filteredHVG10_KohTCC()}}
-\code{\link{sce_filteredM3Drop10_KohTCC()}}
+sce_full_Koh()
+sce_filteredExpr10_Koh()
+sce_filteredHVG10_Koh()
+sce_filteredM3Drop10_Koh()
+sce_full_KohTCC()
+sce_filteredExpr10_KohTCC()
+sce_filteredHVG10_KohTCC()
+sce_filteredM3Drop10_KohTCC()
 }
+
 \examples{
 sce_filteredHVG10_Koh()
 }

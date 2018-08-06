@@ -20,37 +20,37 @@ Gene counts for scRNA-seq data sets from Zheng et al. (2017), consisting of pre-
 \details{
 This is a scRNA-seq data set originally from Zheng et al. (2017). The data set consist of eigth pre-sorted cell types (B-cells, naive cytotoxic T-cells, CD14 monocytes, regulatory T-cells, CD56 NK cells, memory T-cells, CD4 T-helper cells and naive T-cells) from \emph{Homo sapiens} combined into three artificial data sets with different cell proportions. The annotated cell type (obtained by pre-sorting of the cells) is used as the true cell label. The data sets have been used to evaluate the performance of clustering algorithms in Duò et al. (2018).
 
-For the \code{\link{Zhengmix4eq}} data set, randomly selected B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells were combined in equal proportions (1,000 cells per subpopulation).
-The \code{\link{Zhengmix4uneq}} data set consists of four cell types, combined in unequal proportions (1,000 B-cells, 500 naive cytotoxic T-cells, 2,000 CD14 monocytes and 3,000 regulatory T-cells). For the \code{\link{Zhengmix8eq}} data set, all eight populations were combined in approximately equal proportions (400–600 cells per population).
+For the \code{Zhengmix4eq} data set, randomly selected B-cells, CD14 monocytes, naive cytotoxic T-cells and regulatory T-cells were combined in equal proportions (1,000 cells per subpopulation).
+The \code{Zhengmix4uneq} data set consists of four cell types, combined in unequal proportions (1,000 B-cells, 500 naive cytotoxic T-cells, 2,000 CD14 monocytes and 3,000 regulatory T-cells). For the \code{Zhengmix8eq} data set, all eight populations were combined in approximately equal proportions (400–600 cells per population).
 
 For the \code{sce_full_Zhengmix4eq}, \code{sce_full_Zhengmix4uneq} and \code{sce_full_Zhengmix8eq} data set, all genes except those with zero counts across all cells are retained. The gene counts are unique molecular identifiers (UMIs) counts.
-The \code{\link{scater}} package was used to perform quality control of the data (McCarthy et al. (2017)).
+The \code{scater} package was used to perform quality control of the data (McCarthy et al. (2017)).
 Features with zero counts across all cells, as well as all cells with total count or total number of detected features more than 3 median absolute deviations (MADs) below the median across all cells (on the log scale), were excluded.
 
-The \code{\link{sce_full_Zhengmix4eq}} data set consists of 3,994 cells and 15,568 features, the \code{\link{sce_full_Zhengmix4uneq}} data set of 6,498 cells and 16,443 features and the \code{\link{sce_full_Zhengmix8eq}} of 3,994 cells and 16,443 features, respectively.
-The \code{\link{filteredExpr}}, \code{\link{filteredHVG}} and \code{\link{filteredM3Drop10}} are further reduced data sets.
+The \code{sce_full_Zhengmix4eq} data set consists of 3,994 cells and 15,568 features, the \code{sce_full_Zhengmix4uneq} data set of 6,498 cells and 16,443 features and the \code{sce_full_Zhengmix8eq} of 3,994 cells and 16,443 features, respectively.
+The \code{filteredExpr}, \code{filteredHVG} and \code{filteredM3Drop10} are further reduced data sets.
 For each of the filtering method, we retained 10 percent of the original number of genes
 (with a non-zero count in at least one cell) in the original data sets.
 
-For the \code{\link{filteredExpr}} data sets, only the genes with the highest average expression (log-normalized count) value across all cells were retained.
-Using the \code{\link{Seurat}} package, the \code{\link{filteredHVG}} data sets were filtered on the variability of the features and only the most highly variable ones were retained (Satija et al. (2015)).  Finally, the \code{\link{M3Drop}} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{\link{filteredM3Drop10}} data sets (Andrews and Hemberg (2018)).
+For the \code{filteredExpr} data sets, only the genes with the highest average expression (log-normalized count) value across all cells were retained.
+Using the \code{Seurat} package, the \code{filteredHVG} data sets were filtered on the variability of the features and only the most highly variable ones were retained (Satija et al. (2015)).  Finally, the \code{M3Drop} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{filteredM3Drop10} data sets (Andrews and Hemberg (2018)).
 
-The \code{\link{scater}} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{\link{scran}} package (Lun et al. (2016)).
-This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files or the original data sets are available from https://support.10xgenomics.com/single-cell-gene-expression/datasets.}
+The \code{scater} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{scran} package (Lun et al. (2016)).
+This data set is provided as a \code{\linkS4class{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files or the original data sets are available from https://support.10xgenomics.com/single-cell-gene-expression/datasets.}
 
 \usage{
-\code{\link{sce_full_Zhengmix4eq()}}
-\code{\link{sce_filteredExpr10_Zhengmix4eq()}}
-\code{\link{sce_filteredHVG10_Zhengmix4eq()}}
-\code{\link{sce_filteredM3Drop10_Zhengmix4eq()}}
-\code{\link{sce_full_Zhengmix4uneq()}}
-\code{\link{sce_filteredExpr10_Zhengmix4uneq()}}
-\code{\link{sce_filteredHVG10_Zhengmix4uneq()}}
-\code{\link{sce_filteredM3Drop10_Zhengmix4uneq()}}
-\code{\link{sce_full_Zhengmix8eq()}}
-\code{\link{sce_filteredExpr10_Zhengmix8eq()}}
-\code{\link{sce_filteredHVG10_Zhengmix8eq()}}
-\code{\link{sce_filteredM3Drop10_Zhengmix8eq()}}
+sce_full_Zhengmix4eq()
+sce_filteredExpr10_Zhengmix4eq()
+sce_filteredHVG10_Zhengmix4eq()
+sce_filteredM3Drop10_Zhengmix4eq()
+sce_full_Zhengmix4uneq()
+sce_filteredExpr10_Zhengmix4uneq()
+sce_filteredHVG10_Zhengmix4uneq()
+sce_filteredM3Drop10_Zhengmix4uneq()
+sce_full_Zhengmix8eq()
+sce_filteredExpr10_Zhengmix8eq()
+sce_filteredHVG10_Zhengmix8eq()
+sce_filteredM3Drop10_Zhengmix8eq()
 }
 \examples{
 sce_full_Zhengmix4uneq()
