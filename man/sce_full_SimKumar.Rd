@@ -17,7 +17,7 @@
 SimKumar data sets
 }
 \description{
-Gene counts for scRNA-seq data sets simulated with the \code{\link{splatter}} package.
+Gene counts for scRNA-seq data sets simulated with the \code{splatter} package.
 }
 \details{
 Using one subpopulation of the \code{sce_full_Kumar} data set as input, scRNA-seq data with known group structure was simulated with the \code{splatter} package from Zappia et al. (2017). The simulated data have been used to evaluate the performance of clustering algorithms in Duò et al. (2018).
