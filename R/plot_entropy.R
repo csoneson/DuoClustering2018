@@ -27,6 +27,7 @@ shannonEntropy <- function(clusterAssignments) {
 #' @importFrom ggplot2 scale_colour_manual scale_colour_discrete theme_bw theme
 #'   element_text aes ggplot geom_line facet_grid geom_vline geom_point labs
 #'   geom_hline geom_point geom_boxplot
+#' @importFrom stats median
 #'
 #' @return A named list of ggplot2 objects
 #'

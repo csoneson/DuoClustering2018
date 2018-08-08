@@ -16,6 +16,7 @@
 #' @importFrom ggplot2 scale_colour_manual theme element_text facet_wrap
 #'   geom_boxplot geom_dotplot aes labs ggplot geom_hline scale_colour_discrete
 #'   theme_bw
+#' @importFrom stats median na.omit
 #'
 #' @return A named list of ggplot2 objects
 #'

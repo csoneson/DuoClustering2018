@@ -21,6 +21,7 @@
 #' @importFrom stats reorder
 #' @importFrom viridis scale_fill_viridis
 #' @importFrom ggthemes theme_tufte
+#' @importFrom stats median
 #'
 #' @return A named list of \code{ggplot2} objects
 #'

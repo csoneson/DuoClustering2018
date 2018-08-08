@@ -1,8 +1,10 @@
 #' Help function for computing ARI
 #'
-#' @importFrom utils combn
+#' @importFrom utils combn 
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom dplyr select
+#' @importFrom stats median
+#' @importFrom purrr data
 #'
 #' @param x A \code{data.frame} with clustering results.
 #'

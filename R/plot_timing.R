@@ -21,6 +21,7 @@
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom ggplot2 scale_colour_manual geom_boxplot geom_line facet_grid
 #'   scale_y_log10 theme_bw labs theme element_text aes
+#' @importFrom stats median
 #'
 #' @return A named list of ggplot2 objects
 #'
