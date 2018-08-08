@@ -25,10 +25,3 @@ Duò, A., Robinson, M.D., and Soneson, C. (2018).
 F1000Research, 7:1141.
 }
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-%\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-%\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
