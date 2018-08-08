@@ -1,5 +1,6 @@
 \name{sce_full_Kumar}
 \docType{data}
+\alias{sce_full_Kumar}
 \alias{sce_filteredExpr10_Kumar}
 \alias{sce_filteredHVG10_Kumar}
 \alias{sce_filteredM3Drop10_Kumar}
@@ -10,6 +11,9 @@
 
 \title{
 Kumar data sets
+}
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
 Gene or TCC counts for scRNA-seq data set from Kumar et al. (2014), consisting of mESCs with various genetic perturbations which are cultured in different media.
@@ -31,18 +35,18 @@ For each of the filtering method, we retained 10 percent of the original number 
 For the \code{filteredExpr} data sets, only the genes/TCCs with the highest average expression (log-normalized count) value across all cells were retained.
 Using the \code{Seurat} package, the \code{filteredHVG} data sets were filtered on the variability of the features and only the most highly variable ones were retained (Satija et al. (2015)).  Finally, the \code{M3Drop} package was used to model the dropout rate of the genes as a function of the mean expression level using the Michaelis-Menten equation and select variables to retain for the \code{filteredM3Drop10} data sets (Andrews and Hemberg (2018)).
 
-The \code{scater} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{scran} package (Lun et al. (2016)). 
+The \code{scater} package was used to normalize the count values, based on normalization factors calculated by the deconvolution method from the \code{scran} package (Lun et al. (2016)).
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files for the original data set (GEO GSE60749) are available from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60749.}
 
 \usage{
-sce_full_Kumar()
-sce_filteredExpr10_Kumar()
-sce_filteredHVG10_Kumar()
-sce_filteredM3Drop10_Kumar()
-sce_full_KumarTCC()
-sce_filteredExpr10_KumarTCC()
-sce_filteredHVG10_KumarTCC()
-sce_filteredM3Drop10_KumarTCC()
+sce_full_Kumar(metadata = FALSE)
+sce_filteredExpr10_Kumar(metadata = FALSE)
+sce_filteredHVG10_Kumar(metadata = FALSE)
+sce_filteredM3Drop10_Kumar(metadata = FALSE)
+sce_full_KumarTCC(metadata = FALSE)
+sce_filteredExpr10_KumarTCC(metadata = FALSE)
+sce_filteredHVG10_KumarTCC(metadata = FALSE)
+sce_filteredM3Drop10_KumarTCC(metadata = FALSE)
 }
 \examples{
 sce_filteredExpr10_Kumar()

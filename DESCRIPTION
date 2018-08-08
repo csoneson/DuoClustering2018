@@ -25,11 +25,13 @@ Imports: ExperimentHub,
     viridis,
     SingleCellExperiment,
     SummarizedExperiment,
-    ggthemes
+    ggthemes,
+    stats
 Suggests: knitr,
     rmarkdown,
     BiocStyle,
     scater,
-    iSEE
+    iSEE,
+    plyr
 VignetteBuilder: knitr
 RoxygenNote: 6.1.0

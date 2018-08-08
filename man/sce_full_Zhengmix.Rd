@@ -1,5 +1,6 @@
 \name{sce_full_Zhengmix4eq}
 \docType{data}
+\alias{sce_full_Zhengmix4eq}
 \alias{sce_filteredExpr10_Zhengmix4eq}
 \alias{sce_filteredHVG10_Zhengmix4eq}
 \alias{sce_filteredM3Drop10_Zhengmix4eq}
@@ -13,6 +14,9 @@
 \alias{sce_filteredM3Drop10_Zhengmix8eq}
 \title{
 Zheng data sets
+}
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
 Gene counts for scRNA-seq data sets from Zheng et al. (2017), consisting of pre-sorted cell types combined into three artificial data sets with different cell proportions.
@@ -39,18 +43,18 @@ The \code{scater} package was used to normalize the count values, based on norma
 This data set is provided as a \code{\linkS4class{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files or the original data sets are available from https://support.10xgenomics.com/single-cell-gene-expression/datasets.}
 
 \usage{
-sce_full_Zhengmix4eq()
-sce_filteredExpr10_Zhengmix4eq()
-sce_filteredHVG10_Zhengmix4eq()
-sce_filteredM3Drop10_Zhengmix4eq()
-sce_full_Zhengmix4uneq()
-sce_filteredExpr10_Zhengmix4uneq()
-sce_filteredHVG10_Zhengmix4uneq()
-sce_filteredM3Drop10_Zhengmix4uneq()
-sce_full_Zhengmix8eq()
-sce_filteredExpr10_Zhengmix8eq()
-sce_filteredHVG10_Zhengmix8eq()
-sce_filteredM3Drop10_Zhengmix8eq()
+sce_full_Zhengmix4eq(metadata = FALSE)
+sce_filteredExpr10_Zhengmix4eq(metadata = FALSE)
+sce_filteredHVG10_Zhengmix4eq(metadata = FALSE)
+sce_filteredM3Drop10_Zhengmix4eq(metadata = FALSE)
+sce_full_Zhengmix4uneq(metadata = FALSE)
+sce_filteredExpr10_Zhengmix4uneq(metadata = FALSE)
+sce_filteredHVG10_Zhengmix4uneq(metadata = FALSE)
+sce_filteredM3Drop10_Zhengmix4uneq(metadata = FALSE)
+sce_full_Zhengmix8eq(metadata = FALSE)
+sce_filteredExpr10_Zhengmix8eq(metadata = FALSE)
+sce_filteredHVG10_Zhengmix8eq(metadata = FALSE)
+sce_filteredM3Drop10_Zhengmix8eq(metadata = FALSE)
 }
 \examples{
 sce_full_Zhengmix4uneq()

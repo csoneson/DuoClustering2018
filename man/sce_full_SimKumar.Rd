@@ -1,5 +1,6 @@
 \name{sce_full_SimKumar4easy}
 \docType{data}
+\alias{sce_full_SimKumar4easy}
 \alias{sce_filteredExpr10_SimKumar4easy}
 \alias{sce_filteredHVG10_SimKumar4easy}
 \alias{sce_filteredM3Drop10_SimKumar4easy}
@@ -15,6 +16,9 @@
 
 \title{
 SimKumar data sets
+}
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
 Gene counts for scRNA-seq data sets simulated with the \code{splatter} package.
@@ -35,18 +39,18 @@ The \code{scater} package was used to normalize the count values, based on norma
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. }
 
 \usage{
-sce_full_SimKumar4easy()
-sce_filteredExpr10_SimKumar4easy()
-sce_filteredHVG10_SimKumar4easy()
-sce_filteredM3Drop10_SimKumar4easy()
-sce_full_SimKumar4hard()
-sce_filteredExpr10_SimKumar4hard()
-sce_filteredHVG10_SimKumar4hard()
-sce_filteredM3Drop10_SimKumar4hard()
-sce_full_SimKumar8hard()
-sce_filteredExpr10_SimKumar8hard()
-sce_filteredHVG10_SimKumar8hard()
-sce_filteredM3Drop10_SimKumar8hard()
+sce_full_SimKumar4easy(metadata = FALSE)
+sce_filteredExpr10_SimKumar4easy(metadata = FALSE)
+sce_filteredHVG10_SimKumar4easy(metadata = FALSE)
+sce_filteredM3Drop10_SimKumar4easy(metadata = FALSE)
+sce_full_SimKumar4hard(metadata = FALSE)
+sce_filteredExpr10_SimKumar4hard(metadata = FALSE)
+sce_filteredHVG10_SimKumar4hard(metadata = FALSE)
+sce_filteredM3Drop10_SimKumar4hard(metadata = FALSE)
+sce_full_SimKumar8hard(metadata = FALSE)
+sce_filteredExpr10_SimKumar8hard(metadata = FALSE)
+sce_filteredHVG10_SimKumar8hard(metadata = FALSE)
+sce_filteredM3Drop10_SimKumar8hard(metadata = FALSE)
 }
 \examples{
 sce_full_SimKumar4easy()

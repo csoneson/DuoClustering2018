@@ -1,5 +1,6 @@
 \name{sce_full_Koh}
 \docType{data}
+\alias{sce_full_Koh}
 \alias{sce_filteredExpr10_Koh}
 \alias{sce_filteredHVG10_Koh}
 \alias{sce_filteredM3Drop10_Koh}
@@ -10,6 +11,9 @@
 
 \title{
 Koh data sets
+}
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
 Gene or TCC counts for a scRNA-seq data set from Koh et al. (2016), consisting of in vitro cultured
@@ -41,14 +45,14 @@ The \code{scater} package was used to normalize the count values, based on norma
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). Raw data files for the original data set (SRA SRP073808) are available from https://www.ncbi.nlm.nih.gov/sra?term=SRP073808.}
 
 \usage{
-sce_full_Koh()
-sce_filteredExpr10_Koh()
-sce_filteredHVG10_Koh()
-sce_filteredM3Drop10_Koh()
-sce_full_KohTCC()
-sce_filteredExpr10_KohTCC()
-sce_filteredHVG10_KohTCC()
-sce_filteredM3Drop10_KohTCC()
+sce_full_Koh(metadata = FALSE)
+sce_filteredExpr10_Koh(metadata = FALSE)
+sce_filteredHVG10_Koh(metadata = FALSE)
+sce_filteredM3Drop10_Koh(metadata = FALSE)
+sce_full_KohTCC(metadata = FALSE)
+sce_filteredExpr10_KohTCC(metadata = FALSE)
+sce_filteredHVG10_KohTCC(metadata = FALSE)
+sce_filteredM3Drop10_KohTCC(metadata = FALSE)
 }
 
 \examples{
