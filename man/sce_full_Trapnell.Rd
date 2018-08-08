@@ -1,5 +1,6 @@
 \name{sce_full_Trapnell}
 \docType{data}
+\alias{sce_full_Trapnell}
 \alias{sce_filteredExpr10_Trapnell}
 \alias{sce_filteredHVG10_Trapnell}
 \alias{sce_filteredM3Drop10_Trapnell}
@@ -10,6 +11,9 @@
 
 \title{
 Trapnell data sets
+}
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
 Gene or TCC counts for scRNA-seq data set from Trapnell et al. (2014), consisting of primary myoblasts over a time course of serum-induced differentiation.
@@ -36,14 +40,14 @@ The \code{scater} package was used to normalize the count values, based on norma
 This data set is provided as a \code{\link{SingleCellExperiment}} object (Lun and Risso (2017)). For further information on the \code{\linkS4class{SingleCellExperiment}} class, see the respective manual. Raw data files for the original data set (GEO GSE52529) are available from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52529.}
 
 \usage{
-sce_full_Trapnell()
-sce_filteredExpr10_Trapnell()
-sce_filteredHVG10_Trapnell()
-sce_filteredM3Drop10_Trapnell()
-sce_full_TrapnellTCC()
-sce_filteredExpr10_TrapnellTCC()
-sce_filteredHVG10_TrapnellTCC()
-sce_filteredM3Drop10_TrapnellTCC()
+sce_full_Trapnell(metadata = FALSE)
+sce_filteredExpr10_Trapnell(metadata = FALSE)
+sce_filteredHVG10_Trapnell(metadata = FALSE)
+sce_filteredM3Drop10_Trapnell(metadata = FALSE)
+sce_full_TrapnellTCC(metadata = FALSE)
+sce_filteredExpr10_TrapnellTCC(metadata = FALSE)
+sce_filteredHVG10_TrapnellTCC(metadata = FALSE)
+sce_filteredM3Drop10_TrapnellTCC(metadata = FALSE)
 }
 \examples{
 sce_full_Trapnell()

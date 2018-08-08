@@ -21,7 +21,7 @@ Plot differences between optimal, estimated and true number of clusters
 }
 \examples{
 res <- clustering_summary_filteredExpr10_Koh_v1()
-plots <- plot_kdiff(res)
+plots <- plot_k_diff(res)
 
 }
 \author{

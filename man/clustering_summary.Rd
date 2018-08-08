@@ -40,6 +40,9 @@
 \title{
 Clustering summaries
 }
+\arguments{
+\item{metadata}{Logical, whether only metadata should be returned}
+}
 \description{
 Clustering results for the performance evaluation of clustering methods for scRNA-seq data, corresponding to v1 of Duò et al., F1000Research 2018.
 }
@@ -47,7 +50,7 @@ Clustering results for the performance evaluation of clustering methods for scRN
 These objects contain clustering results from the performance evaluation of clustering methods for scRNA-seq data. The clustering results are provided as a \code{\link{data.frame}} object containing 10 variables (columns) named \code{dataset}, \code{method}, \code{cell}, \code{run}, \code{k}, \code{resolution}, \code{cluster}, \code{trueclass}, \code{est_k} and \code{elapsed}. For further information see Duò et al., F1000Research 2018. }
 
 \usage{
-clustering_summary_filteredExpr10_Koh_v1()
+clustering_summary_filteredExpr10_Koh_v1(metadata = FALSE)
 }
 \examples{
 clustering_summary_filteredExpr10_Koh_v1()
