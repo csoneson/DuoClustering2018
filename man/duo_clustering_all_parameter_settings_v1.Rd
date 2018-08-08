@@ -13,7 +13,7 @@ List of hyperparametervalues used used for all clustering algorithms and data se
  }
 
 \usage{
-duo_clustering_all_parameter_settings_v1()
+duo_clustering_all_parameter_settings_v1(metadata = FALSE)
 }
 \examples{
 duo_clustering_all_parameter_settings_v1()
