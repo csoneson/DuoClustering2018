@@ -166,7 +166,8 @@ The `plot_timing()` function plots various aspects of the timing of the
 different methods.
 
 ```{r}
-timing <- plot_timing(res, method_colors = method_colors, scaleMethod = "RtsneKmeans")
+timing <- plot_timing(res, method_colors = method_colors, 
+                      scaleMethod = "RtsneKmeans")
 names(timing)
 timing$time_normalized_by_ref
 ```

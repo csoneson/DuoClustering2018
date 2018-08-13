@@ -67,7 +67,8 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   ## Elapsed time, one boxplot per dataset, over all ks and runs
   plots[["time_boxplot_perds"]] <-
     ggplot2::ggplot(res_summary,
-                    ggplot2::aes(x = reorder(method, elapsed, FUN = stats::median,
+                    ggplot2::aes(x = reorder(method, elapsed,
+                                             FUN = stats::median,
                                              order = TRUE, na.rm = TRUE),
                                  y = elapsed, group = method, color = method)) +
     shared_theme +
@@ -96,7 +97,8 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
 
     plots[["time_normalized_by_ref"]] <-
       ggplot2::ggplot(res.time,
-                      ggplot2::aes(x = reorder(method, norm.time, FUN = stats::median,
+                      ggplot2::aes(x = reorder(method, norm.time,
+                                               FUN = stats::median,
                                                order = TRUE, na.rm = TRUE),
                                    y = norm.time, group = method,
                                    color = method)) +
@@ -105,14 +107,16 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
       ggplot2::labs(x = "", y = paste0("Run time, normalized by ",
                                        scaleMethod), size = 16)+
       ggplot2::theme(axis.text.x = ggplot2::element_text(size = 13, angle = 90,
-                                                         vjust = 0.5, hjust = 1),
+                                                         vjust = 0.5,
+                                                         hjust = 1),
                      legend.position = "none")
   }
 
   plots[["time_by_k"]] <-
     ggplot2::ggplot(res_summary %>% dplyr::group_by(dataset, filtering,
                                                     method, k) %>%
-                      dplyr::summarize(medianelapsed = stats::median(elapsed)) %>%
+                      dplyr::summarize(
+                        medianelapsed = stats::median(elapsed)) %>%
                       dplyr::ungroup(),
                     ggplot2::aes(x = k, y = medianelapsed, group = method,
                                  color = method)) +

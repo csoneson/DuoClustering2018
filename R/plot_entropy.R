@@ -80,7 +80,8 @@ plot_entropy <- function(res, method_colors = NULL) {
                       dplyr::filter(!is.na(s)) %>%
                       dplyr::group_by(dataset, method, filtering, k,
                                       truenclust, s.true) %>%
-                      dplyr::summarize(entropy = stats::median(s, na.rm = TRUE)),
+                      dplyr::summarize(
+                        entropy = stats::median(s, na.rm = TRUE)),
                     ggplot2::aes(x = k, y = entropy, group = method,
                                  color = method)) +
     shared_theme +
@@ -111,7 +112,8 @@ plot_entropy <- function(res, method_colors = NULL) {
     ggplot2::geom_boxplot() +
     ggplot2::facet_grid(. ~ dataset, scale = "free") +
     ggplot2::geom_hline(aes(yintercept = s.true.norm), linetype = "dashed") +
-    ggplot2::labs(x = "", y = "Normalized Entropy for true number of clusters") +
+    ggplot2::labs(x = "",
+                  y = "Normalized Entropy for true number of clusters") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, size = 13,
                                                        vjust = 0.5, hjust = 1),
                    legend.position = "none")
@@ -130,8 +132,9 @@ plot_entropy <- function(res, method_colors = NULL) {
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, size = 13,
                                                        vjust = 0.5, hjust = 1),
                    legend.position = "none") +
-    ggplot2::labs(x = "", y = paste("Difference between entropy for clustering",
-                                    " and truth, \nfor true number of clusters"))
+    ggplot2::labs(x = "",
+                  y = paste("Difference between entropy for clustering",
+                            " and truth, \nfor true number of clusters"))
 
   # Difference to truth at truenclust, normalized entropy
   plots[["deltanormentropy_at_truth"]] <-
@@ -145,7 +148,8 @@ plot_entropy <- function(res, method_colors = NULL) {
     ggplot2::geom_hline(aes(yintercept = 0), linetype = "dashed") +
     ggplot2::theme(legend.position = "none",
                    axis.text.x = ggplot2::element_text(angle = 90, size = 13,
-                                                       vjust = 0.5, hjust = 1)) +
+                                                       vjust = 0.5,
+                                                       hjust = 1)) +
     ggplot2::labs(x = "", y = paste("Difference between normalised entropy ",
                                     "\nfor clustering and truth, for true ",
                                     "number of clusters"))

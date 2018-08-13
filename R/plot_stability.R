@@ -138,7 +138,8 @@ plot_stability <- function(res, method_colors = NULL) {
   plots[["stability_heatmap_truek"]] <-
     ggplot2::ggplot(res_stab %>% dplyr::filter(k == truenclust) %>%
                       dplyr::group_by(filtering, dataset, method, k) %>%
-                      dplyr::summarise(median.stability = stats::median(ari.stab)),
+                      dplyr::summarise(
+                        median.stability = stats::median(ari.stab)),
                     ggplot2::aes(x = stats::reorder(method, median.stability,
                                                     FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, median.stability,
