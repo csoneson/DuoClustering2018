@@ -23,8 +23,6 @@ Imports: ExperimentHub,
     purrr,
     reshape2,
     viridis,
-    SingleCellExperiment,
-    SummarizedExperiment,
     ggthemes,
     stats,
     methods
@@ -33,6 +31,8 @@ Suggests: knitr,
     BiocStyle,
     scater,
     iSEE,
+    SingleCellExperiment,
+    SummarizedExperiment,
     plyr
 VignetteBuilder: knitr
 RoxygenNote: 6.1.0

@@ -4,14 +4,15 @@
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom dplyr select
 #' @importFrom stats median
+#' @importFrom methods is
 #'
 #' @param x A \code{data.frame} with clustering results.
 #'
 #' @return a \code{data.frame} with ARI values for each pair of runs.
 #'
 ARIdf <- function(x) {
-  stopifnot(is(x, "data.frame"))
-  stopifnot(is(x[, 1], "character"))
+  stopifnot(methods::is(x, "data.frame"))
+  stopifnot(methods::is(x[, 1], "character"))
 
   x <- dplyr::select(x, -cell)
   columns <- utils::combn(ncol(x), 2)
