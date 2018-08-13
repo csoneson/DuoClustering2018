@@ -46,8 +46,7 @@ plot_performance <- function(res, method_colors = NULL) {
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
-                   axis.text.y = ggplot2::element_text(size = 13),
-                   axis.text.x = ggplot2::element_text(size = 13),
+                   axis.text = ggplot2::element_text(size = 13),
                    strip.text = ggplot2::element_text(size = 13))
   )
 

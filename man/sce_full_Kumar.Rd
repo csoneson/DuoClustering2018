@@ -22,25 +22,27 @@ media.
 }
 \details{
 This is a scRNA-seq data set originally from Kumar et al. (2014). The data set
-consist of gene counts of mESCs from \emph{Mus musculus} with various genetic
+consists of gene-level read counts or TCCs (transcript compatibility counts)
+for mESCs from \emph{Mus musculus} with various genetic
 perturbations which are cultured in different media. It contains 3
-subpopulations, defined by the cell phenotype given by the author's annotations.
+subpopulations, defined by the cell phenotype given by the authors' annotations.
 The data sets have been used to evaluate the performance of clustering
 algorithms in Duò et al. (2018).
 
 For the \code{sce_full_Kumar} data set, all genes except those with zero counts
 across all cells are retained. The gene counts are
-gene-level length-scaled TPM values derived from Salmon quantifications (see
+gene-level length-scaled TPM values derived from Salmon (Patro et al. (2017))
+quantifications (see
 Soneson and Robinson (2018)). For the TCC data set we estimated transcripts
 compatibility counts using \code{kallisto} as an alternative to the gene-level
-count matrix (Bray et al. (2016)).
+count matrix (Bray et al. (2016), Ntranos et al. (2016)).
 
 The \code{scater} package was used to perform quality control of the data sets
 (McCarthy et al. (2017)).
 Features with zero counts across all cells, as well as all cells with total
 count or total number of detected features more than 3 median absolute
 deviations (MADs) below the median across all cells (on the log scale), were
-excluded. Additionally, cells that were classified as doublets or debris were
+excluded. Additionally, cells with a large fraction of ERCC reads were
 filtered out.
 
 The \code{sce_full_Kumar} data set consists of 246 cells and 45,159 features,
@@ -48,7 +50,7 @@ the \code{sce_full_KumarTCC} data set of 246 cells and 803,405 features,
 respectively.
 The \code{filteredExpr}, \code{filteredHVG} and \code{filteredM3Drop10} are
 further reduced data sets.
-For each of the filtering method, we retained 10 percent of the original number
+For each filtering method, we retained 10 percent of the original number
 of genes
 (with a non-zero count in at least one cell) in the original data sets.
 
@@ -66,8 +68,8 @@ normalization factors calculated by the deconvolution method from the
 \code{scran} package (Lun et al. (2016)).
 This data set is provided as a \code{SingleCellExperiment} object
 (Lun and Risso (2017)). For further information on the
-\code{SingleCellExperiment} class, see the respective manual.
-Raw data files for the original data set (GEO GSE60749) are available from
+\code{SingleCellExperiment} class, see the corresponding manual.
+Raw data files for the original data set (GSE60749) are available from
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60749.}
 
 \usage{
@@ -91,32 +93,42 @@ for scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
 
 Bray, N.L., Pimentel, H., Melsted, P., and Pachter, L. (2016).
 \emph{Near-optimal probabilistic RNA-seq quantification}.
-Nat Biotechnol., 34: 525–527.
+Nat. Biotechnol. 34: 525–527.
 
 Duò, A., Robinson, M.D., and Soneson, C. (2018).
 \emph{A systematic performance evaluation of clustering methods for single-cell
 RNA-seq data.}
-F1000Research, 7:1141.
+F1000Res. 7:1141.
 
-Kumar R.M., Cahan P., Shalek A.K., et al. (2014) Deconstructing transcriptional
-heterogeneity in pluripotent stem cells. Nature. ; 516(7529): 56–61.
+Kumar R.M., Cahan P., Shalek A.K., Satija R., DaleyKeyser A.J., Li H., Zhang J.,
+Pardee K., Gennert D., Trombetta J.J., Ferrante T.C., Regev A., Daley G.Q.,
+and Collins J.J. (2014) \emph{Deconstructing transcriptional
+heterogeneity in pluripotent stem cells.} Nature 516(7529): 56–61.
 
 Lun, A.T.L., Bach, K., and Marioni, J.C. (2016) \emph{Pooling across cells to
 normalize single-cell RNA sequencing data with many zero counts.}
-Genome Biol., 17(1): 75.
+Genome Biol. 17(1): 75.
 
 Lun, A.T.L., and Risso, D. (2017). \emph{SingleCellExperiment: S4 Classes for
 Single Cell Data}. R package version 1.0.0.
 
 McCarthy, D.J., Campbell, K.R., Lun, A.T.L., and Wills, Q.F. (2017):
 \emph{Scater: pre-processing, quality control, normalization and visualization
-of single-cell RNA-seq data in R. } Bioinformatics 33(8): 1179-1186.
+of single-cell RNA-seq data in R.} Bioinformatics 33(8): 1179-1186.
+
+Ntranos, V., Kamath, G.M., Zhang, J.M., Pachter, L., and Tse, D.N. (2016):
+\emph{Fast and accurate single-cell RNA-seq analysis by clustering of
+transcript-compatibility counts.} Genome Biol. 17:112.
+
+Patro, R., Duggal, G., Love, M.I., Irizarry, R.A., and Kingsford, C. (2017):
+\emph{Salmon provides fast and bias-aware quantification of transcript
+expression.} Nat. Methods 14:417-419.
 
 Satija, R., Farrell, J.A., Gennert, D., Schier, A.F., and Regev, A. (2015).
 \emph{Spatial reconstruction of single-cell gene expression data.}
-Nat Biotechnol., 33(5): 495–502.
+Nat. Biotechnol. 33(5): 495–502.
 
 Soneson, C., and Robinson, M.D. (2018). \emph{Bias, robustness and scalability
-in single-cell differential expression analysis. } Nat Methods, 15(4): 255-261.
+in single-cell differential expression analysis. } Nat. Methods 15(4): 255-261.
 }
 \keyword{datasets}

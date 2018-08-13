@@ -22,17 +22,19 @@ differentiation.
 }
 \details{
 This is a scRNA-seq data set originally from Trapnell et al. (2014). The data
-set consist of human primary myoblasts over a time course of serum-induced
+set consists of gene-level read counts or TCCs (transcript compatibility counts)
+from human primary myoblasts over a time course of serum-induced
 differentiation. It contains 3 subpopulations, defined by the cell phenotype
-given by the author's annotations. The data sets have been used to evaluate the
+given by the authors' annotations. The data sets have been used to evaluate the
 performance of clustering algorithms in Duò et al. (2018).
 
 For the \code{sce_full_Trapnell} data set, all genes except those with zero
 counts across all cells are retained. The gene counts are
-gene-level length-scaled TPM values derived from Salmon quantifications (see
+gene-level length-scaled TPM values derived from Salmon (Patro et al. (2017))
+quantifications (see
 Soneson and Robinson (2018)). For the TCC data set we estimated transcripts
 compatibility counts using \code{kallisto} as an alternative to the gene-level
-count matrix (Bray et al. (2016)).
+count matrix (Bray et al. (2016), Ntranos et al. (2016)).
 
 The \code{scater} package was used to perform quality control of the data sets
 (McCarthy et al. (2017)).
@@ -55,7 +57,7 @@ For the \code{filteredExpr} data sets, only the genes/TCCs with the highest
 average expression (log-normalized count) value across all cells were retained.
 Using the \code{Seurat} package, the \code{filteredHVG} data sets were filtered
 on the variability of the features and only the most highly variable ones were
-retained (Satija et al. (2015)).  Finally, the \code{M3Drop} package was used
+retained (Satija et al. (2015)). Finally, the \code{M3Drop} package was used
 to model the dropout rate of the genes as a function of the mean expression
 level using the Michaelis-Menten equation and select variables to retain for
 the \code{filteredM3Drop10} data sets (Andrews and Hemberg (2018)).
@@ -66,8 +68,8 @@ normalization factors calculated by the deconvolution method from the
 
 This data set is provided as a \code{SingleCellExperiment} object
 (Lun and Risso (2017)). For further information on the
-\code{SingleCellExperiment} class, see the respective manual.
-Raw data files for the original data set (GEO GSE52529) are available from
+\code{SingleCellExperiment} class, see the corresponding manual.
+Raw data files for the original data set (GSE52529) are available from
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52529.}
 
 \usage{
@@ -91,33 +93,42 @@ for scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
 
 Bray, N.L., Pimentel, H., Melsted, P., and Pachter, L. (2016).
 \emph{Near-optimal probabilistic RNA-seq quantification}.
-Nat Biotechnol., 34: 525–527.
+Nat. Biotechnol. 34: 525–527.
 
 Duò, A., Robinson, M.D., and Soneson, C. (2018).
 \emph{A systematic performance evaluation of clustering methods for single-cell
 RNA-seq data.}
-F1000Research, 7:1141.
+F1000Res. 7:1141.
 
 Lun, A.T.L., Bach, K., and Marioni, J.C. (2016) \emph{Pooling across cells to
 normalize single-cell RNA sequencing data with many zero counts.}
-Genome Biol., 17(1): 75.
+Genome Biol. 17(1): 75.
 
 Lun, A.T.L., and Risso, D. (2017). \emph{SingleCellExperiment: S4 Classes for
 Single Cell Data}. R package version 1.0.0.
 
 McCarthy, D.J., Campbell, K.R., Lun, A.T.L., and Wills, Q.F. (2017):
 \emph{Scater: pre-processing, quality control, normalization and visualization
-of single-cell RNA-seq data in R. } Bioinformatics 33(8): 1179-1186.
+of single-cell RNA-seq data in R.} Bioinformatics 33(8): 1179-1186.
 
-Trapnell, C., Cacchiarelli, D., Grimsby, J., et al. (2014).
-\emph{The dynamics and regulators of cell fate decisions are revealed by
-pseudotemporal ordering of single cells.} Nat Biotechnol., 32(4): 381–386.
+Ntranos, V., Kamath, G.M., Zhang, J.M., Pachter, L., and Tse, D.N. (2016):
+\emph{Fast and accurate single-cell RNA-seq analysis by clustering of
+transcript-compatibility counts.} Genome Biol. 17:112.
+
+Patro, R., Duggal, G., Love, M.I., Irizarry, R.A., and Kingsford, C. (2017):
+\emph{Salmon provides fast and bias-aware quantification of transcript
+expression.} Nat. Methods 14:417-419.
 
 Satija, R., Farrell, J.A., Gennert, D., Schier, A.F., and Regev, A. (2015).
 \emph{Spatial reconstruction of single-cell gene expression data.}
-Nat Biotechnol., 33(5): 495–502.
+Nat. Biotechnol. 33(5): 495–502.
 
 Soneson, C., and Robinson, M.D. (2018). \emph{Bias, robustness and scalability
-in single-cell differential expression analysis. } Nat Methods, 15(4): 255-261.
+in single-cell differential expression analysis.} Nat. Methods, 15(4): 255-261.
+
+Trapnell, C., Cacchiarelli, D., Grimsby, J., Pokharel, P., Li, S., Morse, M.,
+Lennon, N.J., Livak, K.J., Mikkelsen, T.S., and Rinn, J.L. (2014).
+\emph{The dynamics and regulators of cell fate decisions are revealed by
+pseudotemporal ordering of single cells.} Nat. Biotechnol. 32(4): 381–386.
 }
 \keyword{datasets}

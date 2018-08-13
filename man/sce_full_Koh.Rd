@@ -24,7 +24,8 @@ progenitors.
 \details{
 This is a scRNA-seq data set originally from Koh et al. (2016). The data set
 consists of
-gene counts of in vitro cultured human H7 embryonic stem cells (WiCell) and
+gene-level read counts or TCCs (transcript compatibility counts)
+of in vitro cultured human H7 embryonic stem cells (WiCell) and
 H7-derived downstream
 early mesoderm progenitors. It contains 9 subpopulations, defined by the
 cell phenotype given by the authors' annotations. The data sets have been used
@@ -32,18 +33,18 @@ to evaluate the performance of clustering algorithms in Duò et al. (2018).
 
 For the \code{sce_full_Koh} data set, all genes except those with zero counts
 across all cells are retained. The gene counts are
-gene-level length-scaled TPM values derived from Salmon quantifications (see
+gene-level length-scaled TPM values derived from Salmon (Patro et al. (2017))
+quantifications (see
 Soneson and Robinson (2018)). For the TCC data set we estimated transcripts
 compatibility counts using \code{kallisto} as an alternative to the gene-level
-count matrix (Bray et al. (2016)).
+count matrix (Bray et al. (2016), Ntranos et al. (2016)).
 
 The \code{scater} package was used to perform quality control of the data sets
 (McCarthy et al. (2017)).
 Features with zero counts across all cells, as well as all cells with total
 count or total number
 of detected features more than 3 median absolute deviations (MADs) below the
-median across all cells (on the log scale), were excluded. Additionally, cells
-that were classified as doublets or debris were filtered out.
+median across all cells (on the log scale), were excluded.
 
 The \code{sce_full_Koh} data set consists of 531 cells and 48,981 features,
 and the \code{sce_full_KohTCC} data set of 531 cells and 811,938 features.
@@ -66,7 +67,7 @@ normalization factors calculated by the deconvolution method from the
 \code{scran} package (Lun et al. (2016)).
 
 This data set is provided as a \code{SingleCellExperiment} object
-(Lun and Risso (2017)). Raw data files for the original data set (SRA SRP073808)
+(Lun and Risso (2017)). Raw data files for the original data set (SRP073808)
 are available from https://www.ncbi.nlm.nih.gov/sra?term=SRP073808.}
 
 \usage{
@@ -91,35 +92,43 @@ scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
 
 Bray, N.L., Pimentel, H., Melsted, P., and Pachter, L. (2016).
 \emph{Near-optimal probabilistic RNA-seq quantification}.
-Nat Biotechnol., 34: 525–527.
+Nat. Biotechnol. 34: 525–527.
 
 Duò, A., Robinson, M.D., and Soneson, C. (2018).
 \emph{A systematic performance evaluation of clustering methods for single-cell
 RNA-seq data.}
-F1000Research, 7:1141.
+F1000Res. 7:1141.
 
 Koh, P.W., Sinha, R., Barkal, A.A., Morganti  R.M., Chen, A., Weissman, I.L.,
 Ang, L.T., Kundaje, A., and Loh, K.M. (2016).
 \emph{An atlas of transcriptional, chromatin accessibility, and surface marker
 changes in human mesoderm development.}
-Scientific Data, 3:160109.
+Scientific Data 3:160109.
 
 Lun, A.T.L., Bach, K., and Marioni, J.C. (2016) \emph{Pooling across cells to
 normalize single-cell RNA sequencing data with many zero counts.}
-Genome Biol., 17(1): 75.
+Genome Biol. 17(1): 75.
 
 Lun, A.T.L., and Risso, D. (2017). \emph{SingleCellExperiment: S4 Classes for
 Single Cell Data}. R package version 1.0.0.
 
 McCarthy, D.J., Campbell, K.R., Lun, A.T.L., and Wills, Q.F. (2017):
 \emph{Scater: pre-processing, quality control, normalization and visualization
-of single-cell RNA-seq data in R. } Bioinformatics 33(8): 1179-1186.
+of single-cell RNA-seq data in R.} Bioinformatics 33(8): 1179-1186.
+
+Ntranos, V., Kamath, G.M., Zhang, J.M., Pachter, L., and Tse, D.N. (2016):
+\emph{Fast and accurate single-cell RNA-seq analysis by clustering of
+transcript-compatibility counts.} Genome Biol. 17:112.
+
+Patro, R., Duggal, G., Love, M.I., Irizarry, R.A., and Kingsford, C. (2017):
+\emph{Salmon provides fast and bias-aware quantification of transcript
+expression.} Nat. Methods 14:417-419.
 
 Satija, R., Farrell, J.A., Gennert, D., Schier, A.F., and Regev, A. (2015).
 \emph{Spatial reconstruction of single-cell gene expression data.}
-Nat Biotechnol., 33(5): 495–502.
+Nat. Biotechnol. 33(5): 495–502.
 
 Soneson, C., and Robinson, M.D. (2018). \emph{Bias, robustness and scalability
-in single-cell differential expression analysis. } Nat Methods, 15(4): 255-261.
+in single-cell differential expression analysis.} Nat. Methods, 15(4): 255-261.
 }
 \keyword{datasets}

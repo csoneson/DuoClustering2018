@@ -66,7 +66,7 @@ normalization factors calculated by the deconvolution method from the
 \code{scran} package (Lun et al. (2016)).
 This data set is provided as a \code{SingleCellExperiment} object
 (Lun and Risso (2017)). For further information on the
-\code{SingleCellExperiment} class, see the respective manual. }
+\code{SingleCellExperiment} class, see the corresponding manual. }
 
 \usage{
 sce_full_SimKumar4easy(metadata = FALSE)
@@ -94,24 +94,24 @@ for scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
 Duò, A., Robinson, M.D., and Soneson, C. (2018).
 \emph{A systematic performance evaluation of clustering methods for single-cell
 RNA-seq data.}
-F1000Research, 7:1141.
+F1000Res. 7:1141.
 
 Lun, A.T.L., Bach, K., and Marioni, J.C. (2016) \emph{Pooling across cells to
 normalize single-cell RNA sequencing data with many zero counts.}
-Genome Biol., 17(1): 75.
+Genome Biol. 17(1): 75.
 
 Lun, A.T.L., and Risso, D. (2017). \emph{SingleCellExperiment: S4 Classes for
 Single Cell Data}. R package version 1.0.0.
 
 McCarthy, D.J., Campbell, K.R., Lun, A.T.L., and Wills, Q.F. (2017):
 \emph{Scater: pre-processing, quality control, normalization and visualization
-of single-cell RNA-seq data in R. } Bioinformatics 33(8): 1179-1186.
+of single-cell RNA-seq data in R.} Bioinformatics 33(8): 1179-1186.
 
 Satija, R., Farrell, J.A., Gennert, D., Schier, A.F., and Regev, A. (2015).
 \emph{Spatial reconstruction of single-cell gene expression data.}
-Nat Biotechnol., 33(5): 495–502.
+Nat. Biotechnol. 33(5): 495–502.
 
 Zappia, L., Phipson, B., and Oshlack, A. (2017). \emph{Splatter: simulation of
-single-cell RNA sequencing data.} Genome Biol., 18(1): 174.
+single-cell RNA sequencing data.} Genome Biol. 18(1): 174.
 }
 \keyword{datasets}

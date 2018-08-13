@@ -7,8 +7,7 @@ DuoClustering2018
 }
 \description{
 Data package containing scRNA-seq data sets, clustering results and functions
-for running and summarizing the performance of different scRNA-seq clustering
-methods.
+for summarizing the performance of different scRNA-seq clustering methods.
 }
 
 \details{
@@ -22,8 +21,7 @@ F1000Research 2018). The data sets are available as
 sets, see the help files for the respective data sets.
 
 Additionally, the clustering results from the evaluation as well as functions
-for running the clustering methods and functions for summarization and
-visualization of the clustering results are provided.
+for summarization and visualization of the clustering results are provided.
 
 A description of the basic usage of the package for retrieving data sets and
 clustering results, and how to construct various plots summarizing the
