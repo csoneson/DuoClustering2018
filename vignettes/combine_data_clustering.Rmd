@@ -1,16 +1,18 @@
 ---
-title: "Visualize with `iSEE`"
+title: "Visualize data sets and clustering results with `iSEE`"
 author: 
+- name: Angelo Duò
+- name: Mark D Robinson
 - name: Charlotte Soneson
-- name: Angelo Duo
 date: "`r Sys.Date()`"
 package: DuoClustering2018
 output:
   BiocStyle::html_document
 vignette: >
-  %\VignetteIndexEntry{Plot performance summaries}
+  %\VignetteIndexEntry{Visualize data sets and clustering results with iSEE}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: duoclustering2018.bib
 editor_options: 
   chunk_output_type: console
 ---
@@ -19,9 +21,10 @@ editor_options:
 
 In this vignette we describe how to generate a `SingleCellExperiment` object
 combining observed values and clustering results for a data set from the
-`DuoClustering2018` package.
+`DuoClustering2018` package, and how the resulting object can be explored and
+visualized with the `iSEE` package [@Rue-Albrecht2018-wz].
 
-# Load the package
+# Load the necessary packages
 
 ```{r}
 suppressPackageStartupMessages({
@@ -36,7 +39,7 @@ suppressPackageStartupMessages({
 
 The different ways of retrieving a data set from the package are described in
 the `plot_performance` vignette. Here, we will load a data set using the
-shortcut functions provided in the package.
+shortcut function provided in the package.
 
 ```{r}
 dat <- sce_filteredExpr10_Koh()
@@ -92,3 +95,4 @@ if (require(iSEE)) {
 sessionInfo()
 ```
 
+# References

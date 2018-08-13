@@ -1,8 +1,9 @@
 ---
 title: "Plot performance summaries"
 author: 
+- name: Angelo Duò
+- name: Mark D Robinson
 - name: Charlotte Soneson
-- name: Angelo Duo
 date: "`r Sys.Date()`"
 package: DuoClustering2018
 output:
@@ -11,6 +12,7 @@ vignette: >
   %\VignetteIndexEntry{Plot performance summaries}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: duoclustering2018.bib
 editor_options: 
   chunk_output_type: console
 ---
@@ -21,25 +23,25 @@ In this vignette we describe the basic usage of the `DuoClustering2018` package:
 how to retrieve data sets and clustering results, and how to construct various
 plots summarizing the performance of different methods across several data sets.
 
-# Load the package
+# Load the necessary packages
 
 ```{r}
 suppressPackageStartupMessages({
-  library(DuoClustering2018)
-  library(plyr)
   library(ExperimentHub)
   library(SingleCellExperiment)
+  library(DuoClustering2018)
+  library(plyr)
 })
 ```
 
 # Retrieve a data set
 
-The clustering evaluation is based on 12 data sets (9 real and 3 simulated),
-which are all provided via `ExperimentHub` and retrievable via this package. We
-include the full data sets (after quality filtering of cells and removal of
-genes with zero counts across all cells) as well as three filtered versions of
-each data set (by expression, variability and dropout pattern, respectively),
-each containing 10% of the genes in the full data sets.
+The clustering evaluation [@Duo2018-F1000] is based on 12 data sets (9 real and
+3 simulated), which are all provided via `ExperimentHub` and retrievable via
+this package. We include the full data sets (after quality filtering of cells
+and removal of genes with zero counts across all cells) as well as three
+filtered versions of each data set (by expression, variability and dropout
+pattern, respectively), each containing 10% of the genes in the full data set.
 
 To get an overview, we can list all records from this package that are available
 in `ExperimentHub`:
@@ -49,7 +51,7 @@ eh <- ExperimentHub()
 query(eh, "DuoClustering2018")
 ```
 
-The records with names starting in `sce_` represents (filtered or unfiltered)
+The records with names starting in `sce_` represent (filtered or unfiltered)
 data sets (in `SingleCellExperiment` format). The records with names starting in
 `clustering_summary_` correspond to `data.frame` objects with clustering results
 for each of the filtered data sets. Finally, the
@@ -78,7 +80,7 @@ apply additional methods). As mentioned above, the results of these clusterings
 are also available from `ExperimentHub`, and can be loaded either by their
 `ExperimentHub` ID or using the provided shortcut functions, as above. For
 simplicity, the results of all methods for a given data set are combined into
-one data frame. As an illustration, we load the clustering summaries for two
+a single object. As an illustration, we load the clustering summaries for two
 different data sets (`Koh` and `Zhengmix4eq`), each with two different gene
 filterings (`Expr10` and `HVG10`):
 
@@ -90,12 +92,30 @@ res <- plyr::rbind.fill(
   clustering_summary_filteredHVG10_Zhengmix4eq_v1()
 )
 dim(res)
+```
+
+The resulting `data.frame` contains 10 columns:
+
+- `dataset`: The name of the data set
+- `method`: The name of the clustering method
+- `cell`: The cell identifier
+- `run`: The run ID (each method was run five times for each data set and number
+of clusters)
+- `k`: The imposed number of clusters (for all methods except Seurat)
+- `resolution`: The imposed resolution (only for Seurat)
+- `cluster`: The assigned cluster label
+- `trueclass`: The true class of the cell
+- `est_k`: The estimated number of clusters (for methods allowing such
+estimation)
+- `elapsed`: The elapsed time of the run
+
+```{r}
 head(res)
 ```
 
 # Define consistent method colors
 
-For some of the plots generated below, the values will be colored according to
+For some of the plots generated below, the points will be colored according to
 the clustering method. We can enforce a consistent set of colors for the methods
 by defining a named vector of colors to use for all plots.
 
@@ -109,18 +129,19 @@ method_colors <- c(CIDR = "#332288", FlowSOM = "#6699CC", PCAHC = "#88CCEE",
 
 # Plot
 
-Each plotting function described below return a list of `ggplot` objects. These
+Each plotting function described below returns a list of `ggplot` objects. These
 can be plotted directly, or further modified if desired.
 
 ## Performance
 
 The `plot_performance()` function generates plots related to the performance of
 the clustering methods. We quantify performance using the adjusted Rand Index
-(ARI), comparing the obtained clustering to the true clusters. As we noted in
-the publication, defining a true partitioning of the cells is difficult, since
-they can often be grouped together in several different, but still
-interpretable, ways. We refer to our paper for more information on how the true
-clusters were defined for each of the data sets.
+(ARI) [@hubert1985comparing], comparing the obtained clustering to the true
+clusters. As we noted in the publication [@Duo2018-F1000], defining a true
+partitioning of the cells is difficult, since they can often be grouped together
+in several different, but still interpretable, ways. We refer to our paper for
+more information on how the true clusters were defined for each of the data
+sets.
 
 ```{r}
 perf <- plot_performance(res, method_colors = method_colors)
@@ -146,14 +167,15 @@ stab$stability_heatmap_truek
 ## Entropy
 
 In order to evaluate the tendency of the clustering methods to favor equally
-sized clusters, we calculate the Shannon entropy of each clustering solution
-(based on the proportions of cells in the different clusters) and plot this
-using the `plot_entropy()` function. Since the maximal entropy that can be
-obtained depends on the number of clusters, we use normalized entropies, defined
-by dividing the observed entropy by `log2(k)`. We also compare the entropies for
-the clusterings to the entropy of the true partition for each data set.
+sized clusters, we calculate the Shannon entropy [@Shannon1948-cw] of each
+clustering solution (based on the proportions of cells in the different
+clusters) and plot this using the `plot_entropy()` function. Since the maximal
+entropy that can be obtained depends on the number of clusters, we use
+normalized entropies, defined by dividing the observed entropy by `log2(k)`. We
+also compare the entropies for the clusterings to the entropy of the true
+partition for each data set.
 
-```{r}
+```{r, fig.height = 8}
 entr <- plot_entropy(res, method_colors = method_colors)
 names(entr)
 entr$entropy_byds_byk
@@ -165,7 +187,7 @@ entr$normentropy_by_ds
 The `plot_timing()` function plots various aspects of the timing of the
 different methods.
 
-```{r}
+```{r, fig.height = 8}
 timing <- plot_timing(res, method_colors = method_colors, 
                       scaleMethod = "RtsneKmeans")
 names(timing)
@@ -175,13 +197,13 @@ timing$time_normalized_by_ref
 ## Differences in k
 
 Most performance evaluations above are performed on the clustering solutions
-obtained by imposing the true number of clusters. The `plot_k_diff()` function
+obtained by imposing the "true" number of clusters. The `plot_k_diff()` function
 evaluates the difference between the true number of cluster and the number of
 clusters giving the best agreement with the true partition, as well as the
 difference between the estimated and the true number of clusters, for the
 methods that allow estimation of k.
 
-```{r}
+```{r, fig.height = 8}
 kdiff <- plot_k_diff(res, method_colors = method_colors)
 names(kdiff)
 kdiff$diff_kest_ktrue
@@ -193,3 +215,4 @@ kdiff$diff_kest_ktrue
 sessionInfo()
 ```
 
+# References

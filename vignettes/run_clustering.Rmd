@@ -1,16 +1,18 @@
 ---
-title: "Run clustering method"
+title: "Apply clustering method"
 author: 
-- name: Charlotte Soneson
 - name: Angelo Duò
+- name: Mark D Robinson
+- name: Charlotte Soneson
 date: "`r Sys.Date()`"
 package: DuoClustering2018
 output:
   BiocStyle::html_document
 vignette: >
-  %\VignetteIndexEntry{Run clustering method}
+  %\VignetteIndexEntry{Apply clustering method}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: duoclustering2018.bib
 editor_options: 
   chunk_output_type: console
 ---
@@ -19,19 +21,24 @@ editor_options:
 
 This vignette describes how each of the included clustering methods was applied
 to the collection of data sets in order to generate the clustering result
-summaries provided with the package. 
+summaries provided with the package. It also shows how to apply a new clustering
+method to the included data sets, to generate results that can be compared to
+those already included.
 
 # Applying a new clustering algorithm to a provided data set
-In order to apply a new clustering algorithm to one of the data sets using the
-same framework, you need to generate a function consistent with the `apply_*()`
-functions provided in the [GitHub
+
+The code below describes how we applied each of the included clustering methods
+to the data sets for our paper [@Duo2018-F1000]. The `apply_*()` functions,
+describing how the respective clustering methods were run, are available from
+the [GitHub
 repository](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison/tree/master/Rscripts/clustering)
-corresponding to the publication. The input arguments to this function should
-be:
+corresponding to the publication. In order to apply a new clustering algorithm
+to one of the data sets using the same framework, it is necessary to generate a
+function with the same format. The input arguments to this function should be:
 
 - a `SingleCellExperiment` object
-- a list of parameter values (can be empty, if no parameters are used for the
-method)
+- a named list of parameter values (can be empty, if no parameters are used for
+the method)
 - the desired number of clusters (k). 
 
 The function should return a list with three elements:
@@ -46,7 +53,12 @@ If the method does not allow specification of the desired number of clusters,
 but has another parameter affecting the resolution, this can be accommodated as
 well (see the solution for `Seurat` in the code below).
 
-```{r, eval=FALSE}
+First, load the package and define the data set and clustering method to use
+(note that in order to apply a method named `<method>`, there has to be a
+function named `apply_<method>()`, with the above specifications, available in
+the workspace).
+
+```{r}
 suppressPackageStartupMessages({
   library(DuoClustering2018)
 })
@@ -56,13 +68,22 @@ sce <- sce_filteredExpr10_Koh()
 method <- "PCAHC"
 ```
 
+Next, define the list of hyperparameter values. The package contains the
+hyperparameter values for the methods included in our paper.
 
-```{r, eval=FALSE}
+```{r}
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
 params <- duo_clustering_all_parameter_settings_v1()[[paste0(scename, "_", 
                                                              method)]]
+params
+```
 
+Finally, define the number of times to apply the clustering method (for each
+value of the number of clusters), and run the clustering across a range of
+imposed numbers of clusters (defined in the parameter list).
+
+```{r, eval=FALSE}
 ## Set number of times to run clustering for each k
 n_rep <- 5
 
@@ -176,8 +197,8 @@ df <- dplyr::full_join(res$assignments %>%
                                                      resolution, elapsed))
 ```
 
-The `df` data frames can then be combined across data sets, filterings and
-methods.
+The resulting `df` data frames can then be combined across data sets, filterings
+and methods and used as input to the provided plotting functions.
 
 # Session info
 
@@ -185,3 +206,4 @@ methods.
 sessionInfo()
 ```
 
+# References 
