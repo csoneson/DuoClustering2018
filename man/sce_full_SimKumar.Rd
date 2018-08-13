@@ -72,8 +72,6 @@ McCarthy, D.J., Campbell, K.R., Lun, A.T.L., and Wills, Q.F. (2017): \emph{Scate
 
 Satija, R., Farrell, J.A., Gennert, D., Schier, A.F., and Regev, A. (2015). \emph{Spatial reconstruction of single-cell gene expression data.} Nat Biotechnol., 33(5): 495–502.
 
-Soneson, C., and Robinson, M.D. (2018). \emph{Bias, robustness and scalability in single-cell differential expression analysis. } Nat Methods, 15(4): 255-261.
-
 Zappia, L., Phipson, B., and Oshlack, A. (2017). \emph{Splatter: simulation of single-cell RNA sequencing data.} Genome Biol., 18(1): 174.
 }
 \keyword{datasets}
