@@ -58,7 +58,8 @@ sce_filteredM3Drop10_KohTCC(metadata = FALSE)
 \examples{
 sce_filteredHVG10_Koh()
 }
-\value{Returns a \code{\link{SingleCellExperiment}} class.}
+\format{SingleCellExperiment}
+\value{Returns a \code{\link{SingleCellExperiment}} object.}
 \references{
 Andrews, T.S., and Hemberg, M. (2018). \emph{Dropout-based feature selection for scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
 

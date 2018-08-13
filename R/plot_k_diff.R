@@ -59,7 +59,7 @@ plot_k_diff <- function(res, method_colors = NULL) {
     dplyr::summarize(ARI = mclust::adjustedRandIndex(cluster, trueclass),
                      truenclust = length(unique(trueclass)),
                      estnclust = unique(est_k),
-                     elapsed = median(elapsed)) %>%
+                     elapsed = stats::median(elapsed)) %>%
     tidyr::separate(dataset, sep = "_", into = c("sce", "filtering",
                                                  "dataset")) %>%
     dplyr::select(-sce) %>% dplyr::ungroup()
@@ -68,7 +68,7 @@ plot_k_diff <- function(res, method_colors = NULL) {
   ## true k
   diff_abs <- res_summary %>%
     dplyr::group_by(dataset, filtering, method, truenclust, k) %>%
-    dplyr::summarize(medARI = median(ARI, na.rm = TRUE)) %>%
+    dplyr::summarize(medARI = stats::median(ARI, na.rm = TRUE)) %>%
     dplyr::filter(medARI == max(medARI, na.rm = TRUE)) %>%
     dplyr::mutate(k_diff = (k - truenclust))
 
@@ -92,7 +92,7 @@ plot_k_diff <- function(res, method_colors = NULL) {
   diff_estnclust$method <- factor(diff_estnclust$method)
 
   plots[["diff_kest_ktrue"]] <-
-    ggplot2::ggplot(na.omit(diff_estnclust),
+    ggplot2::ggplot(stats::na.omit(diff_estnclust),
                     ggplot2::aes(x = method, y = k_diff, color = method)) +
     shared_theme +
     ggplot2::labs(y = "Difference between estimated and true number of clusters",

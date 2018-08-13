@@ -1,10 +1,9 @@
 #' Help function for computing ARI
 #'
-#' @importFrom utils combn 
+#' @importFrom utils combn
 #' @importFrom mclust adjustedRandIndex
 #' @importFrom dplyr select
 #' @importFrom stats median
-#' @importFrom purrr data
 #'
 #' @param x A \code{data.frame} with clustering results.
 #'
@@ -113,8 +112,8 @@ plot_stability <- function(res, method_colors = NULL) {
     ggplot2::ggplot(res_stab %>%
                       dplyr::group_by(dataset, method, filtering, k,
                                       truenclust) %>%
-                      dplyr::summarize(ari.stab = median(ari.stab,
-                                                         na.rm = TRUE)),
+                      dplyr::summarize(ari.stab = stats::median(ari.stab,
+                                                                na.rm = TRUE)),
                     ggplot2::aes(x = k, y = ari.stab, group = method,
                                  color = method)) +
     shared_theme +
@@ -138,7 +137,7 @@ plot_stability <- function(res, method_colors = NULL) {
   plots[["stability_heatmap_truek"]] <-
     ggplot2::ggplot(res_stab %>% dplyr::filter(k == truenclust) %>%
                       dplyr::group_by(filtering, dataset, method, k) %>%
-                      dplyr::summarise(median.stability = median(ari.stab)),
+                      dplyr::summarise(median.stability = stats::median(ari.stab)),
                     ggplot2::aes(x = stats::reorder(method, median.stability,
                                                     FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, median.stability,

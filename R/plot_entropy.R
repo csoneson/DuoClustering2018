@@ -80,7 +80,7 @@ plot_entropy <- function(res, method_colors = NULL) {
                       dplyr::filter(!is.na(s)) %>%
                       dplyr::group_by(dataset, method, filtering, k,
                                       truenclust, s.true) %>%
-                      dplyr::summarize(entropy = median(s, na.rm = TRUE)),
+                      dplyr::summarize(entropy = stats::median(s, na.rm = TRUE)),
                     ggplot2::aes(x = k, y = entropy, group = method,
                                  color = method)) +
     shared_theme +

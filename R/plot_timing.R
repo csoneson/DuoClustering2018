@@ -59,7 +59,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
     dplyr::summarize(ARI = mclust::adjustedRandIndex(cluster, trueclass),
                      truenclust = length(unique(trueclass)),
                      estnclust = unique(est_k),
-                     elapsed = median(elapsed)) %>%
+                     elapsed = stats::median(elapsed)) %>%
     tidyr::separate(dataset, sep = "_", into = c("sce", "filtering",
                                                  "dataset")) %>%
     dplyr::select(-sce) %>% dplyr::ungroup()
@@ -67,7 +67,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   ## Elapsed time, one boxplot per dataset, over all ks and runs
   plots[["time_boxplot_perds"]] <-
     ggplot2::ggplot(res_summary,
-                    ggplot2::aes(x = reorder(method, elapsed, FUN = median,
+                    ggplot2::aes(x = reorder(method, elapsed, FUN = stats::median,
                                              order = TRUE, na.rm = TRUE),
                                  y = elapsed, group = method, color = method)) +
     shared_theme +
@@ -84,11 +84,11 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
       dplyr::select(filtering, dataset, method, k, run, truenclust, elapsed) %>%
       dplyr::group_by(dataset, filtering, k) %>%
       dplyr::filter(method == scaleMethod) %>%
-      dplyr::summarise(med.t = median(elapsed)) %>%
+      dplyr::summarise(med.t = stats::median(elapsed)) %>%
       dplyr::ungroup()
     res.time <- res_summary %>%
       dplyr::group_by(filtering, dataset, method, k) %>%
-      dplyr::summarise(median.elapsed = median(elapsed))%>%
+      dplyr::summarise(median.elapsed = stats::median(elapsed))%>%
       dplyr::ungroup()
     res.time <- dplyr::full_join(res.time, median.ref,
                                  by = c("dataset", "filtering", "k")) %>%
@@ -96,7 +96,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
 
     plots[["time_normalized_by_ref"]] <-
       ggplot2::ggplot(res.time,
-                      ggplot2::aes(x = reorder(method, norm.time, FUN = median,
+                      ggplot2::aes(x = reorder(method, norm.time, FUN = stats::median,
                                                order = TRUE, na.rm = TRUE),
                                    y = norm.time, group = method,
                                    color = method)) +
@@ -112,7 +112,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
   plots[["time_by_k"]] <-
     ggplot2::ggplot(res_summary %>% dplyr::group_by(dataset, filtering,
                                                     method, k) %>%
-                      dplyr::summarize(medianelapsed = median(elapsed)) %>%
+                      dplyr::summarize(medianelapsed = stats::median(elapsed)) %>%
                       dplyr::ungroup(),
                     ggplot2::aes(x = k, y = medianelapsed, group = method,
                                  color = method)) +

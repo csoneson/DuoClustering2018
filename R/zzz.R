@@ -1,4 +1,4 @@
-#' importFrom utils read.csv
+#' @importFrom utils read.csv
 .onLoad <- function(libname, pkgname) {
   fl <- system.file("extdata", "metadata.csv", package = "DuoClustering2018")
   titles <- utils::read.csv(fl, stringsAsFactors = FALSE)$Title

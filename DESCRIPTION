@@ -26,7 +26,8 @@ Imports: ExperimentHub,
     SingleCellExperiment,
     SummarizedExperiment,
     ggthemes,
-    stats
+    stats,
+    methods
 Suggests: knitr,
     rmarkdown,
     BiocStyle,
