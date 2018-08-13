@@ -160,7 +160,7 @@ comparing each pair of such runs using the adjusted Rand Index.
 ```{r}
 stab <- plot_stability(res, method_colors = method_colors)
 names(stab)
-stab$stability_allmethods
+stab$stability_vs_k
 stab$stability_heatmap_truek
 ```
 
@@ -178,8 +178,8 @@ partition for each data set.
 ```{r, fig.height = 8}
 entr <- plot_entropy(res, method_colors = method_colors)
 names(entr)
-entr$entropy_byds_byk
-entr$normentropy_by_ds
+entr$entropy_vs_k
+entr$normentropy
 ```
 
 ## Timing

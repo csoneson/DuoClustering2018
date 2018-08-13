@@ -145,7 +145,7 @@ plot_performance <- function(res, method_colors = NULL) {
     ggplot2::ggtitle("Median ARI, number of clusters giving highest ARI")
 
   ## Heatmap of ARI at estimated number of clusters
-  plots[["median_ari_heatmap_estnclust"]] <-
+  plots[["median_ari_heatmap_estk"]] <-
     ggplot2::ggplot(res_summary %>%
                       dplyr::filter(k == estnclust) %>%
                       dplyr::group_by(dataset, filtering, method, k) %>%

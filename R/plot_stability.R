@@ -10,18 +10,18 @@
 #'
 #' @return a \code{data.frame} with ARI values for each pair of runs.
 #'
-ARIdf <- function(x) {
+ari_df <- function(x) {
   stopifnot(methods::is(x, "data.frame"))
   stopifnot(methods::is(x[, 1], "character"))
 
   x <- dplyr::select(x, -cell)
   columns <- utils::combn(ncol(x), 2)
-  ari.nk <- array(NA, ncol(columns))
-  for (i in seq_len(length(ari.nk))) {
-    ari.nk[i] <- mclust::adjustedRandIndex(x[, columns[1, i]],
+  ari_nk <- array(NA, ncol(columns))
+  for (i in seq_len(length(ari_nk))) {
+    ari_nk[i] <- mclust::adjustedRandIndex(x[, columns[1, i]],
                                            x[, columns[2, i]])
   }
-  data.frame(ari.stab = ari.nk, run1 = columns[1, ], run2 = columns[2, ],
+  data.frame(ari.stab = ari_nk, run1 = columns[1, ], run2 = columns[2, ],
              stringsAsFactors = FALSE)
 }
 
@@ -72,8 +72,7 @@ plot_stability <- function(res, method_colors = NULL) {
     ggplot2::theme(legend.text = ggplot2::element_text(size = 13),
                    legend.title = ggplot2::element_text(size = 16),
                    axis.title = ggplot2::element_text(size = 16),
-                   axis.text.y = ggplot2::element_text(size = 13),
-                   axis.text.x = ggplot2::element_text(size = 13),
+                   axis.text = ggplot2::element_text(size = 13),
                    strip.text = ggplot2::element_text(size = 13)),
     ggplot2::facet_grid(filtering ~ dataset, scales = "free_x"),
     ggplot2::ylim(NA, 1)
@@ -97,7 +96,7 @@ plot_stability <- function(res, method_colors = NULL) {
 
   ## compute ARI
   res_stab.tmp <- res_nested %>%
-    dplyr::mutate(stability = purrr::map(data.wide, ARIdf))
+    dplyr::mutate(stability = purrr::map(data.wide, ari_df))
 
   ## unnest
   res_stab <- res_stab.tmp %>%
@@ -109,7 +108,7 @@ plot_stability <- function(res, method_colors = NULL) {
   res_stab$k <- as.integer(res_stab$k)
 
   ## methods combined
-  plots[["stability_allmethods"]] <-
+  plots[["stability_vs_k"]] <-
     ggplot2::ggplot(res_stab %>%
                       dplyr::group_by(dataset, method, filtering, k,
                                       truenclust) %>%

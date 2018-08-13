@@ -45,15 +45,15 @@ Clustering summaries
 }
 \description{
 Clustering results for the performance evaluation of clustering methods for
-scRNA-seq data, corresponding to v1 of Duò et al., F1000Research 2018.
+scRNA-seq data, corresponding to v1 of Duò et al. (2018).
 }
 \details{
 These objects contain clustering results from the performance evaluation of
 clustering methods for scRNA-seq data. The clustering results are provided as
-a \code{\link{data.frame}} object containing 10 variables (columns) named
+a \code{data.frame} object containing 10 variables (columns) named
 \code{dataset}, \code{method}, \code{cell}, \code{run}, \code{k},
 \code{resolution}, \code{cluster}, \code{trueclass}, \code{est_k} and
-\code{elapsed}. For further information see Duò et al., F1000Research 2018. }
+\code{elapsed}. For further information see Duò et al. (2018).}
 
 \usage{
 clustering_summary_filteredExpr10_Koh_v1(metadata = FALSE)
@@ -61,11 +61,11 @@ clustering_summary_filteredExpr10_Koh_v1(metadata = FALSE)
 \examples{
 clustering_summary_filteredExpr10_Koh_v1()
 }
-\value{Returns a \code{\link{data.frame}} class.}
+\value{Returns a \code{data.frame}.}
 \references{
 Duò A, Robinson MD. and Soneson C. (2018).
 \emph{A systematic performance evaluation of clustering methods for
 single-cell RNA-seq data.}
-F1000Research, 7:1141.
+F1000Res., 7:1141.
 }
 \keyword{datasets}

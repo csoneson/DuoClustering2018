@@ -65,7 +65,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
     dplyr::select(-sce) %>% dplyr::ungroup()
 
   ## Elapsed time, one boxplot per dataset, over all ks and runs
-  plots[["time_boxplot_perds"]] <-
+  plots[["time_boxplot"]] <-
     ggplot2::ggplot(res_summary,
                     ggplot2::aes(x = reorder(method, elapsed,
                                              FUN = stats::median,
@@ -112,7 +112,7 @@ plot_timing <- function(res, method_colors = NULL, scaleMethod = NULL) {
                      legend.position = "none")
   }
 
-  plots[["time_by_k"]] <-
+  plots[["time_vs_k"]] <-
     ggplot2::ggplot(res_summary %>% dplyr::group_by(dataset, filtering,
                                                     method, k) %>%
                       dplyr::summarize(

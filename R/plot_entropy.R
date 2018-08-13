@@ -1,11 +1,11 @@
 #' Calculate Shannon entropy
 #'
-#' @param clusterAssignments A vector with cluster assignments
+#' @param cluster_assignments A vector with cluster assignments
 #'
 #' @return The Shannon entropy of the assignment vector
 #'
-shannonEntropy <- function(clusterAssignments) {
-  p <- c(table(clusterAssignments)) / length(clusterAssignments)
+shannon_entropy <- function(cluster_assignments) {
+  p <- c(table(cluster_assignments)) / length(cluster_assignments)
   -1 * sum(p * log2(p))
 }
 
@@ -61,8 +61,8 @@ plot_entropy <- function(res, method_colors = NULL) {
   res_entropy <- res %>%
     dplyr::group_by(dataset, method, run, k) %>%
     dplyr::filter(!is.na(cluster)) %>%
-    dplyr::summarize(s = shannonEntropy(cluster),
-                     s.true = shannonEntropy(trueclass),
+    dplyr::summarize(s = shannon_entropy(cluster),
+                     s.true = shannon_entropy(trueclass),
                      s.norm = s/log2(unique(k)),
                      s.true.norm = s.true/log2(unique(k)),
                      ARI = mclust::adjustedRandIndex(cluster, trueclass),
@@ -75,7 +75,7 @@ plot_entropy <- function(res, method_colors = NULL) {
     dplyr::ungroup()
 
   # plot entropy per k
-  plots[["entropy_byds_byk"]] <-
+  plots[["entropy_vs_k"]] <-
     ggplot2::ggplot(data = res_entropy %>%
                       dplyr::filter(!is.na(s)) %>%
                       dplyr::group_by(dataset, method, filtering, k,
@@ -92,7 +92,7 @@ plot_entropy <- function(res, method_colors = NULL) {
     ggplot2::labs(x = "Number of clusters", y = "Entropy")  +
     ggplot2::theme(legend.position = "right")
 
-  plots[["entropy_vs_ari_byds"]] <-
+  plots[["entropy_vs_ari"]] <-
     ggplot2::ggplot(data = res_entropy %>%
                       dplyr::filter(k == truenclust),
                     ggplot2::aes(x = ARI, y = s, group = method,
@@ -103,7 +103,7 @@ plot_entropy <- function(res, method_colors = NULL) {
     ggplot2::geom_hline(aes(yintercept = s.true), linetype = "dashed") +
     ggplot2::labs(x = "ARI", y = "Entropy")
 
-  plots[["normentropy_by_ds"]] <-
+  plots[["normentropy"]] <-
     ggplot2::ggplot(data = res_entropy %>%
                       dplyr::filter(k == truenclust),
                     ggplot2::aes(x = method, y = s.norm, group = method,
@@ -119,7 +119,7 @@ plot_entropy <- function(res, method_colors = NULL) {
                    legend.position = "none")
 
   # Difference to truth at truenclust
-  plots[["deltaentropy_at_truth"]] <-
+  plots[["deltaentropy_truek"]] <-
     ggplot2::ggplot(data = res_entropy %>%
                       dplyr::filter(k == truenclust) %>%
                       dplyr::mutate(ds = s - s.true),
@@ -137,7 +137,7 @@ plot_entropy <- function(res, method_colors = NULL) {
                             " and truth, \nfor true number of clusters"))
 
   # Difference to truth at truenclust, normalized entropy
-  plots[["deltanormentropy_at_truth"]] <-
+  plots[["deltanormentropy_truek"]] <-
     ggplot2::ggplot(data = res_entropy %>%
                       dplyr::filter(k == truenclust) %>%
                       dplyr::mutate(ds.norm = s.norm - s.true.norm),
