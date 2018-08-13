@@ -5,11 +5,18 @@ date: ""
 output: html_document
 ---
 
-Below, we summarize the process of generating the data sets and clustering results provided in this package. More information is available from the GitHub repository corresponding to the publication (Duò et al., F1000Research 7:1141 (2018)): [https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison).
+Below, we summarize the process of generating the data sets and clustering
+results provided in this package. More information is available from the GitHub
+repository corresponding to the publication (Duò et al., F1000Research 7:1141
+(2018)):
+[https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison).
 
 ## Generating the data sets 
 
-First, we download the raw data files, either from the conquer repository [http://imlspenticton.uzh.ch:3838/conquer/](http://imlspenticton.uzh.ch:3838/conquer/) or from the 10x Genomics website [https://support.10xgenomics.com/single-cell-gene-expression/datasets](https://support.10xgenomics.com/single-cell-gene-expression/datasets).
+First, we download the raw data files, either from the conquer repository
+[http://imlspenticton.uzh.ch:3838/conquer/](http://imlspenticton.uzh.ch:3838/conquer/)
+or from the 10x Genomics website
+[https://support.10xgenomics.com/single-cell-gene-expression/datasets](https://support.10xgenomics.com/single-cell-gene-expression/datasets).
 
 ```{bash, eval=FALSE}
 wget -P data/data_raw http://imlspenticton.uzh.ch/robinson_lab/conquer/data-mae/GSE60749-GPL13112.rds
@@ -28,7 +35,10 @@ done
 
 ```
 
-Next, we run each `import_QC_*.Rmd` file to generate the "full" data sets (retaining all genes with at least 1 read in at least one of the good-quality cells). From the "full" data sets, we then generate the filtered data sets using the following wrapper code:
+Next, we run each `import_QC_*.Rmd` file to generate the "full" data sets
+(retaining all genes with at least 1 read in at least one of the good-quality
+cells). From the "full" data sets, we then generate the filtered data sets using
+the following wrapper code:
 
 ```{r, eval=FALSE}
 suppressPackageStartupMessages({
@@ -56,7 +66,9 @@ sce_filt <- runTSNE(sce_filt, exprs_values = "logcounts", perplexity = 10)
 saveRDS(sce_filt, file = outrds)
 ```
 
-We use three filtering methods (indicated by `method` in the code chunk above): `Expr`, `HVG` and `M3Drop`. The percentage of genes to keep (`pctkeep`) is always 10.
+We use three filtering methods (indicated by `method` in the code chunk above):
+`Expr`, `HVG` and `M3Drop`. The percentage of genes to keep (`pctkeep`) is
+always 10.
 
 ```{r, eval=FALSE}
 ## Expr filtering
@@ -68,10 +80,13 @@ filterExpr <- function(sce, pctkeep) {
 
 ## HVG filtering
 filterHVG <- function(sce, pctkeep) {
-  seurat <- CreateSeuratObject(raw.data = counts(sce), meta.data = as.data.frame(colData(sce)),
-                               min.cells = 0, min.genes = 0, project = "scRNAseq")
+  seurat <- CreateSeuratObject(raw.data = counts(sce), 
+                               meta.data = as.data.frame(colData(sce)),
+                               min.cells = 0, min.genes = 0, 
+                               project = "scRNAseq")
   seurat <- NormalizeData(seurat)
-  seurat <- ScaleData(seurat, vars.to.regress = "nUMI", display.progress = FALSE)
+  seurat <- ScaleData(seurat, vars.to.regress = "nUMI", 
+                      display.progress = FALSE)
   seurat <- FindVariableGenes(seurat, do.plot = FALSE)
   keep <- rownames(head(seurat@hvg.info, n = round(pctkeep/100*nrow(sce))))
   sce[keep, ]
@@ -93,7 +108,16 @@ filterM3Drop <- function(sce, pctkeep) {
 
 ## Running the clustering algorithms
 
-The clustering results were obtained by running a number of clustering algorithms on each of the data sets generated above. The details can be found in the GitHub repository corresponding to the publication (Duò et al., F1000Research 7:1141 (2018)): [https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison). The vignette `run_clustering.Rmd` contains the wrapper script that we used to apply each clustering function to each data set. It is also reproduced here. The specific clustering functions (called `apply_*()`) can be found in the GitHub repository of the publication. The parameter settings are included in summarized form in this package (`duo_clustering_all_parameter_settings_v1()`). 
+The clustering results were obtained by running a number of clustering
+algorithms on each of the data sets generated above. The details can be found in
+the GitHub repository corresponding to the publication (Duò et al.,
+F1000Research 7:1141 (2018)):
+[https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison).
+The vignette `run_clustering.Rmd` contains the wrapper script that we used to
+apply each clustering function to each data set. It is also reproduced here. The
+specific clustering functions (called `apply_*()`) can be found in the GitHub
+repository of the publication. The parameter settings are included in summarized
+form in this package (`duo_clustering_all_parameter_settings_v1()`).
 
 ```{r, eval=FALSE}
 print(scefile)  ## Name of .rds file containing a SingleCellExperiment object
@@ -109,7 +133,8 @@ source(paste0("Rscripts/clustering/apply_", method, ".R"))
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
 params <- c(fromJSON(file = paste0("parameter_settings/", 
-                                   gsub("\\.rds$", "_", basename(scefile)), method, ".json")),
+                                   gsub("\\.rds$", "_", basename(scefile)), 
+                                   method, ".json")),
             fromJSON(file = paste0("parameter_settings/", method, ".json")), 
             fromJSON(file = paste0("parameter_settings/", 
                                    gsub("\\.rds$", ".json", basename(scefile))))
@@ -135,7 +160,8 @@ L <- lapply(seq_len(n_rep), function(i) {  ## For each run
     tmp <- lapply(params$range_resolutions, function(resolution) {  ## For each resolution
       cat(paste0("resolution = ", resolution, "\n"))
       ## Run clustering
-      res <- get(paste0("apply_", method))(sce = sce, params = params, resolution = resolution)
+      res <- get(paste0("apply_", method))(sce = sce, params = params, 
+                                           resolution = resolution)
       
       ## Put output in data frame
       df <- data.frame(dataset = gsub("\\.rds$", "", basename(scefile)), 

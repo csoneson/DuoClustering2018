@@ -87,8 +87,9 @@ plot_performance <- function(res, method_colors = NULL) {
   plots[["median_ari_vs_k"]] <-
     ggplot2::ggplot(res_summary %>%
                       dplyr::group_by(dataset, filtering, method, k) %>%
-                      dplyr::summarize(medianARI = stats::median(ARI, na.rm = TRUE),
-                                       truenclust = unique(truenclust)) %>%
+                      dplyr::summarize(
+                        medianARI = stats::median(ARI, na.rm = TRUE),
+                        truenclust = unique(truenclust)) %>%
                       dplyr::ungroup(),
                     ggplot2::aes(x = k, y = medianARI, group = method,
                                  color = method)) +
@@ -118,7 +119,8 @@ plot_performance <- function(res, method_colors = NULL) {
     ggplot2::ggplot(res_summary %>%
                       dplyr::filter(k == truenclust) %>%
                       dplyr::group_by(dataset, filtering, method, k) %>%
-                      dplyr::summarize(medianARI = stats::median(ARI, na.rm = TRUE)),
+                      dplyr::summarize(
+                        medianARI = stats::median(ARI, na.rm = TRUE)),
                     ggplot2::aes(x = stats::reorder(method, medianARI,
                                                     FUN = mean, na.rm = TRUE),
                                  y = stats::reorder(dataset, medianARI,
@@ -131,8 +133,8 @@ plot_performance <- function(res, method_colors = NULL) {
   plots[["median_ari_heatmap_bestk"]] <-
     ggplot2::ggplot(res_summary %>%
                       dplyr::group_by(dataset, filtering, method, k) %>%
-                      dplyr::summarize(medianARI = stats::median(ARI,
-                                                                 na.rm = TRUE)) %>%
+                      dplyr::summarize(
+                        medianARI = stats::median(ARI, na.rm = TRUE)) %>%
                       dplyr::group_by(dataset, filtering, method) %>%
                       dplyr::filter(medianARI == max(medianARI, na.rm = TRUE)),
                     ggplot2::aes(x = stats::reorder(method, medianARI,
