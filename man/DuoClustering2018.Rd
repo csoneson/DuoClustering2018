@@ -18,7 +18,7 @@ clustering methods. Several real data sets a well as simulated data sets are
 provided. The data sets have been used to evaluate the performance of clustering
 algorithms in our previous work and publication (Duò et al.,
 F1000Research 2018). The data sets are available as
-\code{\link{SingleCellExperiment}} objects. For additional details on the data
+\code{SingleCellExperiment} objects. For additional details on the data
 sets, see the help files for the respective data sets.
 
 Additionally, the clustering results from the evaluation as well as functions

@@ -65,7 +65,7 @@ The \code{scater} package was used to normalize the count values, based on
 normalization factors calculated by the deconvolution method from the
 \code{scran} package (Lun et al. (2016)).
 
-This data set is provided as a \code{\link{SingleCellExperiment}} object
+This data set is provided as a \code{SingleCellExperiment} object
 (Lun and Risso (2017)). Raw data files for the original data set (SRA SRP073808)
 are available from https://www.ncbi.nlm.nih.gov/sra?term=SRP073808.}
 
@@ -84,7 +84,7 @@ sce_filteredM3Drop10_KohTCC(metadata = FALSE)
 sce_filteredHVG10_Koh()
 }
 \format{SingleCellExperiment}
-\value{Returns a \code{\link{SingleCellExperiment}} object.}
+\value{Returns a \code{SingleCellExperiment} object.}
 \references{
 Andrews, T.S., and Hemberg, M. (2018). \emph{Dropout-based feature selection for
 scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.

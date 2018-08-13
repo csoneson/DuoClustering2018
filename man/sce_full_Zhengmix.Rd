@@ -75,9 +75,9 @@ level using the Michaelis-Menten equation and select variables to retain for the
 The \code{scater} package was used to normalize the count values, based on
 normalization factors calculated by the deconvolution method from the
 \code{scran} package (Lun et al. (2016)).
-This data set is provided as a \code{\linkS4class{SingleCellExperiment}} object
+This data set is provided as a \code{SingleCellExperiment} object
 (Lun and Risso (2017)). For further information on the
-\code{\linkS4class{SingleCellExperiment}} class, see the respective manual.
+\code{SingleCellExperiment} class, see the respective manual.
 Raw data files or the original data sets are available from
 https://support.10xgenomics.com/single-cell-gene-expression/datasets.}
 
@@ -99,7 +99,7 @@ sce_filteredM3Drop10_Zhengmix8eq(metadata = FALSE)
 sce_full_Zhengmix4uneq()
 }
 \format{SingleCellExperiment}
-\value{Returns a \code{\link{SingleCellExperiment}} object.}
+\value{Returns a \code{SingleCellExperiment} object.}
 \references{
 Andrews, T.S., and Hemberg, M. (2018). \emph{Dropout-based feature selection for
 scRNASeq}. bioRxiv doi:https://doi.org/10.1101/065094.
