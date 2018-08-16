@@ -1,7 +1,7 @@
 Package: DuoClustering2018
 Type: Package
 Title: Data, Clustering Results and Visualization Functions From Duò et al (2018)
-Version: 0.99.0
+Version: 0.99.1
 Author: Angelo Duò, Charlotte Soneson
 Maintainer: Angelo Duò <angelo.duo@icloud.com>
 Description: Preprocessed experimental and simulated scRNA-seq data sets used 
