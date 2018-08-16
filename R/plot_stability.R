@@ -48,6 +48,7 @@ ari_df <- function(x) {
 #'   geom_tile coord_equal
 #' @importFrom viridis scale_fill_viridis
 #' @importFrom ggthemes theme_tufte
+#' @importFrom utils data
 #'
 #' @return A named list of \code{ggplot2} objects
 #'
