@@ -57,7 +57,7 @@ data sets (in `SingleCellExperiment` format). The records with names starting in
 for each of the filtered data sets. Finally, the
 `duo_clustering_all_parameter_settings` object contains the parameter settings
 we used for all the clustering methods. For clustering summaries and parameter
-settings, the version number (e.g., `_v1`) corresponds to the version of the
+settings, the version number (e.g., `_v2`) corresponds to the version of the
 publication.
 
 The records can be retrieved using their `ExperimentHub` ID, e.g.:
@@ -86,10 +86,10 @@ filterings (`Expr10` and `HVG10`):
 
 ```{r}
 res <- plyr::rbind.fill(
-  clustering_summary_filteredExpr10_Koh_v1(),
-  clustering_summary_filteredHVG10_Koh_v1(),
-  clustering_summary_filteredExpr10_Zhengmix4eq_v1(),
-  clustering_summary_filteredHVG10_Zhengmix4eq_v1()
+  clustering_summary_filteredExpr10_Koh_v2(),
+  clustering_summary_filteredHVG10_Koh_v2(),
+  clustering_summary_filteredExpr10_Zhengmix4eq_v2(),
+  clustering_summary_filteredHVG10_Zhengmix4eq_v2()
 )
 dim(res)
 ```

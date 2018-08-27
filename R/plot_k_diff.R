@@ -21,7 +21,7 @@
 #' @return A named list of ggplot2 objects
 #'
 #' @examples
-#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' res <- clustering_summary_filteredExpr10_Koh_v2()
 #' plots <- plot_k_diff(res)
 #'
 plot_k_diff <- function(res, method_colors = NULL) {

@@ -74,7 +74,7 @@ hyperparameter values for the methods included in our paper.
 ```{r}
 ## Load parameter files. General dataset and method parameters as well as
 ## dataset/method-specific parameters
-params <- duo_clustering_all_parameter_settings_v1()[[paste0(scename, "_", 
+params <- duo_clustering_all_parameter_settings_v2()[[paste0(scename, "_", 
                                                              method)]]
 params
 ```

@@ -1,5 +1,5 @@
 ## --------------------------- parameter values ----------------------------- ##
-df_all_parameter_settings <- data.frame(
+df_all_parameter_settings_v1 <- data.frame(
   Title = "duo_clustering_all_parameter_settings_v1",
   Description = "Hyperparameter values used for all clustering algorithms and data sets in v1 of Duo et al (F1000Research 2018)",
   BiocVersion = "3.8",
@@ -17,7 +17,24 @@ df_all_parameter_settings <- data.frame(
   RDataPath = "DuoClustering2018/parameter_settings/all_parameter_settings_v1.rds",
   stringsAsFactors = FALSE
 )
-
+df_all_parameter_settings_v2 <- data.frame(
+  Title = "duo_clustering_all_parameter_settings_v2",
+  Description = "Hyperparameter values used for all clustering algorithms and data sets in v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = NA,
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = NA,
+  TaxonomyId = NA,
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "list",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/parameter_settings/all_parameter_settings_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------------- full_Koh --------------------------------- ##
 df_sce_full_Koh <- data.frame(
   Title = "sce_full_Koh",
@@ -77,6 +94,24 @@ df_res_filteredExpr10_Koh_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Koh_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Koh_v2",
+  Description = "Clustering results for sce_filteredExpr10_Koh, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Koh_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------------- filteredHVG10_Koh ----------------------------- ##
 df_sce_filteredHVG10_Koh <- data.frame(
   Title = "sce_filteredHVG10_Koh",
@@ -116,6 +151,24 @@ df_res_filteredHVG10_Koh_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Koh_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Koh_v2",
+  Description = "Clustering results for sce_filteredHVG10_Koh, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Koh_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------- filteredM3Drop10_Koh --------------------------- ##
 df_sce_filteredM3Drop10_Koh <- data.frame(
   Title = "sce_filteredM3Drop10_Koh",
@@ -155,6 +208,24 @@ df_res_filteredM3Drop10_Koh_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Koh_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Koh_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Koh, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Koh_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ----------------------------- full_KohTCC -------------------------------- ##
 df_sce_full_KohTCC <- data.frame(
   Title = "sce_full_KohTCC",
@@ -214,6 +285,24 @@ df_res_filteredExpr10_KohTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_KohTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_KohTCC_v2",
+  Description = "Clustering results for sce_filteredExpr10_KohTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KohTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------ filteredHVG10_KohTCC ---------------------------- ##
 df_sce_filteredHVG10_KohTCC <- data.frame(
   Title = "sce_filteredHVG10_KohTCC",
@@ -253,6 +342,24 @@ df_res_filteredHVG10_KohTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_KohTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_KohTCC_v2",
+  Description = "Clustering results for sce_filteredHVG10_KohTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KohTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ----------------------- filteredM3Drop10_KohTCC -------------------------- ##
 df_sce_filteredM3Drop10_KohTCC <- data.frame(
   Title = "sce_filteredM3Drop10_KohTCC",
@@ -292,6 +399,24 @@ df_res_filteredM3Drop10_KohTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_KohTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_KohTCC_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_KohTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KohTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------------ full_Kumar -------------------------------- ##
 df_sce_full_Kumar <- data.frame(
   Title = "sce_full_Kumar",
@@ -351,6 +476,24 @@ df_res_filteredExpr10_Kumar_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Kumar_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Kumar_v2",
+  Description = "Clustering results for sce_filteredExpr10_Kumar, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Kumar_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------- filteredHVG10_Kumar ---------------------------- ##
 df_sce_filteredHVG10_Kumar <- data.frame(
   Title = "sce_filteredHVG10_Kumar",
@@ -390,6 +533,24 @@ df_res_filteredHVG10_Kumar_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Kumar_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Kumar_v2",
+  Description = "Clustering results for sce_filteredHVG10_Kumar, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Kumar_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ------------------------ filteredM3Drop10_Kumar -------------------------- ##
 df_sce_filteredM3Drop10_Kumar <- data.frame(
   Title = "sce_filteredM3Drop10_Kumar",
@@ -429,6 +590,24 @@ df_res_filteredM3Drop10_Kumar_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Kumar_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Kumar_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Kumar, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Kumar_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ---------------------------- full_KumarTCC ------------------------------- ##
 df_sce_full_KumarTCC <- data.frame(
   Title = "sce_full_KumarTCC",
@@ -488,6 +667,24 @@ df_res_filteredExpr10_KumarTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_KumarTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_KumarTCC_v2",
+  Description = "Clustering results for sce_filteredExpr10_KumarTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_KumarTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ----------------------- filteredHVG10_KumarTCC --------------------------- ##
 df_sce_filteredHVG10_KumarTCC <- data.frame(
   Title = "sce_filteredHVG10_KumarTCC",
@@ -527,6 +724,24 @@ df_res_filteredHVG10_KumarTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_KumarTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_KumarTCC_v2",
+  Description = "Clustering results for sce_filteredHVG10_KumarTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_KumarTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ---------------------- filteredM3Drop10_KumarTCC ------------------------- ##
 df_sce_filteredM3Drop10_KumarTCC <- data.frame(
   Title = "sce_filteredM3Drop10_KumarTCC",
@@ -563,6 +778,25 @@ df_res_filteredM3Drop10_KumarTCC_v1 <- data.frame(
   RDataClass = "data.frame",
   DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KumarTCC_v1.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_KumarTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_KumarTCC_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_KumarTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_KumarTCC_v2.rds",
   stringsAsFactors = FALSE
 )
 
@@ -625,6 +859,24 @@ df_res_filteredExpr10_Trapnell_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Trapnell_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Trapnell_v2",
+  Description = "Clustering results for sce_filteredExpr10_Trapnell, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Trapnell_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ----------------------- filteredHVG10_Trapnell --------------------------- ##
 df_sce_filteredHVG10_Trapnell <- data.frame(
   Title = "sce_filteredHVG10_Trapnell",
@@ -664,6 +916,24 @@ df_res_filteredHVG10_Trapnell_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Trapnell_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Trapnell_v2",
+  Description = "Clustering results for sce_filteredHVG10_Trapnell, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Trapnell_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ---------------------- filteredM3Drop10_Trapnell ------------------------- ##
 df_sce_filteredM3Drop10_Trapnell <- data.frame(
   Title = "sce_filteredM3Drop10_Trapnell",
@@ -703,6 +973,24 @@ df_res_filteredM3Drop10_Trapnell_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Trapnell_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Trapnell_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Trapnell, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Trapnell_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------------- full_TrapnellTCC ------------------------------ ##
 df_sce_full_TrapnellTCC <- data.frame(
   Title = "sce_full_TrapnellTCC",
@@ -762,6 +1050,24 @@ df_res_filteredExpr10_TrapnellTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_TrapnellTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_TrapnellTCC_v2",
+  Description = "Clustering results for sce_filteredExpr10_TrapnellTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_TrapnellTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredHVG10_TrapnellTCC -------------------------- ##
 df_sce_filteredHVG10_TrapnellTCC <- data.frame(
   Title = "sce_filteredHVG10_TrapnellTCC",
@@ -801,6 +1107,24 @@ df_res_filteredHVG10_TrapnellTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_TrapnellTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_TrapnellTCC_v2",
+  Description = "Clustering results for sce_filteredHVG10_TrapnellTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_TrapnellTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------- filteredM3Drop10_TrapnellTCC ------------------------ ##
 df_sce_filteredM3Drop10_TrapnellTCC <- data.frame(
   Title = "sce_filteredM3Drop10_TrapnellTCC",
@@ -840,6 +1164,24 @@ df_res_filteredM3Drop10_TrapnellTCC_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_TrapnellTCC_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_TrapnellTCC_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_TrapnellTCC, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCh38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_TrapnellTCC_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------------- full_Zhengmix4eq ----------------------------- ##
 df_sce_full_Zhengmix4eq <- data.frame(
   Title = "sce_full_Zhengmix4eq",
@@ -899,6 +1241,24 @@ df_res_filteredExpr10_Zhengmix4eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Zhengmix4eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4eq_v2",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ---------------------- filteredHVG10_Zhengmix4eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4eq",
@@ -938,6 +1298,24 @@ df_res_filteredHVG10_Zhengmix4eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Zhengmix4eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4eq_v2",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredM3Drop10_Zhengmix4eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4eq",
@@ -977,6 +1355,24 @@ df_res_filteredM3Drop10_Zhengmix4eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Zhengmix4eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4eq_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------------- full_Zhengmix4uneq ---------------------------- ##
 df_sce_full_Zhengmix4uneq <- data.frame(
   Title = "sce_full_Zhengmix4uneq",
@@ -1036,6 +1432,24 @@ df_res_filteredExpr10_Zhengmix4uneq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Zhengmix4uneq_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix4uneq_v2",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix4uneq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix4uneq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredHVG10_Zhengmix4uneq ------------------------ ##
 df_sce_filteredHVG10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix4uneq",
@@ -1075,6 +1489,24 @@ df_res_filteredHVG10_Zhengmix4uneq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Zhengmix4uneq_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix4uneq_v2",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix4uneq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix4uneq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------- filteredM3Drop10_Zhengmix4uneq ---------------------- ##
 df_sce_filteredM3Drop10_Zhengmix4uneq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix4uneq",
@@ -1114,6 +1546,24 @@ df_res_filteredM3Drop10_Zhengmix4uneq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Zhengmix4uneq_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix4uneq_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix4uneq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix4uneq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------------- full_Zhengmix8eq ----------------------------- ##
 df_sce_full_Zhengmix8eq <- data.frame(
   Title = "sce_full_Zhengmix8eq",
@@ -1173,6 +1623,24 @@ df_res_filteredExpr10_Zhengmix8eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_Zhengmix8eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_Zhengmix8eq_v2",
+  Description = "Clustering results for sce_filteredExpr10_Zhengmix8eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_Zhengmix8eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## ---------------------- filteredHVG10_Zhengmix8eq ------------------------- ##
 df_sce_filteredHVG10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredHVG10_Zhengmix8eq",
@@ -1212,6 +1680,24 @@ df_res_filteredHVG10_Zhengmix8eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_Zhengmix8eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_Zhengmix8eq_v2",
+  Description = "Clustering results for sce_filteredHVG10_Zhengmix8eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_Zhengmix8eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredM3Drop10_Zhengmix8eq ----------------------- ##
 df_sce_filteredM3Drop10_Zhengmix8eq <- data.frame(
   Title = "sce_filteredM3Drop10_Zhengmix8eq",
@@ -1251,6 +1737,24 @@ df_res_filteredM3Drop10_Zhengmix8eq_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_Zhengmix8eq_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_Zhengmix8eq_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_Zhengmix8eq, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "hg19",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Homo sapiens",
+  TaxonomyId = "9606",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_Zhengmix8eq_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## -------------------------- full_SimKumar4easy ---------------------------- ##
 df_sce_full_SimKumar4easy <- data.frame(
   Title = "sce_full_SimKumar4easy",
@@ -1310,6 +1814,24 @@ df_res_filteredExpr10_SimKumar4easy_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_SimKumar4easy_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4easy_v2",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4easy, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4easy_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredHVG10_SimKumar4easy ------------------------ ##
 df_sce_filteredHVG10_SimKumar4easy <- data.frame(
   Title = "sce_filteredHVG10_SimKumar4easy",
@@ -1349,6 +1871,25 @@ df_res_filteredHVG10_SimKumar4easy_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_SimKumar4easy_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4easy_v2",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4easy, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4easy_v2.rds",
+  stringsAsFactors = FALSE
+)
+
 ## -------------------- filteredM3Drop10_SimKumar4easy ---------------------- ##
 df_sce_filteredM3Drop10_SimKumar4easy <- data.frame(
   Title = "sce_filteredM3Drop10_SimKumar4easy",
@@ -1385,6 +1926,25 @@ df_res_filteredM3Drop10_SimKumar4easy_v1 <- data.frame(
   RDataClass = "data.frame",
   DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4easy_v1.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_SimKumar4easy_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4easy_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4easy, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4easy_v2.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1447,6 +2007,24 @@ df_res_filteredExpr10_SimKumar4hard_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_SimKumar4hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar4hard_v2",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar4hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar4hard_v2.rds",
+  stringsAsFactors = FALSE
+)
 ## --------------------- filteredHVG10_SimKumar4hard ------------------------ ##
 df_sce_filteredHVG10_SimKumar4hard <- data.frame(
   Title = "sce_filteredHVG10_SimKumar4hard",
@@ -1486,6 +2064,25 @@ df_res_filteredHVG10_SimKumar4hard_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredHVG10_SimKumar4hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar4hard_v2",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar4hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar4hard_v2.rds",
+  stringsAsFactors = FALSE
+)
+
 ## -------------------- filteredM3Drop10_SimKumar4hard ---------------------- ##
 df_sce_filteredM3Drop10_SimKumar4hard <- data.frame(
   Title = "sce_filteredM3Drop10_SimKumar4hard",
@@ -1522,6 +2119,25 @@ df_res_filteredM3Drop10_SimKumar4hard_v1 <- data.frame(
   RDataClass = "data.frame",
   DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4hard_v1.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredM3Drop10_SimKumar4hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar4hard_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar4hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar4hard_v2.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1584,6 +2200,25 @@ df_res_filteredExpr10_SimKumar8hard_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredExpr10_SimKumar8hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredExpr10_SimKumar8hard_v2",
+  Description = "Clustering results for sce_filteredExpr10_SimKumar8hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredExpr10_SimKumar8hard_v2.rds",
+  stringsAsFactors = FALSE
+)
+
 ## --------------------- filteredHVG10_SimKumar8hard ------------------------ ##
 df_sce_filteredHVG10_SimKumar8hard <- data.frame(
   Title = "sce_filteredHVG10_SimKumar8hard",
@@ -1620,6 +2255,25 @@ df_res_filteredHVG10_SimKumar8hard_v1 <- data.frame(
   RDataClass = "data.frame",
   DispatchClass = "Rds",
   RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar8hard_v1.rds",
+  stringsAsFactors = FALSE
+)
+
+df_res_filteredHVG10_SimKumar8hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredHVG10_SimKumar8hard_v2",
+  Description = "Clustering results for sce_filteredHVG10_SimKumar8hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredHVG10_SimKumar8hard_v2.rds",
   stringsAsFactors = FALSE
 )
 
@@ -1662,9 +2316,29 @@ df_res_filteredM3Drop10_SimKumar8hard_v1 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+df_res_filteredM3Drop10_SimKumar8hard_v2 <- data.frame(
+  Title = "clustering_summary_filteredM3Drop10_SimKumar8hard_v2",
+  Description = "Clustering results for sce_filteredM3Drop10_SimKumar8hard, corresponding to v2 of Duo et al (F1000Research 2018)",
+  BiocVersion = "3.8",
+  Genome = "GRCm38",
+  SourceType = "rds",
+  SourceUrl = NA,
+  SourceVersion = NA,
+  Species = "Mus musculus",
+  TaxonomyId = "10090",
+  Coordinate_1_based = NA,
+  DataProvider = "Robinson group (UZH)",
+  Maintainer = "Angelo Duo <angelo.duo@icloud.com>",
+  RDataClass = "data.frame",
+  DispatchClass = "Rds",
+  RDataPath = "DuoClustering2018/output/clustering_summary_filteredM3Drop10_SimKumar8hard_v2.rds",
+  stringsAsFactors = FALSE
+)
+
 ## Combined meta-data
 df_all <- base::rbind(
-  df_all_parameter_settings,
+  df_all_parameter_settings_v1,
+  df_all_parameter_settings_v2,
   df_sce_full_Koh,
   df_sce_filteredExpr10_Koh,
   df_sce_filteredHVG10_Koh,
@@ -1748,7 +2422,43 @@ df_all <- base::rbind(
   df_res_filteredM3Drop10_SimKumar4hard_v1,
   df_res_filteredExpr10_SimKumar8hard_v1,
   df_res_filteredHVG10_SimKumar8hard_v1,
-  df_res_filteredM3Drop10_SimKumar8hard_v1
+  df_res_filteredM3Drop10_SimKumar8hard_v1,
+  df_res_filteredExpr10_Koh_v2,
+  df_res_filteredHVG10_Koh_v2,
+  df_res_filteredM3Drop10_Koh_v2,
+  df_res_filteredExpr10_KohTCC_v2,
+  df_res_filteredHVG10_KohTCC_v2,
+  df_res_filteredM3Drop10_KohTCC_v2,
+  df_res_filteredExpr10_Kumar_v2,
+  df_res_filteredHVG10_Kumar_v2,
+  df_res_filteredM3Drop10_Kumar_v2,
+  df_res_filteredExpr10_KumarTCC_v2,
+  df_res_filteredHVG10_KumarTCC_v2,
+  df_res_filteredM3Drop10_KumarTCC_v2,
+  df_res_filteredExpr10_Trapnell_v2,
+  df_res_filteredHVG10_Trapnell_v2,
+  df_res_filteredM3Drop10_Trapnell_v2,
+  df_res_filteredExpr10_TrapnellTCC_v2,
+  df_res_filteredHVG10_TrapnellTCC_v2,
+  df_res_filteredM3Drop10_TrapnellTCC_v2,
+  df_res_filteredExpr10_Zhengmix4eq_v2,
+  df_res_filteredHVG10_Zhengmix4eq_v2,
+  df_res_filteredM3Drop10_Zhengmix4eq_v2,
+  df_res_filteredExpr10_Zhengmix4uneq_v2,
+  df_res_filteredHVG10_Zhengmix4uneq_v2,
+  df_res_filteredM3Drop10_Zhengmix4uneq_v2,
+  df_res_filteredExpr10_Zhengmix8eq_v2,
+  df_res_filteredHVG10_Zhengmix8eq_v2,
+  df_res_filteredM3Drop10_Zhengmix8eq_v2,
+  df_res_filteredExpr10_SimKumar4easy_v2,
+  df_res_filteredHVG10_SimKumar4easy_v2,
+  df_res_filteredM3Drop10_SimKumar4easy_v2,
+  df_res_filteredExpr10_SimKumar4hard_v2,
+  df_res_filteredHVG10_SimKumar4hard_v2,
+  df_res_filteredM3Drop10_SimKumar4hard_v2,
+  df_res_filteredExpr10_SimKumar8hard_v2,
+  df_res_filteredHVG10_SimKumar8hard_v2,
+  df_res_filteredM3Drop10_SimKumar8hard_v2
 )
 
 ## Save .csv file

@@ -51,7 +51,7 @@ For this data set, we also load a set of clustering results obtained using
 different clustering methods.
 
 ```{r}
-res <- clustering_summary_filteredExpr10_Koh_v1()
+res <- clustering_summary_filteredExpr10_Koh_v2()
 ```
 
 # Merge data and clustering results
