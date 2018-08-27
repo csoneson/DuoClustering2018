@@ -32,7 +32,7 @@ shannon_entropy <- function(cluster_assignments) {
 #' @return A named list of ggplot2 objects
 #'
 #' @examples
-#' res <- clustering_summary_filteredExpr10_Koh_v1()
+#' res <- clustering_summary_filteredExpr10_Koh_v2()
 #' plots <- plot_entropy(res)
 #'
 plot_entropy <- function(res, method_colors = NULL) {
