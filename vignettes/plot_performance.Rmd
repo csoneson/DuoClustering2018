@@ -88,7 +88,7 @@ filterings (`Expr10` and `HVG10`):
 res <- plyr::rbind.fill(
   clustering_summary_filteredExpr10_Koh_v2(),
   clustering_summary_filteredHVG10_Koh_v2(),
-  clustering_summary_filteredExpr10_Zhengmix4eq_v2(),
+  #clustering_summary_filteredExpr10_Zhengmix4eq_v2(),
   clustering_summary_filteredHVG10_Zhengmix4eq_v2()
 )
 dim(res)
