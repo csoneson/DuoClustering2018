@@ -96,7 +96,7 @@ sce_filteredHVG10_Zhengmix8eq(metadata = FALSE)
 sce_filteredM3Drop10_Zhengmix8eq(metadata = FALSE)
 }
 \examples{
-sce_full_Zhengmix4uneq()
+sce_filteredExpr10_Zhengmix4eq()
 }
 \format{SingleCellExperiment}
 \value{Returns a \code{SingleCellExperiment} object.}

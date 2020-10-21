@@ -83,7 +83,7 @@ sce_filteredHVG10_TrapnellTCC(metadata = FALSE)
 sce_filteredM3Drop10_TrapnellTCC(metadata = FALSE)
 }
 \examples{
-sce_full_Trapnell()
+sce_filteredExpr10_Trapnell()
 }
 \format{SingleCellExperiment}
 \value{Returns a \code{SingleCellExperiment} object.}

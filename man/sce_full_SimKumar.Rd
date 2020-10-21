@@ -83,7 +83,7 @@ sce_filteredHVG10_SimKumar8hard(metadata = FALSE)
 sce_filteredM3Drop10_SimKumar8hard(metadata = FALSE)
 }
 \examples{
-sce_full_SimKumar4easy()
+sce_filteredExpr10_SimKumar4easy()
 }
 \format{SingleCellExperiment}
 \value{Returns a \code{SingleCellExperiment} object.}
