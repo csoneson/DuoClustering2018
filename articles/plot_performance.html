@@ -102,7 +102,7 @@
   <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">DuoClustering2018</span><span class="op">)</span>
   <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://had.co.nz/plyr">plyr</a></span><span class="op">)</span>
 <span class="op">}</span><span class="op">)</span></pre></div>
-<pre><code>## using temporary cache /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//Rtmpl3d2JK/BiocFileCache</code></pre>
+<pre><code>## using temporary cache /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpPCHUGr/BiocFileCache</code></pre>
 <pre><code>## snapshotDate(): 2020-10-02</code></pre>
 </div>
 <div id="retrieve-a-data-set" class="section level1">
@@ -187,7 +187,7 @@
 <span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">plyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/plyr/man/rbind.fill.html">rbind.fill</a></span><span class="op">(</span>
   <span class="fu"><a href="../reference/clustering_summary_filteredExpr10_Koh_v2.html">clustering_summary_filteredExpr10_Koh_v2</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="fu"><a href="../reference/clustering_summary_filteredExpr10_Koh_v2.html">clustering_summary_filteredHVG10_Koh_v2</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="co">#clustering_summary_filteredExpr10_Zhengmix4eq_v2(),</span>
+  <span class="fu"><a href="../reference/clustering_summary_filteredExpr10_Koh_v2.html">clustering_summary_filteredExpr10_Zhengmix4eq_v2</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="fu"><a href="../reference/clustering_summary_filteredExpr10_Koh_v2.html">clustering_summary_filteredHVG10_Zhengmix4eq_v2</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></pre></div>
 <pre><code>## snapshotDate(): 2020-10-02</code></pre>
@@ -205,9 +205,14 @@
 <pre><code>## downloading 1 resources</code></pre>
 <pre><code>## retrieving 1 resource</code></pre>
 <pre><code>## loading from cache</code></pre>
-<div class="sourceCode" id="cb37"><pre class="downlit">
+<pre><code>## snapshotDate(): 2020-10-02</code></pre>
+<pre><code>## see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</code></pre>
+<pre><code>## downloading 1 resources</code></pre>
+<pre><code>## retrieving 1 resource</code></pre>
+<pre><code>## loading from cache</code></pre>
+<div class="sourceCode" id="cb42"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></pre></div>
-<pre><code>## [1] 3261810      10</code></pre>
+<pre><code>## [1] 5625885      10</code></pre>
 <p>The resulting <code>data.frame</code> contains 10 columns:</p>
 <ul>
 <li>
@@ -231,7 +236,7 @@
 <li>
 <code>elapsed</code>: The elapsed time of the run</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="downlit">
+<div class="sourceCode" id="cb44"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></pre></div>
 <pre><code>##                  dataset    method       cell run k resolution cluster
 ## 1 sce_filteredExpr10_Koh PCAKmeans SRR3952323   1 2         NA       1
@@ -252,7 +257,7 @@
 <h1 class="hasAnchor">
 <a href="#define-consistent-method-colors" class="anchor"></a>Define consistent method colors</h1>
 <p>For some of the plots generated below, the points will be colored according to the clustering method. We can enforce a consistent set of colors for the methods by defining a named vector of colors to use for all plots.</p>
-<div class="sourceCode" id="cb41"><pre class="downlit">
+<div class="sourceCode" id="cb46"><pre class="downlit">
 <span class="va">method_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>CIDR <span class="op">=</span> <span class="st">"#332288"</span>, FlowSOM <span class="op">=</span> <span class="st">"#6699CC"</span>, PCAHC <span class="op">=</span> <span class="st">"#88CCEE"</span>, 
             PCAKmeans <span class="op">=</span> <span class="st">"#44AA99"</span>, pcaReduce <span class="op">=</span> <span class="st">"#117733"</span>,
             RtsneKmeans <span class="op">=</span> <span class="st">"#999933"</span>, Seurat <span class="op">=</span> <span class="st">"#DDCC77"</span>, SC3svm <span class="op">=</span> <span class="st">"#661100"</span>, 
@@ -267,17 +272,17 @@
 <h2 class="hasAnchor">
 <a href="#performance" class="anchor"></a>Performance</h2>
 <p>The <code><a href="../reference/plot_performance.html">plot_performance()</a></code> function generates plots related to the performance of the clustering methods. We quantify performance using the adjusted Rand Index (ARI) <span class="citation">(Hubert and Arabie 1985)</span>, comparing the obtained clustering to the true clusters. As we noted in the publication <span class="citation">(Duò, Robinson, and Soneson 2018)</span>, defining a true partitioning of the cells is difficult, since they can often be grouped together in several different, but still interpretable, ways. We refer to our paper for more information on how the true clusters were defined for each of the data sets.</p>
-<div class="sourceCode" id="cb42"><pre class="downlit">
+<div class="sourceCode" id="cb47"><pre class="downlit">
 <span class="va">perf</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_performance.html">plot_performance</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">perf</span><span class="op">)</span></pre></div>
 <pre><code>## [1] "median_ari_vs_k"           "scatter_time_vs_ari_truek"
 ## [3] "median_ari_heatmap_truek"  "median_ari_heatmap_bestk" 
 ## [5] "median_ari_heatmap_estk"</code></pre>
-<div class="sourceCode" id="cb44"><pre class="downlit">
+<div class="sourceCode" id="cb49"><pre class="downlit">
 <span class="va">perf</span><span class="op">$</span><span class="va">median_ari_vs_k</span></pre></div>
 <pre><code>## Warning: Removed 4 row(s) containing missing values (geom_path).</code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
-<div class="sourceCode" id="cb46"><pre class="downlit">
+<div class="sourceCode" id="cb51"><pre class="downlit">
 <span class="va">perf</span><span class="op">$</span><span class="va">median_ari_heatmap_truek</span></pre></div>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-8-2.png" width="700"></p>
 </div>
@@ -285,9 +290,13 @@
 <h2 class="hasAnchor">
 <a href="#stability" class="anchor"></a>Stability</h2>
 <p>The <code><a href="../reference/plot_stability.html">plot_stability()</a></code> function evaluates the stability of the clustering results from each method, with respect to random starts. Each method was run five times on each data set (for each k), and we quantify the stability by comparing each pair of such runs using the adjusted Rand Index.</p>
-<div class="sourceCode" id="cb47"><pre class="downlit">
+<div class="sourceCode" id="cb52"><pre class="downlit">
 <span class="va">stab</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_stability.html">plot_stability</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span></pre></div>
 <pre><code>## Aggregation function missing: defaulting to length
+## Aggregation function missing: defaulting to length
+## Aggregation function missing: defaulting to length
+## Aggregation function missing: defaulting to length
+## Aggregation function missing: defaulting to length
 ## Aggregation function missing: defaulting to length
 ## Aggregation function missing: defaulting to length
 ## Aggregation function missing: defaulting to length
@@ -299,15 +308,15 @@
 ## Aggregation function missing: defaulting to length</code></pre>
 <pre><code>## Warning: `cols` is now required when using unnest().
 ## Please use `cols = c(stability)`</code></pre>
-<div class="sourceCode" id="cb50"><pre class="downlit">
+<div class="sourceCode" id="cb55"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">stab</span><span class="op">)</span></pre></div>
 <pre><code>## [1] "stability_vs_k"          "stability_truek"        
 ## [3] "stability_heatmap_truek"</code></pre>
-<div class="sourceCode" id="cb52"><pre class="downlit">
+<div class="sourceCode" id="cb57"><pre class="downlit">
 <span class="va">stab</span><span class="op">$</span><span class="va">stability_vs_k</span></pre></div>
 <pre><code>## Warning: Removed 4 row(s) containing missing values (geom_path).</code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
-<div class="sourceCode" id="cb54"><pre class="downlit">
+<div class="sourceCode" id="cb59"><pre class="downlit">
 <span class="va">stab</span><span class="op">$</span><span class="va">stability_heatmap_truek</span></pre></div>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-9-2.png" width="700"></p>
 </div>
@@ -315,15 +324,15 @@
 <h2 class="hasAnchor">
 <a href="#entropy" class="anchor"></a>Entropy</h2>
 <p>In order to evaluate the tendency of the clustering methods to favor equally sized clusters, we calculate the Shannon entropy <span class="citation">(Shannon 1948)</span> of each clustering solution (based on the proportions of cells in the different clusters) and plot this using the <code><a href="../reference/plot_entropy.html">plot_entropy()</a></code> function. Since the maximal entropy that can be obtained depends on the number of clusters, we use normalized entropies, defined by dividing the observed entropy by <code><a href="https://rdrr.io/r/base/Log.html">log2(k)</a></code>. We also compare the entropies for the clusterings to the entropy of the true partition for each data set.</p>
-<div class="sourceCode" id="cb55"><pre class="downlit">
+<div class="sourceCode" id="cb60"><pre class="downlit">
 <span class="va">entr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_entropy.html">plot_entropy</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">entr</span><span class="op">)</span></pre></div>
 <pre><code>## [1] "entropy_vs_k"           "entropy_vs_ari"         "normentropy"           
 ## [4] "deltaentropy_truek"     "deltanormentropy_truek"</code></pre>
-<div class="sourceCode" id="cb57"><pre class="downlit">
+<div class="sourceCode" id="cb62"><pre class="downlit">
 <span class="va">entr</span><span class="op">$</span><span class="va">entropy_vs_k</span></pre></div>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
-<div class="sourceCode" id="cb58"><pre class="downlit">
+<div class="sourceCode" id="cb63"><pre class="downlit">
 <span class="va">entr</span><span class="op">$</span><span class="va">normentropy</span></pre></div>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-10-2.png" width="700"></p>
 </div>
@@ -331,25 +340,25 @@
 <h2 class="hasAnchor">
 <a href="#timing" class="anchor"></a>Timing</h2>
 <p>The <code><a href="../reference/plot_timing.html">plot_timing()</a></code> function plots various aspects of the timing of the different methods.</p>
-<div class="sourceCode" id="cb59"><pre class="downlit">
+<div class="sourceCode" id="cb64"><pre class="downlit">
 <span class="va">timing</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_timing.html">plot_timing</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span>, 
                       scaleMethod <span class="op">=</span> <span class="st">"RtsneKmeans"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">timing</span><span class="op">)</span></pre></div>
 <pre><code>## [1] "time_boxplot"           "time_normalized_by_ref" "time_vs_k"</code></pre>
-<div class="sourceCode" id="cb61"><pre class="downlit">
+<div class="sourceCode" id="cb66"><pre class="downlit">
 <span class="va">timing</span><span class="op">$</span><span class="va">time_normalized_by_ref</span></pre></div>
-<pre><code>## Warning: Removed 29 rows containing non-finite values (stat_boxplot).</code></pre>
+<pre><code>## Warning: Removed 32 rows containing non-finite values (stat_boxplot).</code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 </div>
 <div id="differences-in-k" class="section level2">
 <h2 class="hasAnchor">
 <a href="#differences-in-k" class="anchor"></a>Differences in k</h2>
 <p>Most performance evaluations above are performed on the clustering solutions obtained by imposing the “true” number of clusters. The <code><a href="../reference/plot_k_diff.html">plot_k_diff()</a></code> function evaluates the difference between the true number of cluster and the number of clusters giving the best agreement with the true partition, as well as the difference between the estimated and the true number of clusters, for the methods that allow estimation of k.</p>
-<div class="sourceCode" id="cb63"><pre class="downlit">
+<div class="sourceCode" id="cb68"><pre class="downlit">
 <span class="va">kdiff</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_k_diff.html">plot_k_diff</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">kdiff</span><span class="op">)</span></pre></div>
 <pre><code>## [1] "diff_kmax_ktrue" "diff_kest_ktrue"</code></pre>
-<div class="sourceCode" id="cb65"><pre class="downlit">
+<div class="sourceCode" id="cb70"><pre class="downlit">
 <span class="va">kdiff</span><span class="op">$</span><span class="va">diff_kest_ktrue</span></pre></div>
 <pre><code>## `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
@@ -358,7 +367,7 @@
 <div id="session-info" class="section level1">
 <h1 class="hasAnchor">
 <a href="#session-info" class="anchor"></a>Session info</h1>
-<div class="sourceCode" id="cb67"><pre class="downlit">
+<div class="sourceCode" id="cb72"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></pre></div>
 <pre><code>## R version 4.0.3 (2020-10-10)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
