@@ -47,6 +47,8 @@ cell proportions." />
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -58,9 +60,18 @@ cell proportions." />
 
 
 
+<!-- dependencies from examples -->
+
+
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -239,7 +250,7 @@ digital transcriptional profiling of single cells.</em> Nat. Commun. 8:14049.</p
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>sce_filteredExpr10_Zhengmix4eq</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'>snapshotDate(): 2020-10-02</span></div><div class='output co'>#&gt; <span class='message'>see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span></div><div class='output co'>#&gt; <span class='message'>downloading 1 resources</span></div><div class='output co'>#&gt; <span class='message'>retrieving 1 resource</span></div><div class='output co'>#&gt; <span class='message'>loading from cache</span></div><div class='output co'>#&gt; class: SingleCellExperiment 
+</div><div class='output co'>#&gt; <span class='message'>snapshotDate(): 2021-03-24</span></div><div class='output co'>#&gt; <span class='message'>see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span></div><div class='output co'>#&gt; <span class='message'>downloading 1 resources</span></div><div class='output co'>#&gt; <span class='message'>retrieving 1 resource</span></div><div class='output co'>#&gt; <span class='message'>loading from cache</span></div><div class='output co'>#&gt; class: SingleCellExperiment 
 #&gt; dim: 1556 3555 
 #&gt; metadata(1): log.exprs.offset
 #&gt; assays(3): counts logcounts normcounts
@@ -249,7 +260,10 @@ digital transcriptional profiling of single cells.</em> Nat. Commun. 8:14049.</p
 #&gt; colnames(3555): b.cells6276 b.cells6144 ... regulatory.t1084
 #&gt;   regulatory.t9696
 #&gt; colData names(14): dataset barcode ... pct_counts_top_500_features
-#&gt;   is_cell_control</div></pre>
+#&gt;   is_cell_control
+#&gt; reducedDimNames(2): PCA TSNE
+#&gt; mainExpName: NULL
+#&gt; altExpNames(0):</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -261,11 +275,11 @@ digital transcriptional profiling of single cells.</em> Nat. Commun. 8:14049.</p
 
       <footer>
       <div class="copyright">
-  <p>Developed by Angelo Duò.</p>
+  <p><p>Developed by Angelo Duò.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -273,6 +287,8 @@ digital transcriptional profiling of single cells.</em> Nat. Commun. 8:14049.</p
 
   
 
+
+  
 
   </body>
 </html>
