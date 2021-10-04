@@ -60,9 +60,6 @@ media." />
 
 
 
-<!-- dependencies from examples -->
-
-
   
 
   
@@ -85,7 +82,7 @@ media." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">DuoClustering2018</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.7.1</span>
       </span>
     </div>
 
@@ -139,14 +136,14 @@ of mESCs with various genetic perturbations which are cultured in different
 media.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sce_full_Kumar</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>sce_full_Kumar</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_filteredExpr10_Kumar</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_filteredHVG10_Kumar</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_filteredM3Drop10_Kumar</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_full_KumarTCC</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_filteredExpr10_KumarTCC</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'>sce_filteredHVG10_KumarTCC</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-<span class='fu'>sce_filteredM3Drop10_KumarTCC</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
+<span class='fu'>sce_filteredM3Drop10_KumarTCC</span><span class='op'>(</span>metadata <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -246,21 +243,24 @@ Nat. Biotechnol. 33(5): 495–502.</p>
 in single-cell differential expression analysis. </em> Nat. Methods 15(4): 255-261.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>sce_filteredExpr10_Kumar</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'>snapshotDate(): 2021-03-24</span></div><div class='output co'>#&gt; <span class='message'>see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span></div><div class='output co'>#&gt; <span class='message'>downloading 1 resources</span></div><div class='output co'>#&gt; <span class='message'>retrieving 1 resource</span></div><div class='output co'>#&gt; <span class='message'>loading from cache</span></div><div class='output co'>#&gt; class: SingleCellExperiment 
-#&gt; dim: 4515 246 
-#&gt; metadata(1): log.exprs.offset
-#&gt; assays(3): counts logcounts normcounts
-#&gt; rownames(4515): ENSMUSG00000106106.2 ENSMUSG00000042010.16 ...
-#&gt;   ENSMUSG00000039686.14 ENSMUSG00000027808.8
-#&gt; rowData names(9): is_feature_control_ERCC is_feature_control ...
-#&gt;   total_counts log10_total_counts
-#&gt; colnames(246): GSM1486634 GSM1486635 ... GSM1486993 GSM1486994
-#&gt; colData names(76): title geo_accession ... pct_counts_top_500_features
-#&gt;   is_cell_control
-#&gt; reducedDimNames(2): PCA TSNE
-#&gt; mainExpName: NULL
-#&gt; altExpNames(0):</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='fu'>sce_filteredExpr10_Kumar</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> loading from cache</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> class: SingleCellExperiment </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> dim: 4515 246 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> metadata(1): log.exprs.offset</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> assays(3): counts logcounts normcounts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> rownames(4515): ENSMUSG00000106106.2 ENSMUSG00000042010.16 ...</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   ENSMUSG00000039686.14 ENSMUSG00000027808.8</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> rowData names(9): is_feature_control_ERCC is_feature_control ...</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   total_counts log10_total_counts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> colnames(246): GSM1486634 GSM1486635 ... GSM1486993 GSM1486994</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> colData names(76): title geo_accession ... pct_counts_top_500_features</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   is_cell_control</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> reducedDimNames(2): PCA TSNE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> mainExpName: NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> altExpNames(0):</span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -272,11 +272,11 @@ in single-cell differential expression analysis. </em> Nat. Methods 15(4): 255-2
 
       <footer>
       <div class="copyright">
-  <p><p>Developed by Angelo Duò.</p></p>
+  <p><p>Developed by Angelo DuÃ².</p></p>
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p></p>
 </div>
 
       </footer>
