@@ -76,10 +76,12 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Plot performance summaries</h1>
                         <h4 data-toc-skip class="author">Angelo Duò</h4>
-                                    <h4 data-toc-skip class="author">Mark D Robinson</h4>
-                                    <h4 data-toc-skip class="author">Charlotte Soneson</h4>
+                                    <h4 data-toc-skip class="author">Mark
+D Robinson</h4>
+                                    <h4 data-toc-skip class="author">Charlotte
+Soneson</h4>
                         
-            <h4 data-toc-skip class="date">2022-10-21</h4>
+            <h4 data-toc-skip class="date">2023-01-02</h4>
       
       
       <div class="hidden name"><code>plot_performance.Rmd</code></div>
@@ -91,7 +93,10 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>In this vignette we describe the basic usage of the <code>DuoClustering2018</code> package: how to retrieve data sets and clustering results, and how to construct various plots summarizing the performance of different methods across several data sets.</p>
+<p>In this vignette we describe the basic usage of the
+<code>DuoClustering2018</code> package: how to retrieve data sets and
+clustering results, and how to construct various plots summarizing the
+performance of different methods across several data sets.</p>
 </div>
 <div class="section level2">
 <h2 id="load-the-necessary-packages">Load the necessary packages<a class="anchor" aria-label="anchor" href="#load-the-necessary-packages"></a>
@@ -103,20 +108,28 @@
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DuoClustering2018</span><span class="op">)</span></span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://had.co.nz/plyr" class="external-link">plyr</a></span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## snapshotDate(): 2022-10-17</span></span></code></pre>
+<pre><code><span><span class="co">## snapshotDate(): 2022-12-16</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="retrieve-a-data-set">Retrieve a data set<a class="anchor" aria-label="anchor" href="#retrieve-a-data-set"></a>
 </h2>
-<p>The clustering evaluation <span class="citation">(Duò, Robinson, and Soneson 2018)</span> is based on 12 data sets (9 real and 3 simulated), which are all provided via <code>ExperimentHub</code> and retrievable via this package. We include the full data sets (after quality filtering of cells and removal of genes with zero counts across all cells) as well as three filtered versions of each data set (by expression, variability and dropout pattern, respectively), each containing 10% of the genes in the full data set.</p>
-<p>To get an overview, we can list all records from this package that are available in <code>ExperimentHub</code>:</p>
+<p>The clustering evaluation <span class="citation">(Duò, Robinson, and
+Soneson 2018)</span> is based on 12 data sets (9 real and 3 simulated),
+which are all provided via <code>ExperimentHub</code> and retrievable
+via this package. We include the full data sets (after quality filtering
+of cells and removal of genes with zero counts across all cells) as well
+as three filtered versions of each data set (by expression, variability
+and dropout pattern, respectively), each containing 10% of the genes in
+the full data set.</p>
+<p>To get an overview, we can list all records from this package that
+are available in <code>ExperimentHub</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">eh</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ExperimentHub/man/ExperimentHub-class.html" class="external-link">ExperimentHub</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## snapshotDate(): 2022-10-17</span></span></code></pre>
+<pre><code><span><span class="co">## snapshotDate(): 2022-12-16</span></span></code></pre>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/AnnotationHub/man/AnnotationHub-class.html" class="external-link">query</a></span><span class="op">(</span><span class="va">eh</span>, <span class="st">"DuoClustering2018"</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## ExperimentHub with 122 records</span></span>
-<span><span class="co">## # snapshotDate(): 2022-10-17</span></span>
+<span><span class="co">## # snapshotDate(): 2022-12-16</span></span>
 <span><span class="co">## # $dataprovider: Robinson group (UZH), 10x Genomics, Zheng et al (2017), SRA...</span></span>
 <span><span class="co">## # $species: Homo sapiens, Mus musculus, NA</span></span>
 <span><span class="co">## # $rdataclass: data.frame, SingleCellExperiment, list</span></span>
@@ -137,8 +150,18 @@
 <span><span class="co">##   EH1653 | clustering_summary_filteredExpr10_SimKumar8hard_v2  </span></span>
 <span><span class="co">##   EH1654 | clustering_summary_filteredHVG10_SimKumar8hard_v2   </span></span>
 <span><span class="co">##   EH1655 | clustering_summary_filteredM3Drop10_SimKumar8hard_v2</span></span></code></pre>
-<p>The records with names starting in <code>sce_</code> represent (filtered or unfiltered) data sets (in <code>SingleCellExperiment</code> format). The records with names starting in <code>clustering_summary_</code> correspond to <code>data.frame</code> objects with clustering results for each of the filtered data sets. Finally, the <code>duo_clustering_all_parameter_settings</code> object contains the parameter settings we used for all the clustering methods. For clustering summaries and parameter settings, the version number (e.g., <code>_v2</code>) corresponds to the version of the publication.</p>
-<p>The records can be retrieved using their <code>ExperimentHub</code> ID, e.g.:</p>
+<p>The records with names starting in <code>sce_</code> represent
+(filtered or unfiltered) data sets (in <code>SingleCellExperiment</code>
+format). The records with names starting in
+<code>clustering_summary_</code> correspond to <code>data.frame</code>
+objects with clustering results for each of the filtered data sets.
+Finally, the <code>duo_clustering_all_parameter_settings</code> object
+contains the parameter settings we used for all the clustering methods.
+For clustering summaries and parameter settings, the version number
+(e.g., <code>_v2</code>) corresponds to the version of the
+publication.</p>
+<p>The records can be retrieved using their <code>ExperimentHub</code>
+ID, e.g.:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">eh</span><span class="op">[[</span><span class="st">"EH1500"</span><span class="op">]</span><span class="op">]</span></span></code></pre></div>
 <pre><code><span><span class="co">## see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span></span></code></pre>
@@ -156,7 +179,8 @@
 <span><span class="co">## reducedDimNames(2): PCA TSNE</span></span>
 <span><span class="co">## mainExpName: NULL</span></span>
 <span><span class="co">## altExpNames(0):</span></span></code></pre>
-<p>Alternatively, the shortcut functions provided by this package can be used:</p>
+<p>Alternatively, the shortcut functions provided by this package can be
+used:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/sce_full_Koh.html">sce_filteredExpr10_Koh</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## see ?DuoClustering2018 and browseVignettes('DuoClustering2018') for documentation</span></span></code></pre>
@@ -178,7 +202,17 @@
 <div class="section level2">
 <h2 id="read-a-set-of-clustering-results">Read a set of clustering results<a class="anchor" aria-label="anchor" href="#read-a-set-of-clustering-results"></a>
 </h2>
-<p>For each included data set, we have applied a range of clustering methods (see the <code>run_clustering</code> vignette for more details on how this was done, and how to apply additional methods). As mentioned above, the results of these clusterings are also available from <code>ExperimentHub</code>, and can be loaded either by their <code>ExperimentHub</code> ID or using the provided shortcut functions, as above. For simplicity, the results of all methods for a given data set are combined into a single object. As an illustration, we load the clustering summaries for two different data sets (<code>Koh</code> and <code>Zhengmix4eq</code>), each with two different gene filterings (<code>Expr10</code> and <code>HVG10</code>):</p>
+<p>For each included data set, we have applied a range of clustering
+methods (see the <code>run_clustering</code> vignette for more details
+on how this was done, and how to apply additional methods). As mentioned
+above, the results of these clusterings are also available from
+<code>ExperimentHub</code>, and can be loaded either by their
+<code>ExperimentHub</code> ID or using the provided shortcut functions,
+as above. For simplicity, the results of all methods for a given data
+set are combined into a single object. As an illustration, we load the
+clustering summaries for two different data sets (<code>Koh</code> and
+<code>Zhengmix4eq</code>), each with two different gene filterings
+(<code>Expr10</code> and <code>HVG10</code>):</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">plyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/plyr/man/rbind.fill.html" class="external-link">rbind.fill</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="../reference/clustering_summary_v2.html">clustering_summary_filteredExpr10_Koh_v2</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -206,17 +240,21 @@
 <li>
 <code>cell</code>: The cell identifier</li>
 <li>
-<code>run</code>: The run ID (each method was run five times for each data set and number of clusters)</li>
+<code>run</code>: The run ID (each method was run five times for
+each data set and number of clusters)</li>
 <li>
-<code>k</code>: The imposed number of clusters (for all methods except Seurat)</li>
+<code>k</code>: The imposed number of clusters (for all methods
+except Seurat)</li>
 <li>
-<code>resolution</code>: The imposed resolution (only for Seurat)</li>
+<code>resolution</code>: The imposed resolution (only for
+Seurat)</li>
 <li>
 <code>cluster</code>: The assigned cluster label</li>
 <li>
 <code>trueclass</code>: The true class of the cell</li>
 <li>
-<code>est_k</code>: The estimated number of clusters (for methods allowing such estimation)</li>
+<code>est_k</code>: The estimated number of clusters (for methods
+allowing such estimation)</li>
 <li>
 <code>elapsed</code>: The elapsed time of the run</li>
 </ul>
@@ -240,7 +278,10 @@
 <div class="section level2">
 <h2 id="define-consistent-method-colors">Define consistent method colors<a class="anchor" aria-label="anchor" href="#define-consistent-method-colors"></a>
 </h2>
-<p>For some of the plots generated below, the points will be colored according to the clustering method. We can enforce a consistent set of colors for the methods by defining a named vector of colors to use for all plots.</p>
+<p>For some of the plots generated below, the points will be colored
+according to the clustering method. We can enforce a consistent set of
+colors for the methods by defining a named vector of colors to use for
+all plots.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">method_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>CIDR <span class="op">=</span> <span class="st">"#332288"</span>, FlowSOM <span class="op">=</span> <span class="st">"#6699CC"</span>, PCAHC <span class="op">=</span> <span class="st">"#88CCEE"</span>, </span>
 <span>            PCAKmeans <span class="op">=</span> <span class="st">"#44AA99"</span>, pcaReduce <span class="op">=</span> <span class="st">"#117733"</span>,</span>
@@ -251,11 +292,22 @@
 <div class="section level2">
 <h2 id="plot">Plot<a class="anchor" aria-label="anchor" href="#plot"></a>
 </h2>
-<p>Each plotting function described below returns a list of <code>ggplot</code> objects. These can be plotted directly, or further modified if desired.</p>
+<p>Each plotting function described below returns a list of
+<code>ggplot</code> objects. These can be plotted directly, or further
+modified if desired.</p>
 <div class="section level3">
 <h3 id="performance">Performance<a class="anchor" aria-label="anchor" href="#performance"></a>
 </h3>
-<p>The <code><a href="../reference/plot_performance.html">plot_performance()</a></code> function generates plots related to the performance of the clustering methods. We quantify performance using the adjusted Rand Index (ARI) <span class="citation">(Hubert and Arabie 1985)</span>, comparing the obtained clustering to the true clusters. As we noted in the publication <span class="citation">(Duò, Robinson, and Soneson 2018)</span>, defining a true partitioning of the cells is difficult, since they can often be grouped together in several different, but still interpretable, ways. We refer to our paper for more information on how the true clusters were defined for each of the data sets.</p>
+<p>The <code><a href="../reference/plot_performance.html">plot_performance()</a></code> function generates plots related
+to the performance of the clustering methods. We quantify performance
+using the adjusted Rand Index (ARI) <span class="citation">(Hubert and
+Arabie 1985)</span>, comparing the obtained clustering to the true
+clusters. As we noted in the publication <span class="citation">(Duò,
+Robinson, and Soneson 2018)</span>, defining a true partitioning of the
+cells is difficult, since they can often be grouped together in several
+different, but still interpretable, ways. We refer to our paper for more
+information on how the true clusters were defined for each of the data
+sets.</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">perf</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_performance.html">plot_performance</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">perf</span><span class="op">)</span></span></code></pre></div>
@@ -264,7 +316,7 @@
 <span><span class="co">## [5] "median_ari_heatmap_estk"</span></span></code></pre>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">perf</span><span class="op">$</span><span class="va">median_ari_vs_k</span></span></code></pre></div>
-<pre><code><span><span class="co">## Warning: Removed 4 row(s) containing missing values (geom_path).</span></span></code></pre>
+<pre><code><span><span class="co">## Warning: Removed 4 rows containing missing values (`geom_line()`).</span></span></code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">perf</span><span class="op">$</span><span class="va">median_ari_heatmap_truek</span></span></code></pre></div>
@@ -273,7 +325,11 @@
 <div class="section level3">
 <h3 id="stability">Stability<a class="anchor" aria-label="anchor" href="#stability"></a>
 </h3>
-<p>The <code><a href="../reference/plot_stability.html">plot_stability()</a></code> function evaluates the stability of the clustering results from each method, with respect to random starts. Each method was run five times on each data set (for each k), and we quantify the stability by comparing each pair of such runs using the adjusted Rand Index.</p>
+<p>The <code><a href="../reference/plot_stability.html">plot_stability()</a></code> function evaluates the stability of
+the clustering results from each method, with respect to random starts.
+Each method was run five times on each data set (for each k), and we
+quantify the stability by comparing each pair of such runs using the
+adjusted Rand Index.</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">stab</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_stability.html">plot_stability</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Aggregation function missing: defaulting to length</span></span>
@@ -298,7 +354,7 @@
 <span><span class="co">## [3] "stability_heatmap_truek"</span></span></code></pre>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">stab</span><span class="op">$</span><span class="va">stability_vs_k</span></span></code></pre></div>
-<pre><code><span><span class="co">## Warning: Removed 4 row(s) containing missing values (geom_path).</span></span></code></pre>
+<pre><code><span><span class="co">## Warning: Removed 4 rows containing missing values (`geom_line()`).</span></span></code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">stab</span><span class="op">$</span><span class="va">stability_heatmap_truek</span></span></code></pre></div>
@@ -307,7 +363,14 @@
 <div class="section level3">
 <h3 id="entropy">Entropy<a class="anchor" aria-label="anchor" href="#entropy"></a>
 </h3>
-<p>In order to evaluate the tendency of the clustering methods to favor equally sized clusters, we calculate the Shannon entropy <span class="citation">(Shannon 1948)</span> of each clustering solution (based on the proportions of cells in the different clusters) and plot this using the <code><a href="../reference/plot_entropy.html">plot_entropy()</a></code> function. Since the maximal entropy that can be obtained depends on the number of clusters, we use normalized entropies, defined by dividing the observed entropy by <code>log2(k)</code>. We also compare the entropies for the clusterings to the entropy of the true partition for each data set.</p>
+<p>In order to evaluate the tendency of the clustering methods to favor
+equally sized clusters, we calculate the Shannon entropy <span class="citation">(Shannon 1948)</span> of each clustering solution
+(based on the proportions of cells in the different clusters) and plot
+this using the <code><a href="../reference/plot_entropy.html">plot_entropy()</a></code> function. Since the maximal
+entropy that can be obtained depends on the number of clusters, we use
+normalized entropies, defined by dividing the observed entropy by
+<code>log2(k)</code>. We also compare the entropies for the clusterings
+to the entropy of the true partition for each data set.</p>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">entr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_entropy.html">plot_entropy</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">entr</span><span class="op">)</span></span></code></pre></div>
@@ -323,7 +386,8 @@
 <div class="section level3">
 <h3 id="timing">Timing<a class="anchor" aria-label="anchor" href="#timing"></a>
 </h3>
-<p>The <code><a href="../reference/plot_timing.html">plot_timing()</a></code> function plots various aspects of the timing of the different methods.</p>
+<p>The <code><a href="../reference/plot_timing.html">plot_timing()</a></code> function plots various aspects of the
+timing of the different methods.</p>
 <div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">timing</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_timing.html">plot_timing</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span>, </span>
 <span>                      scaleMethod <span class="op">=</span> <span class="st">"RtsneKmeans"</span><span class="op">)</span></span>
@@ -331,20 +395,27 @@
 <pre><code><span><span class="co">## [1] "time_boxplot"           "time_normalized_by_ref" "time_vs_k"</span></span></code></pre>
 <div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">timing</span><span class="op">$</span><span class="va">time_normalized_by_ref</span></span></code></pre></div>
-<pre><code><span><span class="co">## Warning: Removed 32 rows containing non-finite values (stat_boxplot).</span></span></code></pre>
+<pre><code><span><span class="co">## Warning: Removed 32 rows containing non-finite values (`stat_boxplot()`).</span></span></code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 </div>
 <div class="section level3">
 <h3 id="differences-in-k">Differences in k<a class="anchor" aria-label="anchor" href="#differences-in-k"></a>
 </h3>
-<p>Most performance evaluations above are performed on the clustering solutions obtained by imposing the “true” number of clusters. The <code><a href="../reference/plot_k_diff.html">plot_k_diff()</a></code> function evaluates the difference between the true number of cluster and the number of clusters giving the best agreement with the true partition, as well as the difference between the estimated and the true number of clusters, for the methods that allow estimation of k.</p>
+<p>Most performance evaluations above are performed on the clustering
+solutions obtained by imposing the “true” number of clusters. The
+<code><a href="../reference/plot_k_diff.html">plot_k_diff()</a></code> function evaluates the difference between the
+true number of cluster and the number of clusters giving the best
+agreement with the true partition, as well as the difference between the
+estimated and the true number of clusters, for the methods that allow
+estimation of k.</p>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kdiff</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_k_diff.html">plot_k_diff</a></span><span class="op">(</span><span class="va">res</span>, method_colors <span class="op">=</span> <span class="va">method_colors</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">kdiff</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## [1] "diff_kmax_ktrue" "diff_kest_ktrue"</span></span></code></pre>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kdiff</span><span class="op">$</span><span class="va">diff_kest_ktrue</span></span></code></pre></div>
-<pre><code><span><span class="co">## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.</span></span></code></pre>
+<pre><code><span><span class="co">## Bin width defaults to 1/30 of the range of the data. Pick better value with</span></span>
+<span><span class="co">## `binwidth`.</span></span></code></pre>
 <p><img src="plot_performance_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
 </div>
 </div>
@@ -353,93 +424,101 @@
 </h2>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## R version 4.2.1 (2022-06-23)</span></span>
+<pre><code><span><span class="co">## R Under development (unstable) (2023-01-01 r83536)</span></span>
 <span><span class="co">## Platform: x86_64-apple-darwin17.0 (64-bit)</span></span>
 <span><span class="co">## Running under: macOS Big Sur ... 10.16</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Matrix products: default</span></span>
-<span><span class="co">## BLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib</span></span>
-<span><span class="co">## LAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib</span></span>
+<span><span class="co">## BLAS:   /Library/Frameworks/R.framework/Versions/4.3/Resources/lib/libRblas.0.dylib </span></span>
+<span><span class="co">## LAPACK: /Library/Frameworks/R.framework/Versions/4.3/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## locale:</span></span>
 <span><span class="co">## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## time zone: UTC</span></span>
+<span><span class="co">## tzcode source: internal</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## attached base packages:</span></span>
 <span><span class="co">## [1] stats4    stats     graphics  grDevices utils     datasets  methods  </span></span>
 <span><span class="co">## [8] base     </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## other attached packages:</span></span>
-<span><span class="co">##  [1] plyr_1.8.7                  DuoClustering2018_1.7.1    </span></span>
-<span><span class="co">##  [3] SingleCellExperiment_1.19.1 SummarizedExperiment_1.27.3</span></span>
-<span><span class="co">##  [5] Biobase_2.57.1              GenomicRanges_1.49.1       </span></span>
-<span><span class="co">##  [7] GenomeInfoDb_1.33.13        IRanges_2.31.2             </span></span>
-<span><span class="co">##  [9] S4Vectors_0.35.4            MatrixGenerics_1.9.1       </span></span>
-<span><span class="co">## [11] matrixStats_0.62.0          ExperimentHub_2.5.0        </span></span>
-<span><span class="co">## [13] AnnotationHub_3.5.2         BiocFileCache_2.5.2        </span></span>
-<span><span class="co">## [15] dbplyr_2.2.1                BiocGenerics_0.43.4        </span></span>
-<span><span class="co">## [17] BiocStyle_2.25.0           </span></span>
+<span><span class="co">##  [1] plyr_1.8.8                  DuoClustering2018_1.7.1    </span></span>
+<span><span class="co">##  [3] SingleCellExperiment_1.21.0 SummarizedExperiment_1.29.1</span></span>
+<span><span class="co">##  [5] Biobase_2.59.0              GenomicRanges_1.51.4       </span></span>
+<span><span class="co">##  [7] GenomeInfoDb_1.35.8         IRanges_2.33.0             </span></span>
+<span><span class="co">##  [9] S4Vectors_0.37.3            MatrixGenerics_1.11.0      </span></span>
+<span><span class="co">## [11] matrixStats_0.63.0          ExperimentHub_2.7.0        </span></span>
+<span><span class="co">## [13] AnnotationHub_3.7.0         BiocFileCache_2.7.1        </span></span>
+<span><span class="co">## [15] dbplyr_2.2.1                BiocGenerics_0.45.0        </span></span>
+<span><span class="co">## [17] BiocStyle_2.27.0           </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## loaded via a namespace (and not attached):</span></span>
-<span><span class="co">##  [1] bitops_1.0-7                  fs_1.5.2                     </span></span>
-<span><span class="co">##  [3] bit64_4.0.5                   filelock_1.0.2               </span></span>
-<span><span class="co">##  [5] httr_1.4.4                    rprojroot_2.0.3              </span></span>
-<span><span class="co">##  [7] tools_4.2.1                   bslib_0.4.0                  </span></span>
-<span><span class="co">##  [9] utf8_1.2.2                    R6_2.5.1                     </span></span>
-<span><span class="co">## [11] DBI_1.1.3                     colorspace_2.0-3             </span></span>
-<span><span class="co">## [13] withr_2.5.0                   gridExtra_2.3                </span></span>
-<span><span class="co">## [15] tidyselect_1.2.0              bit_4.0.4                    </span></span>
-<span><span class="co">## [17] curl_4.3.3                    compiler_4.2.1               </span></span>
-<span><span class="co">## [19] textshaping_0.3.6             cli_3.4.1                    </span></span>
-<span><span class="co">## [21] desc_1.4.2                    DelayedArray_0.23.2          </span></span>
-<span><span class="co">## [23] labeling_0.4.2                bookdown_0.29                </span></span>
-<span><span class="co">## [25] sass_0.4.2                    scales_1.2.1                 </span></span>
-<span><span class="co">## [27] rappdirs_0.3.3                pkgdown_2.0.6.9000           </span></span>
-<span><span class="co">## [29] systemfonts_1.0.4             stringr_1.4.1                </span></span>
-<span><span class="co">## [31] digest_0.6.30                 rmarkdown_2.17               </span></span>
-<span><span class="co">## [33] XVector_0.37.1                pkgconfig_2.0.3              </span></span>
-<span><span class="co">## [35] htmltools_0.5.3               highr_0.9                    </span></span>
-<span><span class="co">## [37] fastmap_1.1.0                 ggthemes_4.2.4               </span></span>
-<span><span class="co">## [39] rlang_1.0.6                   RSQLite_2.2.18               </span></span>
-<span><span class="co">## [41] shiny_1.7.2                   farver_2.1.1                 </span></span>
-<span><span class="co">## [43] jquerylib_0.1.4               generics_0.1.3               </span></span>
-<span><span class="co">## [45] jsonlite_1.8.2                mclust_5.4.10                </span></span>
-<span><span class="co">## [47] dplyr_1.0.10                  RCurl_1.98-1.9               </span></span>
-<span><span class="co">## [49] magrittr_2.0.3                GenomeInfoDbData_1.2.9       </span></span>
-<span><span class="co">## [51] Matrix_1.5-1                  Rcpp_1.0.9                   </span></span>
-<span><span class="co">## [53] munsell_0.5.0                 fansi_1.0.3                  </span></span>
-<span><span class="co">## [55] viridis_0.6.2                 lifecycle_1.0.3              </span></span>
-<span><span class="co">## [57] stringi_1.7.8                 yaml_2.3.6                   </span></span>
-<span><span class="co">## [59] zlibbioc_1.43.0               grid_4.2.1                   </span></span>
-<span><span class="co">## [61] blob_1.2.3                    promises_1.2.0.1             </span></span>
-<span><span class="co">## [63] crayon_1.5.2                  lattice_0.20-45              </span></span>
-<span><span class="co">## [65] Biostrings_2.65.6             KEGGREST_1.37.3              </span></span>
-<span><span class="co">## [67] knitr_1.40                    pillar_1.8.1                 </span></span>
-<span><span class="co">## [69] reshape2_1.4.4                glue_1.6.2                   </span></span>
-<span><span class="co">## [71] BiocVersion_3.16.0            evaluate_0.17                </span></span>
-<span><span class="co">## [73] BiocManager_1.30.18           png_0.1-7                    </span></span>
-<span><span class="co">## [75] vctrs_0.4.2                   httpuv_1.6.6                 </span></span>
-<span><span class="co">## [77] tidyr_1.2.1                   gtable_0.3.1                 </span></span>
-<span><span class="co">## [79] purrr_0.3.5                   assertthat_0.2.1             </span></span>
-<span><span class="co">## [81] cachem_1.0.6                  ggplot2_3.3.6                </span></span>
-<span><span class="co">## [83] xfun_0.34                     mime_0.12                    </span></span>
-<span><span class="co">## [85] xtable_1.8-4                  later_1.3.0                  </span></span>
-<span><span class="co">## [87] viridisLite_0.4.1             ragg_1.2.3                   </span></span>
-<span><span class="co">## [89] tibble_3.1.8                  AnnotationDbi_1.59.1         </span></span>
-<span><span class="co">## [91] memoise_2.0.1                 ellipsis_0.3.2               </span></span>
-<span><span class="co">## [93] interactiveDisplayBase_1.35.1</span></span></code></pre>
+<span><span class="co">##  [1] DBI_1.1.3                     bitops_1.0-7                 </span></span>
+<span><span class="co">##  [3] gridExtra_2.3                 rlang_1.0.6                  </span></span>
+<span><span class="co">##  [5] magrittr_2.0.3                compiler_4.3.0               </span></span>
+<span><span class="co">##  [7] RSQLite_2.2.20                png_0.1-8                    </span></span>
+<span><span class="co">##  [9] systemfonts_1.0.4             vctrs_0.5.1                  </span></span>
+<span><span class="co">## [11] reshape2_1.4.4                stringr_1.5.0                </span></span>
+<span><span class="co">## [13] pkgconfig_2.0.3               crayon_1.5.2                 </span></span>
+<span><span class="co">## [15] fastmap_1.1.0                 XVector_0.39.0               </span></span>
+<span><span class="co">## [17] ellipsis_0.3.2                labeling_0.4.2               </span></span>
+<span><span class="co">## [19] utf8_1.2.2                    promises_1.2.0.1             </span></span>
+<span><span class="co">## [21] rmarkdown_2.19                ragg_1.2.4                   </span></span>
+<span><span class="co">## [23] purrr_1.0.0                   bit_4.0.5                    </span></span>
+<span><span class="co">## [25] xfun_0.36                     zlibbioc_1.45.0              </span></span>
+<span><span class="co">## [27] cachem_1.0.6                  jsonlite_1.8.4               </span></span>
+<span><span class="co">## [29] blob_1.2.3                    highr_0.10                   </span></span>
+<span><span class="co">## [31] later_1.3.0                   DelayedArray_0.25.0          </span></span>
+<span><span class="co">## [33] interactiveDisplayBase_1.37.0 R6_2.5.1                     </span></span>
+<span><span class="co">## [35] bslib_0.4.2                   stringi_1.7.8                </span></span>
+<span><span class="co">## [37] jquerylib_0.1.4               Rcpp_1.0.9                   </span></span>
+<span><span class="co">## [39] bookdown_0.31                 assertthat_0.2.1             </span></span>
+<span><span class="co">## [41] knitr_1.41                    httpuv_1.6.7                 </span></span>
+<span><span class="co">## [43] Matrix_1.5-3                  tidyselect_1.2.0             </span></span>
+<span><span class="co">## [45] yaml_2.3.6                    viridis_0.6.2                </span></span>
+<span><span class="co">## [47] curl_4.3.3                    lattice_0.20-45              </span></span>
+<span><span class="co">## [49] tibble_3.1.8                  withr_2.5.0                  </span></span>
+<span><span class="co">## [51] shiny_1.7.4                   KEGGREST_1.39.0              </span></span>
+<span><span class="co">## [53] evaluate_0.19                 desc_1.4.2                   </span></span>
+<span><span class="co">## [55] mclust_6.0.0                  Biostrings_2.67.0            </span></span>
+<span><span class="co">## [57] pillar_1.8.1                  BiocManager_1.30.19          </span></span>
+<span><span class="co">## [59] filelock_1.0.2                generics_0.1.3               </span></span>
+<span><span class="co">## [61] rprojroot_2.0.3               RCurl_1.98-1.9               </span></span>
+<span><span class="co">## [63] BiocVersion_3.17.1            ggplot2_3.4.0                </span></span>
+<span><span class="co">## [65] munsell_0.5.0                 scales_1.2.1                 </span></span>
+<span><span class="co">## [67] xtable_1.8-4                  glue_1.6.2                   </span></span>
+<span><span class="co">## [69] tools_4.3.0                   fs_1.5.2                     </span></span>
+<span><span class="co">## [71] grid_4.3.0                    tidyr_1.2.1                  </span></span>
+<span><span class="co">## [73] AnnotationDbi_1.61.0          colorspace_2.0-3             </span></span>
+<span><span class="co">## [75] GenomeInfoDbData_1.2.9        cli_3.5.0                    </span></span>
+<span><span class="co">## [77] rappdirs_0.3.3                textshaping_0.3.6            </span></span>
+<span><span class="co">## [79] fansi_1.0.3                   viridisLite_0.4.1            </span></span>
+<span><span class="co">## [81] ggthemes_4.2.4                dplyr_1.0.10                 </span></span>
+<span><span class="co">## [83] gtable_0.3.1                  sass_0.4.4                   </span></span>
+<span><span class="co">## [85] digest_0.6.31                 farver_2.1.1                 </span></span>
+<span><span class="co">## [87] memoise_2.0.1                 htmltools_0.5.4              </span></span>
+<span><span class="co">## [89] pkgdown_2.0.7.9000            lifecycle_1.0.3              </span></span>
+<span><span class="co">## [91] httr_1.4.4                    mime_0.12                    </span></span>
+<span><span class="co">## [93] bit64_4.0.5</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Duo2018-F1000" class="csl-entry">
-Duò, A, MD Robinson, and D Soneson. 2018. <span>“A Systematic Performance Evaluation of Clustering Methods for Single-Cell <span class="nocase">RNA-seq</span> Data.”</span> <em>F1000Research</em> 7: 1141.
+Duò, A, MD Robinson, and D Soneson. 2018. <span>“A Systematic
+Performance Evaluation of Clustering Methods for Single-Cell <span class="nocase">RNA-seq</span> Data.”</span> <em>F1000Research</em> 7:
+1141.
 </div>
 <div id="ref-hubert1985comparing" class="csl-entry">
-Hubert, L, and P Arabie. 1985. <span>“Comparing Partitions.”</span> <em>Journal of Classification</em> 2 (1): 193–218.
+Hubert, L, and P Arabie. 1985. <span>“Comparing Partitions.”</span>
+<em>Journal of Classification</em> 2 (1): 193–218.
 </div>
 <div id="ref-Shannon1948-cw" class="csl-entry">
-Shannon, C E. 1948. <span>“A Mathematical Theory of Communication.”</span> <em>The Bell System Technical Journal</em> 27 (3): 379–423.
+Shannon, C E. 1948. <span>“A Mathematical Theory of
+Communication.”</span> <em>The Bell System Technical Journal</em> 27
+(3): 379–423.
 </div>
 </div>
 </div>
@@ -462,7 +541,7 @@ Shannon, C E. 1948. <span>“A Mathematical Theory of Communication.”</span> <
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
 </div>
 
       </footer>
